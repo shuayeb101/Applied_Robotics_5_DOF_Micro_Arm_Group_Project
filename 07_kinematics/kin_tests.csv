@@ -1,0 +1,9 @@
+Target ID,Target x (mm),Target y (mm),IK branch A (deg),IK branch B (deg),Chosen branch and reason,FK residual (mm),Physical result/error (mm),Pass/fail
+KIN-01,,,,,,,,
+KIN-02,,,,,,,,
+KIN-03,,,,,,,,
+KIN-04,,,,,,,,
+KIN-05,,,,,,,,
+KIN-B1 (near boundary),,,,,,,,
+KIN-U1 (unreachable),,,,,,,,
+KIN-U2 (limit-violating),,,,,,,,

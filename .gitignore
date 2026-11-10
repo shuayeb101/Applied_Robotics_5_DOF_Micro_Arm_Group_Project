@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Arduino / PlatformIO builds
+.pio/
+build/
+*.hex
+*.elf
+# Editors
+.vscode/
+.idea/
+*~$*
+~$*

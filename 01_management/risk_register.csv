@@ -1,0 +1,8 @@
+Risk ID,Hazard,Cause and consequence,Initial rating,Controls,Owner,Verification,Residual rating,Action
+R-01,Servo supply brownout,"Several SG90s moving at once exceed the power module current; Nano resets and the arm moves unpredictably",,,,,,
+R-02,Pinch point,Fingers caught in moving joints or gripper,,,,,,
+R-03,Wrong polarity,"Reversed V+ or capacitor damages PCA9685, servos or Nano",,,,,,
+R-04,Lead pulled at base,Base rotation tensions servo leads and disconnects or damages a connector,,,,,,
+R-05,Servo stall,Binding or overload makes a servo overheat,,,,,,
+R-06,Parser fault,Malformed command produces unintended motion,,,,,,
+R-07,Communication loss,USB disconnect mid-move leaves the arm moving to a stale target,,,,,,

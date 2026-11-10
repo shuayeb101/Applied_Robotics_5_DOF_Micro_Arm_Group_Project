@@ -1,0 +1,8 @@
+Test,Expected result,Measured result,Pass/fail,Evidence file
+Valid joint command,"Joint moves; ACK/DONE",,,
+Unknown command,No motion; explicit error,,,
+Invalid joint or value (x3),No motion; error names the field,,,
+Rapid slider movement,No backlog after release/stop,,,
+Disconnect during motion,Hold/stop/fault within timeout,,,
+STOP during motion,Motion stops; queue cleared,,,
+Reconnect/reset,Reports state; no jump to old target,,,

@@ -1,0 +1,11 @@
+Test ID,Integrated test,Minimum expected result,Firmware/GUI version,Measured result,Pass/fail,Evidence file
+INT-01,Safe startup and HOME,No unexpected movement; HOME reported,,,,
+INT-02,Manual control of all five joints,Correct direction within calibrated range,,,,
+INT-03,Valid Cartesian target,Branch reported; endpoint error recorded,,,,
+INT-04,Unreachable/unsafe target,No motion; explicit error,,,,
+INT-05,Speed/profile comparison,3 settings with measured differences,,,,
+INT-06,Gripper/object handling,Repeated grasp/transfer/release,,,,
+INT-07,Communication disconnect,Hold/stop/fault within timeout,,,,
+INT-08,STOP and safe reset,Motion stops; documented restart,,,,
+INT-09,Repeatable pick and place,>=5 trials; success rate; cycle time,,,,
+INT-10,Power/mechanical observation,No heat/stall/brownout/cable pull/collision,,,,

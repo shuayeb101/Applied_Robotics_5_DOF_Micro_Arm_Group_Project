@@ -1,0 +1,6 @@
+Channel,Joint,Neutral pulse (counts),Safe min pulse,Safe max pulse,Physical min (deg),Physical max (deg),Direction,Offset (deg),Repeatability / backlash,Evidence file
+0,Base,,,,,,,,,
+1,Swing,,,,,,,,,
+2,Arm One,,,,,,,,,
+3,Arm Two,,,,,,,,,
+4,Gripper,,,,,,,,,
