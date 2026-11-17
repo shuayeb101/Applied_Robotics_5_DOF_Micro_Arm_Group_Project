@@ -12,7 +12,7 @@ The lecture describes the cycle as iterative, not strictly linear: feedback loop
 | # | Stage (Lecture 3, slide 5) | Brief gate | File | Status |
 | --- | --- | --- | --- | --- |
 | 1 | Identification of the problem | G0 | [`01_problem_identification.md`](01_problem_identification.md) | Draft 3 |
-| 2 | Ideation and conceptualisation | G0 | [`02_ideation_and_concepts.md`](02_ideation_and_concepts.md) | In progress (1 of 9 subsystems) |
+| 2 | Ideation and conceptualisation | G0 | [`02_ideation_and_concepts.md`](02_ideation_and_concepts.md) | In progress |
 | 3 | Detailed design and planning | G0 | | Not started |
 | 4 | Prototyping | G1, G2 | | Not started |
 | 5 | Implementation | G3, G4 | | Not started |
