@@ -8,6 +8,10 @@ What others have built that's similar to our arm, and what we can learn from the
 
 ### 1. ShillehTek: Arduino Nano + PCA9685 6-DOF arm
 
+<img src="https://cdn.shopify.com/s/files/1/0837/4340/8415/files/arm-cover.png" alt="ShillehTek 6-DOF arm with Arduino Nano and PCA9685" width="420"> <img src="https://cdn.shopify.com/s/files/1/0837/4340/8415/files/arm-running.jpg" alt="ShillehTek arm in motion" width="300">
+
+*Images: ShillehTek [1]*
+
 - **Hardware:** six MG90S micro servos (base, shoulder, elbow, wrist twist, wrist tilt, gripper), an Arduino Nano and a PCA9685 over I²C [1].
 - **Power:** a separate 5 V, 2–3 A servo supply with a shared ground, because each servo can draw about 700 mA at peak [1].
 - **Control:** a joystick. The code ignores small stick movements (a dead zone) and nudges the target angle a little every 20 ms [1].
@@ -19,6 +23,8 @@ What others have built that's similar to our arm, and what we can learn from the
 | Incremental moves give smooth motion [1]. | No reach, load or accuracy figures [1]. No IK [1]. |
 
 ### 2. Hackster: Bluetooth-controlled 5-DOF arm (Atharva Kaplay)
+
+*Photos: [see the project page](https://www.hackster.io/atharva-kaplay/bluetooth-controlled-5-dof-robotic-arm-1436fc) [2].*
 
 - **Hardware:** five joints (base, shoulder, elbow, wrist, gripper), an Arduino Uno, Nano or Mega, and a PCA9685 [2]. The servo type is left open: MG996R, SG90 or similar [2].
 - **Power:** an external 5–6 V servo supply. The Arduino's 5 V powers the PCA9685 logic, and all grounds are joined [2].
@@ -32,6 +38,8 @@ What others have built that's similar to our arm, and what we can learn from the
 
 ### 3. Cults3D: 5DOF robot arm with MG90S servos
 
+*Photos: [see the model page](https://stlfinder.com/model/5dof-robotarm-with-mg90s-servos-9R3juYbv/2775700) [3].*
+
 - **Hardware:** a 5-DOF printed arm, an Arduino with a Sensor Shield V5.0 (no PCA9685), and a separate servo supply [3].
 - **Servos:** MG90S at the shoulder, which needs the most torque. The author notes that 9 g servos may be fine for the gripper and wrist [3].
 - **Built for:** small-scale training for students. The base is a cube filled with concrete to keep it steady on a desk [3].
@@ -43,6 +51,10 @@ What others have built that's similar to our arm, and what we can learn from the
 | Updates added a stronger servo holder and a new gear for the SG90 [3]. | Basic gripper [3]. No control details or results. |
 
 ### 4. "Small Robot Arm 5 Motor SG90" kit
+
+<img src="https://electrolik-eg.com/wp-content/uploads/2026/09/1e5a3d78-9952-4a91-a0e9-434fcbbecbd6-1-catalog-square-600x600.webp" alt="Small Robot Arm 5 Motor SG90 kit" width="320">
+
+*Image: Electrolik [4]*
 
 - **Hardware:** five SG90 servos for base, shoulder, elbow, wrist and gripper. Sold as an educational kit for pick-and-place and kinematics practice [4].
 
