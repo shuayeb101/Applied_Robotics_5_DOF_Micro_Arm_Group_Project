@@ -15,3 +15,5 @@ build/
 .idea/
 *~$*
 ~$*
+# GUI run logs
+06_host_gui/logs/
