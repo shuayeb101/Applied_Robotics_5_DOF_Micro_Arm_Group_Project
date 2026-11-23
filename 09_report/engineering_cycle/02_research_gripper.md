@@ -149,6 +149,7 @@ Suggested values for the group to agree. Objects are the Stage 1 ones: **A** = 1
 | **C3** | **Matched rack** | Redraw the racks with tooth spacing that matches the pinion, with tested clearance | Play, binding (GR3, GR4) | 2 small reprints |
 | **C4** | **Fin Ray fingers** | Replace the fingers with bendy TPU fingers | Grip on odd shapes | Needs TPU; heavier and bigger |
 | **C5** | **Grip-to-angle firmware** | Close to a per-object angle just past contact, never to fully closed | Holding at stall (GR7) | Free, software only |
+| **C6** | **Mini geared claw** | A new angular claw like the Kitronik Klaw, scaled to the SG90: two jaws geared to each other, serrated edges, lightening holes. Design, checks and STLs in [`03_cad/mini_claw/`](../../03_cad/mini_claw/README.md) | Opening (≈ 32 mm), retention, mass (≈ 25 % less plastic) | 5 new prints + 2 M2 screws |
 
 C5 isn't a CAD change, so it can't be the Task 10 improvement on its own. **Do it anyway**, whatever is chosen: it protects the gripper servo during every trial.
 
@@ -156,17 +157,19 @@ C5 isn't a CAD change, so it can't be the Task 10 improvement on its own. **Do i
 
 Scores 1–5 (5 = best), weight in brackets. **These are suggestions to start the discussion. The group should score it together** and record the agreed version.
 
-| Criterion (weight) | C1 Pads | C2 V-groove + pad | C3 Matched rack | C4 Fin Ray |
-| --- | --- | --- | --- | --- |
-| Performance (3) | 3 | 4 | 3 | 4 |
-| Printability (2) | 5 | 4 | 3 | 2 |
-| Safety (2) | 4 | 4 | 4 | 4 |
-| Cost / material (1) | 5 | 4 | 4 | 2 |
-| Compatibility with supplied arm (2) | 5 | 5 | 4 | 2 |
-| Mass (2) | 5 | 4 | 5 | 2 |
-| **Weighted total (/60)** | **52** | **50** | **45** | **34** |
+| Criterion (weight) | C1 Pads | C2 V-groove + pad | C3 Matched rack | C4 Fin Ray | C6 Mini claw |
+| --- | --- | --- | --- | --- | --- |
+| Performance (3) | 3 | 4 | 3 | 4 | 4 |
+| Printability (2) | 5 | 4 | 3 | 2 | 3 |
+| Safety (2) | 4 | 4 | 4 | 4 | 3 |
+| Cost / material (1) | 5 | 4 | 4 | 2 | 4 |
+| Compatibility with supplied arm (2) | 5 | 5 | 4 | 2 | 3 |
+| Mass (2) | 5 | 4 | 5 | 2 | 5 |
+| **Weighted total (/60)** | **52** | **50** | **45** | **34** | **44** |
 
 **Reading it:** C1 scores best but is barely a CAD change, so it's weak for the "dimensioned CAD change" marks. **C2 with a pad recess** keeps most of C1's benefit and gives a real, measurable CAD change. Suggested choice: **C2 (V-groove jaws with a pad recess), plus C5 in firmware**. If the inspection confirms the pitch mismatch, add **C3** as a second fix, tested separately so each change's effect can be seen.
+
+**C6** is the most ambitious option: a full redesign that is lighter, opens wider and gives the most CAD evidence. It loses points for its pointed tips (pinch risk), five new prints with small teeth, and the firmware changes it needs (a smaller gripper range and a new `L3`). It's the better choice if the group wants a bigger redesign and has printer time to tune the gears.
 
 ---
 
