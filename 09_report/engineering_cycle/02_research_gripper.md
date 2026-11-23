@@ -169,6 +169,8 @@ Scores 1–5 (5 = best), weight in brackets. **These are suggestions to start th
 
 **Reading it:** C1 scores best but is barely a CAD change, so it's weak for the "dimensioned CAD change" marks. **C2 with a pad recess** keeps most of C1's benefit and gives a real, measurable CAD change. Suggested choice: **C2 (V-groove jaws with a pad recess), plus C5 in firmware**. If the inspection confirms the pitch mismatch, add **C3** as a second fix, tested separately so each change's effect can be seen.
 
+**C6 update (simulated):** the mini claw now has 30° inward-curled tips. In a MuJoCo pick-lift-shake simulation it held the cube and the cylinder in every trial across the PLA friction range, while the straight-jaw version dropped both at low friction. See [`03_cad/mini_claw/README.md`](../../03_cad/mini_claw/README.md). These are simulation results, not physical trials.
+
 **C6** is the most ambitious option: a full redesign that is lighter, opens wider and gives the most CAD evidence. It loses points for its pointed tips (pinch risk), five new prints with small teeth, and the firmware changes it needs (a smaller gripper range and a new `L3`). It's the better choice if the group wants a bigger redesign and has printer time to tune the gears.
 
 ---

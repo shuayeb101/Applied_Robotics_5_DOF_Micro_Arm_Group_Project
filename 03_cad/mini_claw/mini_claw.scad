@@ -67,6 +67,8 @@ finger_drop  = 3.0;  // extra finger height below the gear stack (taller grip fa
 drop_from_y  = 13;   // local y where the taller finger section starts
 serr_pitch   = 2.0;  // serration pitch on the gripping edge
 serr_depth   = 0.8;  // serration depth
+tip_curl     = 30;   // angle of the curled end section, inward from the jaw axis (deg)
+curl_len     = 9;    // length of the curled end section
 grooves      = true; // "stacked plate" grooves around the finger
 groove_d     = 0.5;  // groove depth
 groove_h     = 0.6;  // groove height
@@ -135,36 +137,45 @@ module wedge2d(a0, a1, r=50) {
 // =====================================================================
 // jaw (right jaw, local frame: pivot at origin, jaw pointing +y)
 // =====================================================================
-x_tip = tip_gap/2 - a;                    // tip x in local frame
-P_in0 = [-a + inner_off, inner_start];    // start of gripping edge
-P_tip = [x_tip, jaw_len];                 // tip
+x_tip  = tip_gap/2 - a;                    // tip x in local frame
+P_tip  = [x_tip, jaw_len];                 // tip
+cd     = [-sin(tip_curl), cos(tip_curl)];  // direction of the curled end, towards the tip
+cn     = [ cos(tip_curl), sin(tip_curl)];  // its outward normal
+P_bend = P_tip - curl_len*cd;              // where the straight edge turns into the curl
+P_in0  = [-a + inner_off, inner_start];    // start of gripping edge
 P_out0 = [P_in0[0] + w_root, inner_start];
-P_out1 = [x_tip + w_tip, jaw_len - 4.5];
 
 function lerp(p, q, t) = p + (q-p)*t;
 function width_at(y) = let(t = (y - inner_start)/(jaw_len - 4.5 - inner_start))
                        w_root + (w_tip - w_root)*t;
 
+P_bend_o = P_bend + [width_at(P_bend[1]), 0];
+P_tip_o  = P_tip + cn*(0.6*w_tip) - cd*3;
+
 module finger_body2d() {
     hull() { circle(r = 4.6); translate(P_in0) circle(r=0.01); translate(P_out0) circle(r=0.01); }
-    polygon([P_in0, P_tip, P_out1, P_out0]);
+    polygon([P_in0, P_bend, P_tip, P_tip_o, P_bend_o, P_out0]);
 }
 
-module serrations2d() {
-    L = norm(P_tip - P_in0);
-    n = floor((L - 3) / serr_pitch);
-    ang = atan2(P_tip[1]-P_in0[1], P_tip[0]-P_in0[0]);
-    for (i = [1:n]) {
-        p = lerp(P_in0, P_tip, (i*serr_pitch + 1)/L);
-        translate(p) rotate(ang) rotate(45) square(serr_depth*sqrt(2), center=true);
+module serr_seg(p, q, end_margin) {
+    L = norm(q - p);
+    n = floor((L - end_margin) / serr_pitch);
+    ang = atan2(q[1]-p[1], q[0]-p[0]);
+    if (n >= 1) for (i = [1:n]) {
+        c = lerp(p, q, (i*serr_pitch)/L);
+        translate(c) rotate(ang) rotate(45) square(serr_depth*sqrt(2), center=true);
     }
 }
 
+module serrations2d() {
+    serr_seg(P_in0, P_bend, 1);
+    serr_seg(P_bend, P_tip, 2.5);   // the curled end is serrated too, but not the point
+}
+
 module holes2d() {
-    for (y = [13, 17.5, 22]) {
-        // centre of the finger at this y
-        t  = (y - inner_start)/(jaw_len - inner_start);
-        xi = P_in0[0] + (P_tip[0]-P_in0[0])*t;
+    for (y = [13, 17.5, 22]) if (y < P_bend[1] - 1.5) {
+        t  = (y - P_in0[1])/(P_bend[1] - P_in0[1]);
+        xi = P_in0[0] + (P_bend[0]-P_in0[0])*t;
         w  = width_at(y);
         r  = min(1.5, (w - 2.6)/2);
         if (r >= 0.6) translate([xi + w/2, y]) circle(r = r);
@@ -375,6 +386,7 @@ if (part == "bottom_plate")  bottom_plate_3d();
 if (part == "top_plate")     translate([0,0,-zt]) top_plate_3d();
 if (part == "plate_2d")      bottom_plate2d();
 if (part == "pinion_2d")     pinion2d();
+if (part == "finger_2d")     finger2d();   // right jaw finger outline, local frame (used by sim/grip_sim.py)
 
 // 2D collision checks: each must render EMPTY at every theta
 if (part == "check_l1_pinion_jawR") intersection() { posedP() pinion2d(); posedR() jaw_layer2d(1, true); }
