@@ -22,7 +22,7 @@ The lecture describes this stage as brainstorming ideas, developing them into co
 
 To add an idea, copy [`02_ideas/_template.md`](02_ideas/_template.md), fill it in, and add a row here.
 
-Background: [what others have built](02_research_existing_arms.md).
+Background: [what others have built](02_research_existing_arms.md) · [gripper research](02_research_gripper.md).
 
 | Idea | Proposed by | Fulfils | Status |
 | --- | --- | --- | --- |
