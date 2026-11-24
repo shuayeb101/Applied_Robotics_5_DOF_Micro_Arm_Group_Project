@@ -12,7 +12,7 @@ Each video shows, for one design:
 The right-hand panels show the view from above (foot outline, centre of mass,
 tipping margin) and the live status.
 
-Run:   python3 animate.py              -> videos/D3_*.mp4, videos/D5_*.mp4
+Run:   python3 animate.py              -> videos/D3_*.mp4, D5_*.mp4, D6_*.mp4
        python3 animate.py --only D3 --fps 15
 Needs: the simulate_designs.py packages + ffmpeg + fast-simplification
 AI-assisted (Claude Code). A simulation video is not test evidence.
@@ -36,7 +36,7 @@ import arm_model as am  # noqa: E402
 import simulate_designs as sd  # noqa: E402
 
 OUT = os.path.join(am.HERE, "videos")
-VIDEO_DESIGNS = ("D3", "D5")
+VIDEO_DESIGNS = ("D3", "D5", "D6")
 STEP = 3.0                 # deg per frame in the limit test
 LEG_FRAMES = 18            # frames per pick-and-place leg
 JOINT_NAMES = ("base", "shoulder", "elbow", "wrist")
@@ -144,16 +144,19 @@ class Planner:
     def plan_pick_place(self, obj, pick, place):
         """pick/place = (radius mm, yaw deg). Returns frames or (None, reason)."""
         d, w, st = self.d, self.w, self.st
+        fg, fp = d.floor_at(pick[0], obj["size"] / 2), d.floor_at(place[0], obj["size"] / 2)
+        if fg is None or fp is None:
+            return None, "object would straddle the base plate edge"
         g = p = None
         for z in np.arange(obj["h"] / 2, obj["h"] + 0.01, 1.0):
-            g = sd.solve(d, w, pick[0], pick[1], z, 0, st)
-            p = sd.solve(d, w, place[0], place[1], z, am.PAYLOAD, st)
+            g = sd.solve(d, w, pick[0], pick[1], fg + z, 0, st)
+            p = sd.solve(d, w, place[0], place[1], fp + z, am.PAYLOAD, st)
             if g and p:
                 break
         if not (g and p):
             return None, "no collision-free grasp pose"
-        ag = sd.solve(d, w, pick[0], pick[1], z + 30, 0, st)
-        ap = sd.solve(d, w, place[0], place[1], z + 30, am.PAYLOAD, st)
+        ag = sd.solve(d, w, pick[0], pick[1], fg + z + 30, 0, st)
+        ap = sd.solve(d, w, place[0], place[1], fp + z + 30, am.PAYLOAD, st)
         if not (ag and ap):
             return None, "cannot reach 30 mm above the object"
         H, G, P, AG, AP = tuple(self.home), g[0], p[0], ag[0], ap[0]
@@ -254,14 +257,14 @@ def render_frame(args):
     ax.add_collection3d(Poly3DCollection(np.concatenate(polys), facecolors=np.concatenate(cols),
                                          edgecolor="none"))
     # table, foot hull, targets
-    xx, yy = np.meshgrid([-75, 165], [-120, 120])
+    xx, yy = np.meshgrid([-95, 165], [-120, 120])
     ax.plot_surface(xx, yy, np.zeros_like(xx), color="0.88", alpha=0.35, shade=False)
     hull = np.vstack([st.foot_xy, st.foot_xy[:1]])
     ax.plot(hull[:, 0], hull[:, 1], 0.2, color="0.45", lw=0.8, ls="--")
     for tgt in meta.get("targets", []):
         a = math.radians(tgt[1])
         ax.scatter(tgt[0] * math.cos(a), tgt[0] * math.sin(a), 0.3, marker="x", color="0.3", s=30)
-    ax.set_xlim(-75, 165); ax.set_ylim(-120, 120); ax.set_zlim(0, 200)
+    ax.set_xlim(-95, 165); ax.set_ylim(-130, 130); ax.set_zlim(0, 200)
     ax.set_box_aspect((1, 1, 0.83))
     ax.set_proj_type("persp", focal_length=0.6)
     ax.view_init(22, -62 + 18 * math.sin(2 * math.pi * idx / 600))
@@ -288,7 +291,7 @@ def render_frame(args):
     ax2.plot(*com, "o", color=mc, ms=11, mec="k")
     for o in frame.get("objects", []):
         ax2.plot(o["T"][0, 3], o["T"][1, 3], "s", color="#F28C1E", ms=6)
-    ax2.set_xlim(-90, 190); ax2.set_ylim(-140, 140); ax2.set_aspect("equal")
+    ax2.set_xlim(-100, 190); ax2.set_ylim(-140, 140); ax2.set_aspect("equal")
     ax2.set_title("From above: foot, arm, centre of mass", fontsize=10)
     ax2.tick_params(labelsize=7)
 
@@ -347,7 +350,8 @@ def build_frames(d):
             continue
         targets += [pick, place]
         a = math.radians(pick[1])
-        T_obj = am.tr(pick[0] * math.cos(a), pick[0] * math.sin(a), obj["h"] / 2) @ am.rz(pick[1])
+        T_obj = am.tr(pick[0] * math.cos(a), pick[0] * math.sin(a),
+                      d.floor_at(pick[0], obj["size"] / 2) + obj["h"] / 2) @ am.rz(pick[1])
         if obj["kind"] == "cyl":
             T_obj = T_obj  # upright cylinder
         rel = None

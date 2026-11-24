@@ -94,8 +94,14 @@ class World:
         # pairs that touch in the assembled neutral pose are joined parts
         # (screwed together, servo in its bay, fork round a pivot): exclude.
         self.joined = set()
+        # Only parts on the same or adjacent links can be joined: a contact
+        # between non-adjacent links (e.g. the tool on a wide foot) is a real hit.
+        adj = {frozenset((a, b)) for a, b in zip(am.LINKS, am.LINKS[1:])}
         for q in [(0, 0, 0, 0), (0, 90, -90, 0), (0, 45, -45, -45), (30, 120, -120, 30)]:
-            self.joined |= self._pairs_hit(q, all_pairs=True)
+            for pr in self._pairs_hit(q, all_pairs=True):
+                la = {self.link_of[n] for n in pr}
+                if len(la) == 1 or frozenset(la) in adj:
+                    self.joined.add(pr)
         # adjacent structural links: check them with the pivot region trimmed
         self.trimmed = []
         for jn, (pl, pp, dl, dp) in JOINTS.items():
@@ -157,7 +163,7 @@ class Statics:
     def __init__(self, design: am.Design):
         self.d = design
         self.items = [(p.link, p.mass, np.asarray(p.com, float)) for p in design.parts]
-        foot = trimesh.load(f"{am.BASE}/Foot.stl")
+        foot = [p for p in design.parts if p.link == "foot" and p.printed][0].mesh
         sec = foot.section(plane_origin=(0, 0, 0.3), plane_normal=(0, 0, 1))
         self.hull = ConvexHull(sec.vertices[:, :2])
         self.eq = self.hull.equations              # n.x + c <= 0 inside
@@ -273,9 +279,20 @@ def test_asm(d: am.Design, world: World):
                               "pivot boss): material removed from the original",
             result="PASS" if lv < 5 else "FAIL", detail=f"{lv:.2f} mm^3 removed"))
 
+    if d.foot == "wide":
+        import manifold3d  # noqa: F401
+        ft = am.load(f"{am.BASE}/Foot.stl")
+        v2 = am.load(f"{am.NEW}/Foot_v2_wide.stl")
+        lost = trimesh.boolean.difference([ft, v2], engine="manifold")
+        lv = abs(lost.volume) if len(lost.faces) else 0.0
+        res["checks"].append(dict(
+            id="ASM-5", check="Foot_v2_wide keeps every feature of Foot (servo cradle, "
+                              "screw ears, cross arms): material removed from the original",
+            result="PASS" if lv < 5 else "FAIL", detail=f"{lv:.2f} mm^3 removed"))
+
     # swing (and counterweight) vs foot and base servo over a full turn
     sw_parts = [p for p in d.parts if p.link == "swing"]
-    foot = [p for p in d.parts if p.name == "Foot"][0]
+    foot = [p for p in d.parts if p.link == "foot" and p.printed][0]
     fo = fcl_obj(foot.mesh)
     dmin = 1e9
     for yaw in range(0, 360, 5):
@@ -433,10 +450,15 @@ def pick_place(d, world, st, radii=(60, 80, 100, 120, 140, 160), cube=15.0):
     home = find_home(d, world, st)
     for R in radii:
         rec = dict(radius_mm=R, result="PASS", reason="", grasp_z=None, tilt_deg=None,
-                   min_margin_mm=None, max_torque_pct=None, max_side_gmm=None)
+                   min_margin_mm=None, max_torque_pct=None, max_side_gmm=None,
+                   surface_z=d.floor_at(R, cube / 2))
+        if rec["surface_z"] is None:
+            rec.update(result="FAIL", reason="object would straddle the base plate edge")
+            out.append(rec)
+            continue
         # lowest grasp height (TCP) that keeps every part off the table, within the cube
         g = p = None
-        for z in np.arange(cube / 2, cube + 0.01, 1.0):
+        for z in rec["surface_z"] + np.arange(cube / 2, cube + 0.01, 1.0):
             g = solve(d, world, R, -45, z, 0, st)
             p = solve(d, world, R, 45, z, am.PAYLOAD, st)
             if g and p:
@@ -517,9 +539,9 @@ def render(d, q, path, title):
             ax.add_collection3d(Poly3DCollection(m.vertices[m.faces],
                                                  facecolors=np.clip(shade[:, None] * base, 0, 1),
                                                  edgecolor="none"))
-        xx, yy = np.meshgrid([-70, 190], [-110, 110])
+        xx, yy = np.meshgrid([-100, 190], [-110, 110])
         ax.plot_surface(xx, yy, np.zeros_like(xx), color="0.9", alpha=0.35)
-        ax.set_xlim(-70, 190); ax.set_ylim(-130, 130); ax.set_zlim(0, 260)
+        ax.set_xlim(-100, 190); ax.set_ylim(-130, 130); ax.set_zlim(0, 260)
         ax.set_box_aspect((1, 1, 1))
         ax.view_init(el, az)
         ax.set_xticks([0, 100]); ax.set_yticks([-100, 0, 100]); ax.set_zticks([0, 100, 200])
@@ -534,7 +556,8 @@ def comparison_plots(results, rows_by, path):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     keys = [r["key"] for r in results]
-    cols = ["#4C72B0", "#55A868", "#C44E52", "#8172B2", "#CCB974", "#64B5CD"]
+    cols = ["#4C72B0", "#55A868", "#C44E52", "#8172B2", "#CCB974", "#64B5CD", "#E377C2", "#7F7F7F"]
+    mid = (len(keys) - 1) / 2
     fig, axs = plt.subplots(2, 3, figsize=(16, 9))
     # 1 workspace side view (usable poses)
     for i, k in enumerate(keys):
@@ -564,10 +587,10 @@ def comparison_plots(results, rows_by, path):
                   ylabel="margin to foot edge (mm), <0 = tips")
     axs[0, 1].legend(fontsize=8)
     # 3 torques
-    w = 0.13
+    w = 0.8 / len(keys)
     for i, r in enumerate(results):
         v = [r["sweep"]["max_torque_pct"].get(j, 0) for j in JOINTS]
-        axs[0, 2].bar(np.arange(3) + (i - 2.5) * w, v, w, color=cols[i], label=r["key"])
+        axs[0, 2].bar(np.arange(3) + (i - mid) * w, v, w, color=cols[i], label=r["key"])
     axs[0, 2].axhline(50, color="k", ls="--", lw=1)
     axs[0, 2].set_xticks(range(3), list(JOINTS))
     axs[0, 2].set(title="Peak static torque over the usable workspace\n(% of SG90 stall, 1.8 kgf.cm)",
@@ -584,7 +607,7 @@ def comparison_plots(results, rows_by, path):
     for i, r in enumerate(results):
         R = [p["radius_mm"] for p in r["pnp"]]
         v = [{"PASS": 2, "MARGINAL": 1, "FAIL": 0}[p["result"]] for p in r["pnp"]]
-        axs[1, 1].plot(R, np.array(v) + (i - 2.5) * 0.06, "-o", color=cols[i], label=r["key"])
+        axs[1, 1].plot(R, np.array(v) + (i - mid) * 0.05, "-o", color=cols[i], label=r["key"])
     axs[1, 1].set_yticks([0, 1, 2], ["FAIL", "MARGINAL", "PASS"])
     axs[1, 1].set(title="Pick-and-place: 15 mm 5 g cube, -45 to +45 deg yaw",
                   xlabel="object distance from yaw axis (mm)")
@@ -637,6 +660,7 @@ def main():
         yaw["base_torque_90deg_0.6s_pct"] = round(100 * yaw["inertia_gmm2"] * 1e-9 * alpha
                                                   / (am.SG90_STALL * 9.81e-6), 1)
         res = dict(key=d.key, title=d.title, gripper=d.tool["name"], counterweight=d.counterweight,
+                   foot=d.foot,
                    tool_notes=d.tool["notes"], opening_mm=d.tool["opening_mm"],
                    grip_force=d.tool["grip_force_N"], asm=asm, mass=mass, sweep=sw,
                    pnp=pnp, home=home[0] if home else None, reach_pose=reach_pose, yaw=yaw,

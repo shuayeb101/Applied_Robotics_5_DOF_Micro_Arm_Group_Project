@@ -45,6 +45,11 @@ COINS = 7
 PAYLOAD = 5.0          # brief: lightweight object, <= 5 g
 SG90_STALL = 18000.0   # g.mm (1.8 kgf.cm at 4.8 V, datasheet)
 
+# wide base (03_cad/wide_base): a Ø180 x 1.6 mm plate round the supplied foot
+WIDE_FOOT_R = 90.0
+FOOT_TOP = 1.6         # top of the plate (the original cross arms stand at 3.0)
+EDGE_CHAMFER = 0.6
+
 
 # ------------------------------------------------------------ transforms
 def tr(x=0.0, y=0.0, z=0.0):
@@ -281,6 +286,14 @@ def swing_parts(counterweight: bool):
     return [sw, lid, c]
 
 
+# ------------------------------------------------------------------ feet
+def foot_part(kind: str):
+    if kind == "wide":
+        return Part("Foot_v2_wide", "foot", load(f"{NEW}/Foot_v2_wide.stl"),
+                    f"{NEW}/Foot_v2_wide.stl", status="modified")
+    return Part("Foot", "foot", load(f"{BASE}/Foot.stl"), f"{BASE}/Foot.stl")
+
+
 # ---------------------------------------------------------------- designs
 @dataclass
 class Design:
@@ -288,11 +301,23 @@ class Design:
     title: str
     gripper: str
     counterweight: bool
+    foot: str = "original"     # original / wide
     parts: list = field(default_factory=list)
     tool: dict = field(default_factory=dict)
 
+    def floor_at(self, r, half=7.5):
+        """Height of the surface an object of half-width `half` rests on, centred
+        at distance r from the yaw axis. None if it would straddle the plate edge."""
+        if self.foot != "wide":
+            return 0.0
+        if r + half <= WIDE_FOOT_R - EDGE_CHAMFER:
+            return FOOT_TOP
+        if r - half >= WIDE_FOOT_R + 1.0:
+            return 0.0
+        return None
+
     def build(self):
-        parts = [Part("Foot", "foot", load(f"{BASE}/Foot.stl"), f"{BASE}/Foot.stl")]
+        parts = [foot_part(self.foot)]
         parts += swing_parts(self.counterweight)
         parts.append(Part("ArmSpring", "link1", load(f"{BASE}/ArmSpring.stl"),
                           f"{BASE}/ArmSpring.stl"))
@@ -318,6 +343,8 @@ DESIGNS = [
     Design("D3", "Mini claw gripper + swing counterweight", "mini_claw", True),
     Design("D4", "Spanner gripper", "spanner", False),
     Design("D5", "Spanner gripper + swing counterweight", "spanner", True),
+    Design("D6", "Spanner gripper + swing counterweight + wide base", "spanner", True, "wide"),
+    Design("D7", "Spanner gripper + wide base (no counterweight)", "spanner", False, "wide"),
 ]
 
 
