@@ -54,7 +54,7 @@ def jaw_transforms(d: am.Design, gap: float):
     out = {}
     if d.gripper == "spanner":
         t = am.tr(0, gap - 1.0, 0)            # FPs +y == ArmFront +y; STL is at gap 1 mm
-        out["GripperSpannerSlider_v1"] = out["GripperSpannerJaw_v1"] = t
+        out["GripperSpannerSlider_v2"] = out["GripperSpannerJaw_v2"] = t
     elif d.gripper == "mini_claw":
         full = am.FLIP_X @ am.FPS_TO_AF @ am.CLAW_TO_FPS
         inv = np.linalg.inv(full)

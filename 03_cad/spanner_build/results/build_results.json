@@ -10,524 +10,440 @@
  "map": {
   "15 mm cube": {
    "50,-90": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.5,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-75": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.4,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-60": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.3,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-45": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 9.1,
-    "surface": 1.6,
-    "tilt": 179.21856925593215,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3022
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-30": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 9.1,
-    "surface": 1.6,
-    "tilt": 179.21856925593215,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3022
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-15": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 9.1,
-    "surface": 1.6,
-    "tilt": 179.21856925593215,
-    "min_margin_mm": 73.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3022
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,0": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,15": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,30": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,45": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 9.1,
-    "surface": 1.6,
-    "tilt": 179.21856925593215,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3022
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,60": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 9.1,
-    "surface": 1.6,
-    "tilt": 179.21856925593215,
-    "min_margin_mm": 73.3,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3022
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,75": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 9.1,
-    "surface": 1.6,
-    "tilt": 179.21856925593215,
-    "min_margin_mm": 73.4,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3022
+    "ok": false,
+    "why": "no collision-free grasp"
    },
    "50,90": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 10.1,
-    "surface": 1.6,
-    "tilt": 179.30516239871463,
-    "min_margin_mm": 73.5,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3018
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "60,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 10.1,
     "surface": 1.6,
-    "tilt": 167.70526558309137,
-    "min_margin_mm": 79.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1972
+    "tilt": 167.75539835635004,
+    "min_margin_mm": 79.0,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2023
    },
    "60,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 10.1,
     "surface": 1.6,
-    "tilt": 167.70526558309137,
-    "min_margin_mm": 79.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1972
+    "tilt": 167.75539835635004,
+    "min_margin_mm": 78.9,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2023
    },
    "60,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 79.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.7,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 78.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 78.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,0": {
     "ok": true,
     "why": "",
     "grasp_z": 10.1,
     "surface": 1.6,
-    "tilt": 167.70526558309137,
-    "min_margin_mm": 78.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1972
+    "tilt": 167.75539835635004,
+    "min_margin_mm": 78.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2023
    },
    "60,15": {
     "ok": true,
     "why": "",
     "grasp_z": 10.1,
     "surface": 1.6,
-    "tilt": 167.70526558309137,
-    "min_margin_mm": 78.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1972
+    "tilt": 167.75539835635004,
+    "min_margin_mm": 78.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2023
    },
    "60,30": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 78.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,45": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.7,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,60": {
     "ok": true,
     "why": "",
     "grasp_z": 9.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 79.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 167.73697879450947,
+    "min_margin_mm": 78.8,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 2029
    },
    "60,75": {
     "ok": true,
     "why": "",
-    "grasp_z": 9.1,
+    "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.644612967211,
-    "min_margin_mm": 79.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1978
+    "tilt": 193.3001407694802,
+    "min_margin_mm": 75.6,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2653
    },
    "60,90": {
     "ok": true,
     "why": "",
-    "grasp_z": 10.1,
+    "grasp_z": 15.1,
     "surface": 1.6,
-    "tilt": 167.70526558309137,
-    "min_margin_mm": 79.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1972
+    "tilt": 193.2633585438532,
+    "min_margin_mm": 75.8,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2648
    },
    "70,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 82.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 82.0,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 15.1,
     "surface": 1.6,
-    "tilt": 179.12453751101285,
-    "min_margin_mm": 82.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1432
+    "tilt": 181.6123264888532,
+    "min_margin_mm": 81.9,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1465
    },
    "70,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.7,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.7,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,0": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.7,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,15": {
     "ok": true,
     "why": "",
     "grasp_z": 15.1,
     "surface": 1.6,
-    "tilt": 179.12453751101285,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1432
+    "tilt": 181.6123264888532,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1465
    },
    "70,30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 81.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.6178699841351,
+    "min_margin_mm": 81.8,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1472
    },
    "70,75": {
     "ok": true,
     "why": "",
-    "grasp_z": 14.1,
+    "grasp_z": 16.1,
     "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 82.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "tilt": 181.58340927441688,
+    "min_margin_mm": 78.3,
+    "peak_load_pct": 18,
+    "peak_side_gmm": 2152
    },
    "70,90": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 14.1,
-    "surface": 1.6,
-    "tilt": 179.09427868098777,
-    "min_margin_mm": 82.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1439
+    "ok": false,
+    "why": "no collision-free grasp"
    },
    "80,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
+    "tilt": 169.9898060749856,
     "min_margin_mm": 84.9,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.8,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.7,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.7,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.6,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.6,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.5,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.6,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.5,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,0": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.5,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.5,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.6,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.6,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.5,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.7,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.6,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,75": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
-    "min_margin_mm": 84.8,
+    "tilt": 169.9898060749856,
+    "min_margin_mm": 84.7,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "80,90": {
     "ok": true,
     "why": "",
     "grasp_z": 14.1,
     "surface": 1.6,
-    "tilt": 167.4522069271215,
+    "tilt": 169.9898060749856,
     "min_margin_mm": 84.9,
     "peak_load_pct": 17,
-    "peak_side_gmm": 916
+    "peak_side_gmm": 933
    },
    "90,-90": {
     "ok": false,
@@ -586,130 +502,124 @@
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.0,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.5,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.1,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.7,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.2,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.8,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.2,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.9,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.3,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.3,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,0": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.4,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.3,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.3,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.9,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.3,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.8,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.2,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.7,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,75": {
     "ok": true,
     "why": "",
     "grasp_z": 14.5,
     "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.1,
+    "tilt": 143.25555387601375,
+    "min_margin_mm": 82.5,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "peak_side_gmm": 1425
    },
    "100,90": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 14.5,
-    "surface": 0.0,
-    "tilt": 140.01667809568224,
-    "min_margin_mm": 83.0,
-    "peak_load_pct": 24,
-    "peak_side_gmm": 1307
+    "ok": false,
+    "why": "no collision-free grasp"
    },
    "110,-90": {
     "ok": false,
@@ -870,524 +780,446 @@
   },
   "12 x 20 mm cylinder": {
    "50,-90": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.6,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-75": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.5,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-60": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.4,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-45": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.3,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-30": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,-15": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,0": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,15": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,30": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,45": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.3,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,60": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.4,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,75": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.5,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "50,90": {
-    "ok": true,
-    "why": "",
-    "grasp_z": 11.6,
-    "surface": 1.6,
-    "tilt": 179.39105657140823,
-    "min_margin_mm": 73.6,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 3011
+    "ok": false,
+    "why": "cannot reach 30 mm above"
    },
    "60,-90": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.7,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,-75": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 15.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.23617814427084,
+    "min_margin_mm": 75.6,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2645
    },
    "60,-60": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.4,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,-45": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.3,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,-30": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.2,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,-15": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.2,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,0": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.1,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,15": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 15.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.23617814427084,
+    "min_margin_mm": 75.2,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2645
    },
    "60,30": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 78.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.2,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,45": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.3,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,60": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.30966862159733,
+    "min_margin_mm": 75.4,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2656
    },
    "60,75": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 14.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.28469141062166,
+    "min_margin_mm": 75.6,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2650
    },
    "60,90": {
     "ok": true,
     "why": "",
-    "grasp_z": 11.6,
+    "grasp_z": 14.6,
     "surface": 1.6,
-    "tilt": 167.75236271908315,
-    "min_margin_mm": 79.2,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1963
+    "tilt": 193.28469141062166,
+    "min_margin_mm": 75.7,
+    "peak_load_pct": 17,
+    "peak_side_gmm": 2650
    },
    "70,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 82.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 82.0,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 15.6,
     "surface": 1.6,
-    "tilt": 179.13089943943956,
-    "min_margin_mm": 82.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1428
+    "tilt": 181.60078867099625,
+    "min_margin_mm": 78.2,
+    "peak_load_pct": 18,
+    "peak_side_gmm": 2154
    },
    "70,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.7,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.7,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.7,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,0": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.7,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,15": {
     "ok": true,
     "why": "",
     "grasp_z": 15.6,
     "surface": 1.6,
-    "tilt": 179.13089943943956,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1428
+    "tilt": 181.60078867099625,
+    "min_margin_mm": 77.9,
+    "peak_load_pct": 18,
+    "peak_side_gmm": 2154
    },
    "70,30": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.7,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.5,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,45": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.8,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.6,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,60": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 81.9,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.61186736291592,
+    "min_margin_mm": 81.7,
+    "peak_load_pct": 16,
+    "peak_side_gmm": 1476
    },
    "70,75": {
     "ok": true,
     "why": "",
-    "grasp_z": 13.6,
+    "grasp_z": 16.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 82.0,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.5601877189848,
+    "min_margin_mm": 78.3,
+    "peak_load_pct": 18,
+    "peak_side_gmm": 2149
    },
    "70,90": {
     "ok": true,
     "why": "",
-    "grasp_z": 13.6,
+    "grasp_z": 17.6,
     "surface": 1.6,
-    "tilt": 179.07037838790336,
-    "min_margin_mm": 82.1,
-    "peak_load_pct": 15,
-    "peak_side_gmm": 1442
+    "tilt": 181.49620542883852,
+    "min_margin_mm": 78.4,
+    "peak_load_pct": 18,
+    "peak_side_gmm": 2144
    },
    "80,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.9,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.8,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.8,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.7,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.7,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.6,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.6,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.5,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.6,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.5,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,0": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.5,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.3,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,15": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.5,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,30": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.6,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.4,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,45": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.6,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.5,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,60": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.7,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.6,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,75": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
-    "min_margin_mm": 84.8,
+    "tilt": 169.99242815667787,
+    "min_margin_mm": 84.7,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "80,90": {
     "ok": true,
     "why": "",
     "grasp_z": 13.6,
     "surface": 1.6,
-    "tilt": 167.44186540799825,
+    "tilt": 169.99242815667787,
     "min_margin_mm": 84.9,
     "peak_load_pct": 17,
-    "peak_side_gmm": 920
+    "peak_side_gmm": 937
    },
    "90,-90": {
     "ok": false,
@@ -1446,442 +1278,520 @@
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.0,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.5,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.1,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.7,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.2,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.8,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.3,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.9,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.3,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.4,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,0": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.4,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,15": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.4,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 83.0,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,30": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.3,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.9,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,45": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.3,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.8,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,60": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.2,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.7,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,75": {
     "ok": true,
     "why": "",
     "grasp_z": 14.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.1,
+    "tilt": 143.42404424269333,
+    "min_margin_mm": 82.5,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1423
    },
    "100,90": {
     "ok": true,
     "why": "",
-    "grasp_z": 14.0,
+    "grasp_z": 16.0,
     "surface": 0.0,
-    "tilt": 140.20163104015197,
-    "min_margin_mm": 83.0,
+    "tilt": 142.66663258348908,
+    "min_margin_mm": 82.3,
     "peak_load_pct": 24,
-    "peak_side_gmm": 1306
+    "peak_side_gmm": 1432
    },
    "110,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 83.7,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 83.6,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 83.8,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 83.7,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
+    "tilt": 158.36008340825077,
     "min_margin_mm": 83.9,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
+    "tilt": 158.36008340825077,
     "min_margin_mm": 84.0,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
+    "tilt": 158.36008340825077,
     "min_margin_mm": 84.0,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
+    "tilt": 158.36008340825077,
     "min_margin_mm": 84.1,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,0": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
+    "tilt": 158.36008340825077,
     "min_margin_mm": 84.1,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,15": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 84.1,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 84.0,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,30": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
+    "tilt": 158.36008340825077,
     "min_margin_mm": 84.0,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,45": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 84.0,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 83.9,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,60": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 83.9,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 83.7,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,75": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 83.8,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 83.6,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "110,90": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 153.14251034823457,
-    "min_margin_mm": 83.7,
+    "tilt": 158.36008340825077,
+    "min_margin_mm": 83.5,
     "peak_load_pct": 23,
-    "peak_side_gmm": 1170
+    "peak_side_gmm": 1218
    },
    "120,-90": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.6,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.4,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,-75": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.7,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.6,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,-60": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.8,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.7,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,-45": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
+    "tilt": 145.1402539920393,
     "min_margin_mm": 80.8,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,-30": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
+    "tilt": 145.1402539920393,
     "min_margin_mm": 80.9,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,-15": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
+    "tilt": 145.1402539920393,
     "min_margin_mm": 80.9,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,0": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 81.0,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.9,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,15": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
+    "tilt": 145.1402539920393,
     "min_margin_mm": 80.9,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,30": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.9,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.8,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,45": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.8,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.7,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,60": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.8,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.6,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,75": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.7,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.4,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "120,90": {
     "ok": true,
     "why": "",
     "grasp_z": 17.0,
     "surface": 0.0,
-    "tilt": 138.6682431193775,
-    "min_margin_mm": 80.6,
-    "peak_load_pct": 26,
-    "peak_side_gmm": 1762
+    "tilt": 145.1402539920393,
+    "min_margin_mm": 80.3,
+    "peak_load_pct": 27,
+    "peak_side_gmm": 1828
    },
    "130,-90": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.0,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,-75": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.2,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,-60": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.3,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,-45": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.4,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,-30": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.5,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,-15": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.5,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,0": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.5,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,15": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.5,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,30": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.4,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,45": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.3,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,60": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.2,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,75": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 77.1,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    },
    "130,90": {
-    "ok": false,
-    "why": "cannot reach 30 mm above"
+    "ok": true,
+    "why": "",
+    "grasp_z": 17.0,
+    "surface": 0.0,
+    "tilt": 124.74799901751399,
+    "min_margin_mm": 76.9,
+    "peak_load_pct": 30,
+    "peak_side_gmm": 2478
    }
   }
  },
@@ -1924,9 +1834,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 78.9,
-   "peak_load_pct": 15,
-   "peak_side_gmm": 1978
+   "min_margin_mm": 78.6,
+   "peak_load_pct": 16,
+   "peak_side_gmm": 2029
   },
   {
    "object": "15 mm cube",
@@ -1940,9 +1850,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 84.6,
+   "min_margin_mm": 84.5,
    "peak_load_pct": 17,
-   "peak_side_gmm": 916
+   "peak_side_gmm": 933
   },
   {
    "object": "15 mm cube",
@@ -1956,9 +1866,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 83.2,
+   "min_margin_mm": 82.8,
    "peak_load_pct": 24,
-   "peak_side_gmm": 1307
+   "peak_side_gmm": 1425
   },
   {
    "object": "15 mm cube",
@@ -1974,7 +1884,7 @@
    "reason": "",
    "min_margin_mm": 84.9,
    "peak_load_pct": 17,
-   "peak_side_gmm": 916
+   "peak_side_gmm": 933
   },
   {
    "object": "15 mm cube",
@@ -1988,9 +1898,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 78.8,
+   "min_margin_mm": 78.5,
    "peak_load_pct": 24,
-   "peak_side_gmm": 1972
+   "peak_side_gmm": 2023
   },
   {
    "object": "15 mm cube",
@@ -2004,9 +1914,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 79.0,
+   "min_margin_mm": 78.8,
    "peak_load_pct": 24,
-   "peak_side_gmm": 1978
+   "peak_side_gmm": 2029
   },
   {
    "object": "12 x 20 mm cylinder",
@@ -2020,25 +1930,25 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 79.0,
-   "peak_load_pct": 15,
-   "peak_side_gmm": 1963
-  },
-  {
-   "object": "12 x 20 mm cylinder",
-   "pick": [
-    80,
-    -45
-   ],
-   "place": [
-    80,
-    45
-   ],
-   "result": "PASS",
-   "reason": "",
-   "min_margin_mm": 84.6,
+   "min_margin_mm": 75.3,
    "peak_load_pct": 17,
-   "peak_side_gmm": 920
+   "peak_side_gmm": 2656
+  },
+  {
+   "object": "12 x 20 mm cylinder",
+   "pick": [
+    80,
+    -45
+   ],
+   "place": [
+    80,
+    45
+   ],
+   "result": "PASS",
+   "reason": "",
+   "min_margin_mm": 84.5,
+   "peak_load_pct": 17,
+   "peak_side_gmm": 937
   },
   {
    "object": "12 x 20 mm cylinder",
@@ -2052,9 +1962,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 84.6,
+   "min_margin_mm": 84.4,
    "peak_load_pct": 17,
-   "peak_side_gmm": 920
+   "peak_side_gmm": 937
   },
   {
    "object": "12 x 20 mm cylinder",
@@ -2068,9 +1978,9 @@
    ],
    "result": "PASS",
    "reason": "",
-   "min_margin_mm": 83.3,
+   "min_margin_mm": 82.8,
    "peak_load_pct": 24,
-   "peak_side_gmm": 1306
+   "peak_side_gmm": 1423
   }
  ],
  "dynamic": [
@@ -2078,78 +1988,78 @@
    "pose": "arm straight out",
    "joint": "base",
    "move_deg": 90,
-   "static_mm": 70.5,
-   "T=2.0s": 70.3,
-   "T=1.0s": 69.7,
-   "T=0.6s": 68.1,
-   "T=0.4s": 65.0,
-   "T=0.3s": 60.8,
-   "T=0.2s": 48.6,
-   "fastest_T_s_margin5": 0.12
+   "static_mm": 68.0,
+   "T=2.0s": 67.7,
+   "T=1.0s": 66.9,
+   "T=0.6s": 65.0,
+   "T=0.4s": 61.3,
+   "T=0.3s": 56.0,
+   "T=0.2s": 41.1,
+   "fastest_T_s_margin5": 0.14
   },
   {
    "pose": "arm straight out",
    "joint": "base",
    "move_deg": 180,
-   "static_mm": 70.5,
-   "T=2.0s": 69.7,
-   "T=1.0s": 67.0,
-   "T=0.6s": 60.8,
-   "T=0.4s": 48.6,
-   "T=0.3s": 31.5,
-   "T=0.2s": -17.2,
-   "fastest_T_s_margin5": 0.24
+   "static_mm": 68.0,
+   "T=2.0s": 66.9,
+   "T=1.0s": 63.7,
+   "T=0.6s": 56.0,
+   "T=0.4s": 41.1,
+   "T=0.3s": 20.2,
+   "T=0.2s": -39.4,
+   "fastest_T_s_margin5": 0.28
   },
   {
    "pose": "arm straight out",
    "joint": "shoulder",
    "move_deg": 90,
-   "static_mm": 70.5,
-   "T=2.0s": 71.0,
-   "T=1.0s": 70.1,
-   "T=0.6s": 68.0,
-   "T=0.4s": 63.9,
-   "T=0.3s": 58.1,
-   "T=0.2s": 41.7,
-   "fastest_T_s_margin5": 0.14
+   "static_mm": 68.0,
+   "T=2.0s": 68.7,
+   "T=1.0s": 67.6,
+   "T=0.6s": 65.0,
+   "T=0.4s": 59.9,
+   "T=0.3s": 52.7,
+   "T=0.2s": 32.4,
+   "fastest_T_s_margin5": 0.16
   },
   {
    "pose": "HOME",
    "joint": "base",
    "move_deg": 90,
-   "static_mm": 88.1,
-   "T=2.0s": 88.1,
-   "T=1.0s": 88.0,
+   "static_mm": 89.0,
+   "T=2.0s": 88.8,
+   "T=1.0s": 88.4,
    "T=0.6s": 87.3,
-   "T=0.4s": 85.4,
-   "T=0.3s": 82.6,
-   "T=0.2s": 74.3,
+   "T=0.4s": 85.2,
+   "T=0.3s": 82.3,
+   "T=0.2s": 73.8,
    "fastest_T_s_margin5": 0.1
   },
   {
    "pose": "HOME",
    "joint": "base",
    "move_deg": 180,
-   "static_mm": 88.1,
-   "T=2.0s": 88.1,
-   "T=1.0s": 87.6,
-   "T=0.6s": 84.5,
-   "T=0.4s": 76.5,
-   "T=0.3s": 65.3,
-   "T=0.2s": 33.3,
+   "static_mm": 89.0,
+   "T=2.0s": 88.7,
+   "T=1.0s": 87.1,
+   "T=0.6s": 83.0,
+   "T=0.4s": 74.9,
+   "T=0.3s": 63.6,
+   "T=0.2s": 31.3,
    "fastest_T_s_margin5": 0.18
   },
   {
    "pose": "HOME",
    "joint": "shoulder",
    "move_deg": 90,
-   "static_mm": 88.1,
-   "T=2.0s": 88.1,
-   "T=1.0s": 88.0,
-   "T=0.6s": 86.5,
-   "T=0.4s": 80.1,
-   "T=0.3s": 71.1,
-   "T=0.2s": 45.3,
+   "static_mm": 89.0,
+   "T=2.0s": 89.1,
+   "T=1.0s": 88.5,
+   "T=0.6s": 85.1,
+   "T=0.4s": 78.3,
+   "T=0.3s": 68.7,
+   "T=0.2s": 41.5,
    "fastest_T_s_margin5": 0.16
   }
  ],
@@ -2163,16 +2073,16 @@
    "stop": "end of servo window"
   },
   "shoulder_min": {
-   "limit_deg": 71.0,
-   "stop": "collision Foot_v2_wide/GripperSpannerHead_v1"
+   "limit_deg": 72.0,
+   "stop": "collision Foot_v2_wide/GripperSpannerHead_v2"
   },
   "shoulder_max": {
    "limit_deg": 180.0,
    "stop": "end of servo window"
   },
   "elbow_min": {
-   "limit_deg": -92.0,
-   "stop": "collision Foot_v2_wide/GripperSpannerJaw_v1"
+   "limit_deg": -90.0,
+   "stop": "collision Foot_v2_wide/GripperSpannerJaw_v2"
   },
   "elbow_max": {
    "limit_deg": 0.0,
@@ -2194,39 +2104,39 @@
   },
   {
    "shoulder": 100,
-   "worst_margin_mm": 68.2
+   "worst_margin_mm": 67.9
   },
   {
    "shoulder": 110,
-   "worst_margin_mm": 62.4
+   "worst_margin_mm": 61.7
   },
   {
    "shoulder": 120,
-   "worst_margin_mm": 56.9
+   "worst_margin_mm": 55.9
   },
   {
    "shoulder": 130,
-   "worst_margin_mm": 51.9
+   "worst_margin_mm": 50.6
   },
   {
    "shoulder": 140,
-   "worst_margin_mm": 47.6
+   "worst_margin_mm": 46.1
   },
   {
    "shoulder": 150,
-   "worst_margin_mm": 44.2
+   "worst_margin_mm": 42.3
   },
   {
    "shoulder": 160,
-   "worst_margin_mm": 41.6
+   "worst_margin_mm": 39.6
   },
   {
    "shoulder": 170,
-   "worst_margin_mm": 40.0
+   "worst_margin_mm": 37.9
   },
   {
    "shoulder": 180,
-   "worst_margin_mm": 39.4
+   "worst_margin_mm": 37.3
   }
  ]
 }

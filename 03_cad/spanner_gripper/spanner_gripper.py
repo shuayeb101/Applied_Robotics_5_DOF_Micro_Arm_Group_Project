@@ -36,7 +36,15 @@ P = dict(
     window=(-16.35, 5.75, -3.75, 29.25),       # servo window in FrontPlate.stl
     axis_y=17.5,                               # arm centre line (between screws)
     shaft_x=-10.0, shaft_y=22.85,              # SG90 output shaft (measure!)
-    servo_top=2.3,                             # servo case top above plate front face
+    servo_top=2.3,                             # v1 only (wrong: see mount_v2)
+    # v2: real SG90 stack, measured from the supplied ArmFront/FrontPlate slots and
+    # the SG90 datasheets. The servo case passes THROUGH the FrontPlate window and
+    # its tabs sit on the plate's front face (z 0..2.5). Above them: case top at
+    # z 6.8, round boss to z 10.8, spline to ~z 13.5 (MEASURE boss_top).
+    tab_top=2.5,                               # servo tab top above plate front face
+    boss_top=10.8,                             # SG90 boss (base of the spline) above plate front face
+    boss_r=6.3,                                # boss radius 5.9 + clearance
+    cbore_d=4.8, cbore_floor=1.5,              # counterbore so the supplied short tab screws reach
     # drive
     module=1.0, teeth=16, pressure=20.0, backlash=0.15,
     pinion_z0=2.8, pinion_b=5.5, spline_d=4.7, spline_depth=3.6,
@@ -262,6 +270,36 @@ def interference(parts):
             out.append((names[i], names[j], v))
     return out
 
+def zoff_v2(p):
+    """How far the v1 assembly is lifted so the pinion sits on the real spline."""
+    return p['boss_top'] + 0.3 - p['pinion_z0']
+
+
+def mount_v2(parts, p, d):
+    """v2: lift every part by zoff and stand the head on a plinth that rests on the
+    servo tabs. The case and boss pass through the plinth window. Tab screws go
+    head plinth -> tab -> FrontPlate -> ArmFront post; counterbored so the supplied
+    SG90 tab screws (~8 mm) are long enough."""
+    z = zoff_v2(p)
+    out = {k: m.translate((0, 0, z)) for k, m in parts.items()}
+    wx0, wy0, wx1, wy1 = p['window']
+    plinth = box(p['x_left'], d['y_lo'], p['tab_top'], p['wall_out'], d['y_hi'], z + 0.01)
+    plinth -= box(wx0 - 0.25, wy0 - 0.25, -1, wx1 + 0.25, wy1 + 0.25, z + p['base_t'] + 0.7)
+    plinth -= cyl(p['shaft_x'], p['shaft_y'], -1, z + 1, p['boss_r'], 64)
+    # lightening pockets, open to the bed side, 2.4 mm walls; keep solid round the screws
+    w = 2.4
+    for x0, x1, y0, y1 in ((wx1 + 0.25 + w, p['wall_out'] - w, wy0, wy1),
+                           (p['x_left'] + w, p['wall_out'] - w, p['hole_xy'][1][1] + 4.5, d['y_hi'] - w)):
+        if x1 - x0 > 2 and y1 - y0 > 2:
+            plinth -= box(x0, y0, -1, x1, y1, z - 0.0)
+    head = out['head'] + plinth
+    for hx, hy in p['hole_xy']:
+        head -= cyl(hx, hy, -1, 80, 1.15, 24)                               # M2 clearance
+        head -= cyl(hx, hy, p['tab_top'] + p['cbore_floor'], 80, p['cbore_d'] / 2, 32)
+    out['head'] = head
+    return out
+
+
 def mirror_y(m, p):
     return m.mirror((0, 1, 0)).translate((0, 2 * p['axis_y'], 0))
 
@@ -271,6 +309,7 @@ def main():
     ap.add_argument('--shaft-low', action='store_true',
                     help='servo shaft is on the LOW-y side of the window: mirror the set')
     ap.add_argument('--check', action='store_true', help='interference sweep only')
+    ap.add_argument('--v1', action='store_true', help='old v1 set (does NOT fit the real SG90 stack)')
     a = ap.parse_args()
     p = dict(P)
     d = derived(p)
@@ -288,12 +327,15 @@ def main():
         return
     os.makedirs(a.out, exist_ok=True)
     _, parts = build(p, 0.0)
+    parts['pinion'] = make_pinion(p, d)
+    if not a.v1:
+        parts = mount_v2(parts, p, d)
+        print(f"v2: lifted {zoff_v2(p):.1f} mm onto the real SG90 spline; head stands on the servo tabs")
+    ver = 'v1' if a.v1 else 'v2'
     tag = '_shaftlow' if a.shaft_low else ''
-    names = dict(head='GripperSpannerHead_v1', slider='GripperSpannerSlider_v1',
-                 jaw='GripperSpannerJaw_v1', pinion='GripperSpannerPinion_v1')
+    names = {k: f'GripperSpanner{n}_{ver}' for k, n in
+             dict(head='Head', slider='Slider', jaw='Jaw', pinion='Pinion').items()}
     for k, m in parts.items():
-        if k == 'pinion':
-            m = make_pinion(p, d)
         if a.shaft_low and k != 'pinion':
             m = mirror_y(m, p)
         tm = to_trimesh(m)

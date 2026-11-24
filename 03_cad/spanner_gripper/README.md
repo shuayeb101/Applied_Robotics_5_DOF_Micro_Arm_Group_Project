@@ -1,4 +1,9 @@
-# Spanner-inspired gripper (concept + CAD, v1)
+# Spanner-inspired gripper (concept + CAD, v2)
+
+> **v2 (use this): fits the real SG90 stack.** v1 assumed the servo case stuck out only 2.3 mm past the FrontPlate and put the head's base flat on the plate. On the real arm (measured from the supplied `ArmFront` and `FrontPlate` slots and the SG90 datasheets), the case passes **through** the FrontPlate window and the servo **tabs sit on the plate's front face**. Above them: the case top is at 6.8 mm, the round boss reaches 10.8 mm and the spline about 13.5 mm. So the v1 head base sat where the tabs are, and the v1 pinion was ~8 mm below the spline. v1 can't be assembled.
+>
+> v2 (`GripperSpanner*_v2.stl`, made by `spanner_gripper.py` with no flags) keeps the v1 mechanism exactly and lifts it **8.3 mm**, so the pinion sits on the spline just above the boss. The head stands on a **plinth that rests on the servo tabs**: the case and boss pass through the plinth window, and the plinth is hollowed from underneath with 2.4 mm walls. The two head screws are **counterbored**, so the **supplied SG90 tab screws** (~8 mm) reach through 1.5 mm of head, the 2.5 mm tab and the 2 mm plate into the ArmFront post. You don't need longer screws. Every v2 dimension, assembly step and wire path is checked in `../spanner_build/fit_check.py`. The mechanism sections below (1–3a) are unchanged from v1.
+
 
 **Status: designed and checked in CAD only. Not yet printed or tested.** Nothing here
 is a measured result. The trial tables in `08_tests/` are still empty.
@@ -38,6 +43,7 @@ the gear and the front plate.
 - **Heavier:** about 9 cm³ more plastic. At 20 % infill that is roughly 5 g more at the end of the arm. Weigh the printed parts and recheck the arm 2 / swing servo load.
 - **Not centred:** the grasp centre is at `y = 10.75 + gap/2` in plate coordinates. The arm axis is at `y = 17.5`. So the tool-centre offset is **`gap/2 − 6.75` mm** sideways. It is zero for a 13.5 mm object and −6.25 mm for a 1 mm gap. Kinematics must add this offset, or place objects against the fixed jaw (datum) side.
 - **Wider:** 30 mm across, compared with 23.6 mm for the original jaws.
+- **Longer (v2):** the jaw tips are 46.3 mm in front of the FrontPlate (v1: 38 mm), because the mechanism now sits on the real spline. The grasp point (TCP) is 39.3 mm in front of the plate.
 
 ## 3. Concepts considered (for the brief's "two concepts and a justified selection")
 
@@ -76,14 +82,16 @@ nominal geometry; they are not a substitute for printed trials.
 
 | File (`03_cad/stl/`) | Qty | Print orientation | Notes |
 | --- | --- | --- | --- |
-| `GripperSpannerHead_v1.stl` | 1 | back face (z = 0) on the bed | no supports; 3 perimeters |
-| `GripperSpannerSlider_v1.stl` | 1 | bottom face on the bed | teeth stand vertical; 100 % infill |
-| `GripperSpannerJaw_v1.stl` | 1 | **jaw face down** (rotate in the slicer) | no supports |
-| `GripperSpannerPinion_v1.stl` | 1 | flat | 100 % infill; 0.12 mm layers if you can |
+| `GripperSpannerHead_v2.stl` | 1 | plinth face (the face that sits on the servo tabs) on the bed | no supports (the plinth pockets bridge ≤ 10 mm); 3 perimeters |
+| `GripperSpannerSlider_v2.stl` | 1 | bottom face on the bed | teeth stand vertical; 100 % infill |
+| `GripperSpannerJaw_v2.stl` | 1 | **jaw face down** (rotate in the slicer) | no supports |
+| `GripperSpannerPinion_v2.stl` | 1 | flat | 100 % infill; 0.12 mm layers if you can |
 | Original `FrontPlate` | 1 | – | unchanged |
-| M2 countersunk screw, ≈12 mm | 2 | – | replaces the 2 servo/front-plate screws (stack: head 2 + plate 2 + servo ear ≈2.5 + arm) |
+| SG90 tab screws (supplied with the servo) | 2 | – | through the head counterbores, servo tabs and FrontPlate into the ArmFront posts |
 | M2 × 8 screw | 1 | – | jaw to slider (self-tapping into a 1.6 mm pilot hole) |
-| SG90 horn screw | 1 | – | holds the pinion on the spline |
+| SG90 horn screw (supplied) | 1 | – | holds the pinion on the spline |
+
+The servo horns supplied with the SG90s are not used on the gripper: the pinion goes straight onto the spline, as the supplied `GripperGear` does. Keep a single-arm horn spare. If the printed spline bore is too loose, trim a horn to its hub and glue it into the pinion's bore instead.
 
 Gear: module 1, 16 teeth, 20° pressure angle, 0.15 mm backlash per side. The CAD sweep
 shows about 0.2 mm tip clearance and **zero interference** between any two parts at 6
@@ -97,27 +105,26 @@ The script uses a model of the SG90. Measure the real arm and change `P` in
 1. **Which end of the window the servo shaft is at.** Default: the shaft is toward the
    high-y end, at `(-10, 22.85)`, 5.35 mm from the window centre. If it is at the other
    end, run `python3 spanner_gripper.py --shaft-low`. This writes a mirrored set named `*_shaftlow.stl`.
-2. **`servo_top`:** how far the servo case sticks out past the plate's front face (default 2.3 mm).
+2. **`boss_top`:** height of the top of the servo's round boss (where the spline starts) above the FrontPlate's front face, with the servo tabs on the plate (default 10.8 mm, from the datasheet). Measure it with calipers. If it is different, change `boss_top` and regenerate: the whole mechanism moves with it.
 3. **`spline_d`:** size of the pinion bore for a press fit on the spline (default 4.7 mm). Print the pinion first as a test.
 
 ```
 pip install manifold3d trimesh numpy matplotlib
 python3 spanner_gripper.py --check   # interference sweep only
-python3 spanner_gripper.py           # regenerate STLs into ../stl/
+python3 spanner_gripper.py           # regenerate the v2 STLs into ../stl/ (--v1 for the old set)
 python3 render.py                    # regenerate renders/
 python3 simulate.py                  # motion + statics check -> sim/  (~30 s)
 ```
 
 ## 6. Assembly
 
-1. Fit the servo and FrontPlate as before. Use the two long countersunk screws through the
-   **head + plate + servo ears** into the arm. Fit these screws **before** the pinion,
-   because the pinion covers one of them.
-2. Slide the slider into the channel from the open (high-y) end, teeth toward the shaft.
-3. Command the servo to the calibrated **CLOSED** angle. Press the pinion onto the spline
+1. Hold the FrontPlate on the ArmFront end. Push the gripper servo in case-first through the plate window into the ArmFront bay. The tabs end up on the plate's front face, and the wire comes out at the shaft end inside the bay (as in the supplied build).
+2. Put the head on (plinth onto the tabs, case through its window). Drive the two supplied tab screws down the counterbores through head, tab and plate into the ArmFront posts. Fit these screws **before** the pinion, because the pinion covers one of them.
+3. Slide the slider into the channel from the open (high-y) end, teeth toward the shaft.
+4. Command the servo to the calibrated **CLOSED** angle. Press the pinion onto the spline
    so the jaw gap is about 1 mm, then fit the horn screw.
-4. Push the jaw's tenon into the slider socket and fit the M2 × 8 screw.
-5. Sweep CLOSED to OPEN slowly while watching the servo current. Fix any binding first:
+5. Push the jaw's tenon into the slider socket and fit the M2 × 8 screw.
+6. Sweep CLOSED to OPEN slowly while watching the servo current. Fix any binding first:
    ease the dovetail with fine sandpaper.
 
 **Range preset (the spanner adjustment):** to work with larger objects, take off the

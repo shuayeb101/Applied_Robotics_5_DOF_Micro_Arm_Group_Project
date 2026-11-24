@@ -250,7 +250,7 @@ def test_asm(d: am.Design, world: World):
 
     # gripper screw holes line up with the ArmFront holes
     af_holes = np.array([[am.AF_FACE_X, -13.24, 8.0], [am.AF_FACE_X, 14.26, 8.0]])
-    mount = [p for p in d.parts if p.name in ("FrontPlate", "GripperSpannerHead_v1",
+    mount = [p for p in d.parts if p.name in ("FrontPlate", "GripperSpannerHead_v2",
                                                "mini_claw_bottom_plate")]
     clear = []
     for p in mount:

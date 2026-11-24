@@ -12,10 +12,12 @@ holes are unchanged)
     The support polygon becomes a circle: ~90 mm from the axis in EVERY
     direction (2.3 x the old diagonal). The extra plastic sits low and central,
     so it adds restoring moment without adding any load to a servo.
-  + 6 gusset ribs bracing the two thin servo-cradle walls to the disc
-    (the walls are ~1.7 mm thick and 16 mm tall in the original).
-    Every rib stays below the swing and the counterweight pocket with >= 3 mm
-    clearance over a full turn.
+  + a sloped buttress along each of the two thin servo-cradle walls (the walls
+    are ~1.5 mm thick and 16 mm tall in the original). Sloped, not ribbed, so a
+    servo cable dragged round by the swing slides over instead of catching.
+  + a cable lane for the base servo wire: it leaves the SG90 at the shaft end
+    (+x, the open end of the cradle), turns, and runs under 3 low clips to the
+    plate edge on the +y side (lane_side=-1 for the -y side).
   + engraved (0.5 mm) target rings for the pick-and-place test at 60 and 80 mm,
     +/-45 deg, a FRONT arrow and 15-deg rim ticks: repeatable object placement
     for GRIP-05 / TASK-01 without tape marks.
@@ -52,8 +54,13 @@ P = dict(
     target_yaw=(-45.0, 45.0),
     target_d=17.0,      # ring Ø: a 15 mm cube sits inside with 1 mm to spare
     hole_r=84.0, hole_d=3.4, hole_yaw=(22.5, 112.5, 202.5, 292.5),
-    rib_x=(-12.0, -2.0, 8.0),   # along the cradle walls
-    rib_t=2.4, rib_wall_y=8.6, rib_out_y=30.0, rib_top=16.0,
+    # sloped buttress along each cradle wall (x range = the walls); no vertical rib
+    # faces for a dragged servo cable to catch on
+    wedge_x=(-18.0, 7.0), wedge_wall_y=7.6, wedge_out_y=30.0, wedge_top=16.0,
+    # cable lane for the base servo wire: the SG90 wire leaves the case at the
+    # shaft end (+x, open end of the cradle), turns and runs out to one side
+    lane_x=14.0, lane_side=1, clip_y=(30.0, 55.0, 80.0),
+    clip_in_w=6.0, clip_in_h=2.6, clip_len=4.0, clip_wall=1.2,
 )
 
 
@@ -80,17 +87,30 @@ def disc(p):
     return bot + mid + top
 
 
-def rib(x, side, p):
-    """Triangular gusset in the y-z plane against a cradle wall (side = +/-1)."""
-    y0, y1, t, h = p["rib_wall_y"], p["rib_out_y"], p["rib_t"], p["rib_top"]
+def wedge(side, p):
+    """Sloped buttress in the y-z plane, extruded along the cradle wall (side = +/-1)."""
+    y0, y1, h = p["wedge_wall_y"], p["wedge_out_y"], p["wedge_top"]
+    x0, x1 = p["wedge_x"]
     z0 = p["thick"] - 0.01
     tri = [(y0, z0), (y1, z0), (y0, h)]
     if side < 0:
         tri = [(-y, z) for y, z in tri][::-1]
-    cs = Manifold.extrude(CrossSection([tri]), t)          # extruded along +z in its own frame
+    cs = Manifold.extrude(CrossSection([tri]), x1 - x0)
     # map (u, v, w) -> (x = w, y = u, z = v)
-    m = cs.transform(np.array([[0, 0, 1, x - t / 2], [1, 0, 0, 0], [0, 1, 0, 0]], float))
-    return m
+    return cs.transform(np.array([[0, 0, 1, x0], [1, 0, 0, 0], [0, 1, 0, 0]], float))
+
+
+def clips(p):
+    """Low bridge clips that hold the base servo wire flat in its lane."""
+    out = []
+    w, h, L, t = p["clip_in_w"], p["clip_in_h"], p["clip_len"], p["clip_wall"]
+    x, top = p["lane_x"], p["thick"]
+    for y in p["clip_y"]:
+        y = y * p["lane_side"]
+        outer = box(x - w / 2 - t, x + w / 2 + t, y - L / 2, y + L / 2, top - 0.01, top + h + t)
+        inner = box(x - w / 2, x + w / 2, y - L / 2 - 1, y + L / 2 + 1, top - 1, top + h)
+        out.append(outer - inner)
+    return out
 
 
 def ring(cx, cy, d, w, depth, top):
@@ -140,9 +160,10 @@ def holes(p):
 def build(p=P):
     foot = trimesh.load(SRC, force="mesh")
     m = to_manifold(foot) + disc(p)
-    for x in p["rib_x"]:
-        for s in (1, -1):
-            m = m + rib(x, s, p)
+    for s in (1, -1):
+        m = m + wedge(s, p)
+    for c in clips(p):
+        m = m + c
     for c in engravings(p) + holes(p):
         m = m - c
     return to_trimesh(m)

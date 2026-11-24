@@ -26,18 +26,18 @@ fig = plt.figure(figsize=(15, 5.5))
 ax = fig.add_subplot(1, 3, 1)
 for m, c, lab, yc in ((new, "#C44E52", "Foot_v2_wide", -2.0), (old, "#4C72B0", "supplied Foot", -2.0)):
     for ycut, ls in ((yc, "-"),):
-        sec = m.section(plane_origin=(-2.0, 0, 0), plane_normal=(1, 0, 0))
+        sec = m.section(plane_origin=(-5.0, 0, 0), plane_normal=(1, 0, 0))
         for e in sec.discrete:
             ax.plot(e[:, 1], e[:, 2], color=c, lw=1, ls=ls)
     ax.plot([], [], color=c, label=lab)
 ax.set_aspect("equal"); ax.set_ylim(-2, 22); ax.set_xlim(-40, 40); ax.grid(alpha=.3); ax.legend(fontsize=8)
-ax.set_title("Section at x = -2 mm, through the middle gusset pair:\n1.6 mm plate, original 3 mm cross arm, cradle wall + rib")
+ax.set_title("Section at x = -5 mm across the cradle:\n1.6 mm plate, original 3 mm cross arm, cradle walls + buttresses")
 ax.set_xlabel("y (mm)"); ax.set_ylabel("z (mm)")
 ax = fig.add_subplot(1, 3, 2, projection="3d")
 crop = trimesh.boolean.intersection([new, trimesh.creation.box((60, 70, 30), trimesh.transformations.translation_matrix((0, 0, 15)))], engine="manifold")
 shade(ax, crop, np.array([0.80, 0.25, 0.55]))
 ax.set_xlim(-30, 30); ax.set_ylim(-35, 35); ax.set_zlim(0, 30); ax.set_box_aspect((1, 1, .5))
-ax.view_init(25, -30); ax.set_title("Close-up: unchanged servo cradle, 6 gusset ribs")
+ax.view_init(25, -30); ax.set_title("Close-up: unchanged servo cradle, sloped buttresses, wire clips")
 ax = fig.add_subplot(1, 3, 3)
 for m, c, lab in ((new, "#C44E52", "Foot_v2_wide"), (old, "#4C72B0", "supplied Foot")):
     sec = m.section(plane_origin=(0, 0, 0.3), plane_normal=(0, 0, 1))

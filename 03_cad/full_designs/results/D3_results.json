@@ -124,7 +124,7 @@
     "id": "ASM-4",
     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
     "result": "PASS",
-    "detail": "closest approach 2.6 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    "detail": "closest approach 8.7 mm (swing underside assumed 15 mm above the foot top: MEASURE)"
    }
   ],
   "neutral_contacts": [
@@ -141,8 +141,6 @@
    "Foot/servo_base",
    "Swing_v2_counterweight/Swing_v2_counterweight_lid",
    "Swing_v2_counterweight/coins_7x2p",
-   "Swing_v2_counterweight/servo_base",
-   "Swing_v2_counterweight/servo_shoulder",
    "mini_claw_bottom_plate/mini_claw_jaw_left",
    "mini_claw_bottom_plate/mini_claw_jaw_right",
    "mini_claw_bottom_plate/mini_claw_top_plate",
@@ -168,8 +166,8 @@
  "sweep": {
   "poses_swept": 34447,
   "poses_in_servo_windows": 17797,
-  "collision_free": 10058,
-  "collision_free_pct": 56.5,
+  "collision_free": 10335,
+  "collision_free_pct": 58.1,
   "top_collisions": [
    [
     "ArmSpring~Arm",
@@ -185,22 +183,22 @@
    ],
    [
     "Swing_v2_counterweight/servo_wrist",
-    2873
-   ],
-   [
-    "Foot/servo_gripper",
-    2597
+    2808
    ],
    [
     "ArmFront/servo_shoulder",
-    2472
+    2411
+   ],
+   [
+    "ArmSpring/servo_wrist",
+    2405
    ]
   ],
-  "stable_pct_worst_yaw": 84.9,
+  "stable_pct_worst_yaw": 85.2,
   "stable_pct_front": 100.0,
-  "stable_pct_back": 46.3,
+  "stable_pct_back": 46.2,
   "max_stable_forward_reach_any_yaw_mm": 161.3,
-  "stable_pct_worst_yaw_empty": 85.6,
+  "stable_pct_worst_yaw_empty": 85.9,
   "min_margin_mm": -18.2,
   "min_margin_pose": [
    0,
@@ -209,8 +207,8 @@
    15
   ],
   "max_torque_gmm": {
-   "shoulder": 5473,
-   "elbow": 2880,
+   "shoulder": 5470,
+   "elbow": 2879,
    "wrist": 1052
   },
   "max_torque_pct": {
@@ -218,10 +216,10 @@
    "elbow": 16,
    "wrist": 6
   },
-  "max_side_moment_gmm": 8418,
-  "usable_poses": 8541,
+  "max_side_moment_gmm": 8416,
+  "usable_poses": 8808,
   "max_reach_mm": 161.3,
-  "max_reach_table_mm": 160.8
+  "max_reach_table_mm": 159.9
  },
  "pnp": [
   {
@@ -241,9 +239,9 @@
    "reason": "",
    "grasp_z": 7.5,
    "tilt_deg": 30.0,
-   "min_margin_mm": 28.9,
+   "min_margin_mm": 29.1,
    "max_torque_pct": 15,
-   "max_side_gmm": 1564,
+   "max_side_gmm": 1533,
    "surface_z": 0.0
   },
   {
@@ -252,9 +250,9 @@
    "reason": "",
    "grasp_z": 7.5,
    "tilt_deg": 0.0,
-   "min_margin_mm": 34.0,
+   "min_margin_mm": 34.5,
    "max_torque_pct": 17,
-   "max_side_gmm": 852,
+   "max_side_gmm": 778,
    "surface_z": 0.0
   },
   {
@@ -263,9 +261,9 @@
    "reason": "",
    "grasp_z": 7.5,
    "tilt_deg": 0.0,
-   "min_margin_mm": 34.2,
+   "min_margin_mm": 33.8,
    "max_torque_pct": 22,
-   "max_side_gmm": 938,
+   "max_side_gmm": 991,
    "surface_z": 0.0
   },
   {
@@ -274,9 +272,9 @@
    "reason": "",
    "grasp_z": 7.5,
    "tilt_deg": 0.0,
-   "min_margin_mm": 28.1,
-   "max_torque_pct": 26,
-   "max_side_gmm": 1807,
+   "min_margin_mm": 28.0,
+   "max_torque_pct": 27,
+   "max_side_gmm": 1835,
    "surface_z": 0.0
   },
   {
@@ -304,11 +302,11 @@
   30
  ],
  "yaw": {
-  "inertia_gmm2": 663893,
-  "side_moment_straight_out_gmm": 2523,
+  "inertia_gmm2": 663375,
+  "side_moment_straight_out_gmm": 2518,
   "tip_margin_straight_out_worst_yaw_mm": 22.6,
   "tip_margin_home_worst_yaw_mm": 35.5,
-  "side_moment_home_gmm": 634,
+  "side_moment_home_gmm": 636,
   "base_torque_90deg_0.6s_pct": 9.5
  },
  "parts": [
@@ -432,5 +430,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 37.2
+ "runtime_s": 39.1
 }

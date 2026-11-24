@@ -5,6 +5,8 @@
 
 The team has three part redesigns, each on its own branch: two replacement grippers and one swing counterweight. This folder combines them with the 11 supplied parts into **six complete arms**, every valid combination of {original, mini claw, spanner} gripper × {original, counterweight} swing. It then puts each full arm through the same set of simulated tests.
 
+> **Correction (servo fit check):** the tables below were computed with an approximate SG90 model and a swing height of 27.2 mm. A later check against the supplied servo slots and SG90 datasheets put the swing at **33.7 mm** and the servos 2.5 mm further out of their seats. It also showed that the spanner **v1** head can't be assembled on the real servo, so it was replaced by **v2**. `results/*.json`, the renders and the D6 video have been regenerated with the corrected model. The tables below have not: the rankings hold, but the numbers have moved by a few mm or %. Use [`../spanner_build/README.md`](../spanner_build/README.md) for the corrected D6 figures.
+
 **Update: the group chose the spanner gripper with the counterweight.** **D6** is that build on the new wide base (`../wide_base/`, `Foot_v2_wide.stl`). It is simulated with the same tests below, and in more depth in [`../spanner_build/`](../spanner_build/README.md): start there for the chosen build.
 
 ![Comparison of all designs](results/comparison.png)

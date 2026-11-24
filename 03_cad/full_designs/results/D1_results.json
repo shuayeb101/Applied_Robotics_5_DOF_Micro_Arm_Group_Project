@@ -132,7 +132,7 @@
     "id": "ASM-4",
     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
     "result": "PASS",
-    "detail": "closest approach 2.6 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    "detail": "closest approach 8.7 mm (swing underside assumed 15 mm above the foot top: MEASURE)"
    }
   ],
   "neutral_contacts": [
@@ -141,7 +141,6 @@
    "Arm/servo_elbow",
    "Arm/servo_wrist",
    "ArmFront/FrontPlate",
-   "ArmFront/servo_gripper",
    "ArmFront/servo_wrist",
    "ArmSpring/Swing_v2_counterweight",
    "ArmSpring/servo_elbow",
@@ -152,17 +151,18 @@
    "GripperGear/GripperRackBottom",
    "GripperGear/GripperRackTop",
    "GripperGear/GripperRight",
+   "GripperGear/servo_gripper",
    "GripperLeft/GripperRackBottom",
+   "GripperLeft/GripperRackTop",
    "GripperLeft/GripperRight",
    "GripperLeft/servo_gripper",
    "GripperRackBottom/GripperRight",
    "GripperRackBottom/servo_gripper",
+   "GripperRackTop/GripperRight",
    "GripperRackTop/servo_gripper",
    "GripperRight/servo_gripper",
    "Swing_v2_counterweight/Swing_v2_counterweight_lid",
-   "Swing_v2_counterweight/coins_7x2p",
-   "Swing_v2_counterweight/servo_base",
-   "Swing_v2_counterweight/servo_shoulder"
+   "Swing_v2_counterweight/coins_7x2p"
   ]
  },
  "mass": {
@@ -180,8 +180,8 @@
  "sweep": {
   "poses_swept": 34447,
   "poses_in_servo_windows": 17797,
-  "collision_free": 10091,
-  "collision_free_pct": 56.7,
+  "collision_free": 10324,
+  "collision_free_pct": 58.0,
   "top_collisions": [
    [
     "ArmSpring~Arm",
@@ -197,23 +197,23 @@
    ],
    [
     "Swing_v2_counterweight/servo_wrist",
-    2873
+    2808
    ],
    [
     "Foot/servo_gripper",
-    2595
+    2468
    ],
    [
     "ArmFront/servo_shoulder",
-    2472
+    2411
    ]
   ],
-  "stable_pct_worst_yaw": 84.2,
+  "stable_pct_worst_yaw": 84.3,
   "stable_pct_front": 100.0,
-  "stable_pct_back": 50.9,
-  "max_stable_forward_reach_any_yaw_mm": 176.3,
+  "stable_pct_back": 49.8,
+  "max_stable_forward_reach_any_yaw_mm": 184.3,
   "stable_pct_worst_yaw_empty": 85.6,
-  "min_margin_mm": -19.5,
+  "min_margin_mm": -20.2,
   "min_margin_pose": [
    0,
    180,
@@ -221,74 +221,74 @@
    0
   ],
   "max_torque_gmm": {
-   "shoulder": 5702,
-   "elbow": 3078,
-   "wrist": 1213
+   "shoulder": 5795,
+   "elbow": 3173,
+   "wrist": 1309
   },
   "max_torque_pct": {
    "shoulder": 32,
-   "elbow": 17,
+   "elbow": 18,
    "wrist": 7
   },
-  "max_side_moment_gmm": 8647,
-  "usable_poses": 8495,
-  "max_reach_mm": 176.3,
-  "max_reach_table_mm": 175.8
+  "max_side_moment_gmm": 8742,
+  "usable_poses": 8698,
+  "max_reach_mm": 184.3,
+  "max_reach_table_mm": 182.3
  },
  "pnp": [
   {
    "radius_mm": 60,
    "result": "PASS",
    "reason": "",
-   "grasp_z": 10.5,
+   "grasp_z": 7.5,
    "tilt_deg": 0.0,
-   "min_margin_mm": 24.3,
+   "min_margin_mm": 23.2,
    "max_torque_pct": 13,
-   "max_side_gmm": 2216,
+   "max_side_gmm": 2385,
    "surface_z": 0.0
   },
   {
    "radius_mm": 80,
    "result": "PASS",
    "reason": "",
-   "grasp_z": 11.5,
+   "grasp_z": 7.5,
    "tilt_deg": 15.0,
-   "min_margin_mm": 30.9,
+   "min_margin_mm": 29.6,
    "max_torque_pct": 15,
-   "max_side_gmm": 1287,
+   "max_side_gmm": 1472,
    "surface_z": 0.0
   },
   {
    "radius_mm": 100,
    "result": "PASS",
    "reason": "",
-   "grasp_z": 11.5,
+   "grasp_z": 7.5,
    "tilt_deg": 15.0,
-   "min_margin_mm": 34.9,
-   "max_torque_pct": 21,
-   "max_side_gmm": 828,
+   "min_margin_mm": 35.6,
+   "max_torque_pct": 20,
+   "max_side_gmm": 741,
    "surface_z": 0.0
   },
   {
    "radius_mm": 120,
    "result": "PASS",
    "reason": "",
-   "grasp_z": 11.5,
-   "tilt_deg": 45.0,
-   "min_margin_mm": 35.8,
-   "max_torque_pct": 20,
-   "max_side_gmm": 772,
+   "grasp_z": 7.5,
+   "tilt_deg": 30.0,
+   "min_margin_mm": 33.6,
+   "max_torque_pct": 22,
+   "max_side_gmm": 1029,
    "surface_z": 0.0
   },
   {
    "radius_mm": 140,
-   "result": "FAIL",
-   "reason": "cannot reach 30 mm above the object",
-   "grasp_z": 11.5,
-   "tilt_deg": null,
-   "min_margin_mm": null,
-   "max_torque_pct": null,
-   "max_side_gmm": null,
+   "result": "PASS",
+   "reason": "",
+   "grasp_z": 7.5,
+   "tilt_deg": 45.0,
+   "min_margin_mm": 30.1,
+   "max_torque_pct": 25,
+   "max_side_gmm": 1537,
    "surface_z": 0.0
   },
   {
@@ -316,12 +316,12 @@
   0
  ],
  "yaw": {
-  "inertia_gmm2": 692019,
-  "side_moment_straight_out_gmm": 2758,
-  "tip_margin_straight_out_worst_yaw_mm": 21.1,
-  "tip_margin_home_worst_yaw_mm": 34.5,
-  "side_moment_home_gmm": 772,
-  "base_torque_90deg_0.6s_pct": 9.9
+  "inertia_gmm2": 707271,
+  "side_moment_straight_out_gmm": 2852,
+  "tip_margin_straight_out_worst_yaw_mm": 20.4,
+  "tip_margin_home_worst_yaw_mm": 34.7,
+  "side_moment_home_gmm": 741,
+  "base_torque_90deg_0.6s_pct": 10.1
  },
  "parts": [
   {
@@ -451,5 +451,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 37.5
+ "runtime_s": 39.0
 }

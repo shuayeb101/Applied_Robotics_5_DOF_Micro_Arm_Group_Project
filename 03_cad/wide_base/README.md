@@ -12,7 +12,8 @@
 | **Supplied Foot kept exactly** (boolean check: 0.00 mm³ of the original removed) | Base servo cradle, screw ears and cross arms are unchanged, so the servo fits as before |
 | **Ø180 × 1.6 mm disc** round the cross arms | The support polygon becomes a circle: the tipping edge is **~90 mm** from the axis in **every** direction (2.3 × the old diagonal). The plastic sits low and on the axis, so it adds stability without loading any servo |
 | **Plate only 1.6 mm thick** (cross arms still stand at 3 mm) | A 3 mm plate blocked the 100 mm pick in simulation: the spanner head's low back corner hit its edge. At 1.6 mm it clears |
-| **6 gusset ribs** (2.4 mm) bracing the two cradle walls to the plate | Stiffens the base servo mount against the side load from the arm. All ribs stay ≥ 3 mm below the swing and the counterweight pocket over a full turn |
+| **Sloped buttress along each cradle wall** (from the wall top at 16 mm down to the plate 22 mm out) | Stiffens the base servo mount against the side load from the arm. It is a ramp, not separate ribs, so a servo wire dragged round by the swing slides over it instead of catching. It stays well below the swing and the counterweight over a full turn |
+| **Wire lane with 3 low clips** (6 × 2.6 mm opening) | The SG90 wire leaves the case at the **shaft end**, which is the open +x end of the cradle (see the photos of the supplied foot). It turns and runs under the clips to the plate edge on the +y side, flat and clear of the swing. Set `lane_side=-1` for the −y side |
 | **Engraved targets** (0.5 mm deep): Ø17 rings at 60 and 80 mm, ±45°; FRONT arrow on +x; rim ticks every 15° (long every 45°) | Repeatable object placement for the pick-and-place and datum-jaw tests (GRIP-05, TASK-01) without tape marks |
 | **4 × Ø3.4 mm holes** at r = 84 mm | Screw the base to a board, or clamp it. Clamped, it cannot tip at all |
 
@@ -23,7 +24,7 @@
 | Setting | Value |
 | --- | --- |
 | Bed | ≥ 180 × 180 mm. For a smaller bed: `python3 make_wide_foot.py --radius 80` (Ø160; drops the 80 mm targets) |
-| Orientation | Flat, as exported (plate on the bed). No supports: the gusset ribs are 45°-ish triangles and the cradle is unchanged |
+| Orientation | Flat, as exported (plate on the bed). No supports: the buttresses are ramps, the clips bridge 6 mm, the cradle is unchanged |
 | Layers | 0.2 mm. The plate is 8 layers: print it solid (it is mostly top/bottom skin anyway) |
 | Bed adhesion | Brim or a clean PEI sheet: a 180 mm thin disc can lift at the edge (warp) |
 | Material | ~47 cm³ solid, about 55 g PLA estimated. Weigh the print and update `arm_model.py` |
@@ -62,6 +63,6 @@ Parameters (radius, plate thickness, rib positions, targets, holes) are in `P` a
 ## Measure / check on the real build
 
 1. The plate lies flat on the bench (no warp).
-2. The base servo's cable: it now runs across the plate top. Tape it down clear of the rim ticks and targets, or route it out the back.
+2. The base servo's wire: push it under the 3 clips. Leave a little slack between the cradle and the first clip so the servo can be lifted out.
 3. Swing height above the foot top (the simulation assumes 8 mm, same as for the counterweight).
 4. Weigh the printed foot.

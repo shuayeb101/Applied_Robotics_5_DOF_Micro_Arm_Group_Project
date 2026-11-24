@@ -30,7 +30,11 @@ CLAW = os.path.join(REPO, "03_cad", "mini_claw", "stl")
 L_LINK = 49.5          # pivot -> next servo shaft, ArmSpring and Arm (STL: 49.5)
 PIVOT_Z = 8.0          # pivot height in every link's own frame
 SHOULDER_Z = 12.9      # shoulder axis above the swing's underside (STL)
-SWING_Z = 27.2         # MEASURE: swing underside above the table (foot top 19.2 + 8)
+# Swing underside above the table. Set by the base servo stack, measured from the
+# supplied Foot slot and the SG90 datasheets (see SG90 below): tab underside on the
+# cradle top (19.2) -> case bottom 3.3 -> horn plate (under the swing disc) top at
+# case bottom + 30.4 = 33.7. MEASURE on the real build.
+SWING_Z = 33.7
 AF_FACE_X = 43.3       # ArmFront end face (FrontPlate screws into it)
 
 # material and hardware
@@ -91,6 +95,7 @@ def rot(rows, t=(0, 0, 0)):
 # two end-face holes at y = -13.24 / 14.26, z = 8).
 FPS_TO_AF = rot([[0, 0, 1], [0, 1, 0], [-1, 0, 0]], (AF_FACE_X + 2.0, -16.95, -2.0))
 FP_STL_TO_FPS = tr(0, 0, -2.0)              # FrontPlate.stl sits at z 0..2
+GRIP_SPLINE_Z = 10.8   # SG90 boss top above the FrontPlate front face (tabs on the plate)
 # Mini claw frame: servo shaft at the origin, plate long axis = x.
 # Rotating +90 deg about z puts its two holes on the FrontPlate holes.
 CLAW_TO_FPS = rot([[0, -1, 0], [1, 0, 0], [0, 0, 1]], (-10.0, 23.3, 0.0))
@@ -101,27 +106,46 @@ FLIP_X = rot([[1, 0, 0], [0, -1, 0], [0, 0, -1]], (0, 2 * HOLE_MID_Y, 2 * PIVOT_
 
 
 # -------------------------------------------------------------- SG90 model
+# Datasheets (Luxorparts 87897; TowerPro SG90): case 22.2-22.8 x 11.8-12.4, tabs
+# 32.0-32.2 long, tab underside 15.6-16 above the case bottom, case + boss 26.7,
+# horn top ~31. Checked against every supplied slot: 23.5 mm long, 12.6 mm wide,
+# 16.2 mm from the tab seat to the floor / back wall. Values below are the
+# largest of the datasheets (worst case for clearance).
+SG90 = dict(case_l=22.8, case_w=12.4, tab_l=32.2, tab_t=2.5, tab_h=15.9,   # tab underside above case bottom
+            case_top=22.7, boss_r=5.9, boss_top=26.7, spline_r=2.4, spline_top=29.4,
+            shaft_from_end=5.9, wire_w=3.8, wire_t=1.4, wire_h=(1.0, 5.0))
+
+
 def sg90_mesh():
-    """SG90 envelope. Origin on the shaft axis at the TOP of the mounting tabs,
-    +z = shaft direction, +x = along the body (shaft near the +x end)."""
-    body = trimesh.creation.box((22.5, 12.2, 22.7))
-    body.apply_translation((-5.35, 0, 4.3 - 22.7 / 2))
-    tabs = trimesh.creation.box((32.2, 12.2, 2.5))
-    tabs.apply_translation((-5.35, 0, -1.25))
-    dome = trimesh.creation.cylinder(radius=5.9, height=4.0, sections=24)
-    dome.apply_translation((0, 0, 4.3 + 2.0))
-    return trimesh.util.concatenate([body, tabs, dome])
+    """SG90 envelope. Origin on the shaft axis in the plane of the tab UNDERSIDE
+    (the face that rests on the slot), +z = shaft direction, +x = along the body
+    towards the shaft end. Includes boss and spline, not the horn."""
+    g = SG90
+    cx = g["shaft_from_end"] - g["case_l"] / 2           # case centre x (shaft at 0)
+    zb = -g["tab_h"]                                      # case bottom
+    body = trimesh.creation.box((g["case_l"], g["case_w"], g["case_top"]))
+    body.apply_translation((cx, 0, zb + g["case_top"] / 2))
+    tabs = trimesh.creation.box((g["tab_l"], g["case_w"], g["tab_t"]))
+    tabs.apply_translation((cx, 0, g["tab_t"] / 2))
+    boss = trimesh.creation.cylinder(radius=g["boss_r"], height=g["boss_top"] - g["case_top"], sections=24)
+    boss.apply_translation((0, 0, zb + (g["case_top"] + g["boss_top"]) / 2))
+    spl = trimesh.creation.cylinder(radius=g["spline_r"], height=g["spline_top"] - g["boss_top"], sections=16)
+    spl.apply_translation((0, 0, zb + (g["boss_top"] + g["spline_top"]) / 2))
+    return trimesh.util.concatenate([body, tabs, boss, spl])
 
 
-SERVO_BODY_COM = np.array([-5.35, 0.0, 4.3 - 22.7 / 2])
+SERVO_BODY_COM = np.array([SG90["shaft_from_end"] - SG90["case_l"] / 2, 0.0,
+                           -SG90["tab_h"] + SG90["case_top"] / 2])
 
 # where each servo sits, in its mount part's frame (x_axis, z_axis = shaft)
 SERVO_MOUNTS = {
-    # name: (parent link, origin, body x axis, shaft axis)
+    # name: (parent link, origin = shaft axis in the tab-seat plane, body x axis, shaft axis)
+    # tab seats measured from the STLs: Foot cradle top z 19.2; Swing / ArmSpring /
+    # Arm post faces y 4.7 (back wall y -11.5, floor z 6.6 / 1.7)
     "servo_base": ("foot", (0, 0, 19.2), (1, 0, 0), (0, 0, 1)),
-    "servo_shoulder": ("swing", (0, 4.6, SHOULDER_Z), (1, 0, 0), (0, 1, 0)),
-    "servo_elbow": ("link1", (L_LINK, 5.0, PIVOT_Z), (1, 0, 0), (0, 1, 0)),
-    "servo_wrist": ("link2", (L_LINK, 5.0, PIVOT_Z), (1, 0, 0), (0, 1, 0)),
+    "servo_shoulder": ("swing", (0, 4.7, SHOULDER_Z), (1, 0, 0), (0, 1, 0)),
+    "servo_elbow": ("link1", (L_LINK, 4.7, PIVOT_Z), (1, 0, 0), (0, 1, 0)),
+    "servo_wrist": ("link2", (L_LINK, 4.7, PIVOT_Z), (1, 0, 0), (0, 1, 0)),
 }
 
 
@@ -201,21 +225,23 @@ def gripper_original():
     a = FPS_TO_AF
     parts = [Part("FrontPlate", "tool", load(f"{BASE}/FrontPlate.stl", a @ FP_STL_TO_FPS),
                   f"{BASE}/FrontPlate.stl", extra_mass=2 * M2_MASS)]
+    # gear pressed on the spline, just above the boss (FPs z 10.8); racks level with it
+    gz = GRIP_SPLINE_Z
     parts.append(Part("GripperGear", "tool",
-                      load(f"{BASE}/GripperGear.stl", a @ tr(-10, 22.85, 2.8)),
+                      load(f"{BASE}/GripperGear.stl", a @ tr(-10, 22.85, gz)),
                       f"{BASE}/GripperGear.stl"))
     for nm, dx in (("GripperRackTop", -6.5), ("GripperRackBottom", 6.5)):
-        xf = a @ tr(-10 + dx - 0.55, 22.85 - 15, 2.3)
+        xf = a @ tr(-10 + dx - 0.55, 22.85 - 15, gz - 0.5)
         if dx > 0:
-            xf = a @ tr(-10 + dx + 0.55, 22.85 + 15, 2.3) @ rz(180)
+            xf = a @ tr(-10 + dx + 0.55, 22.85 + 15, gz - 0.5) @ rz(180)
         parts.append(Part(nm, "tool", load(f"{BASE}/{nm}.stl", xf), f"{BASE}/{nm}.stl"))
     jaw = rot([[0, 0, -1], [0, 1, 0], [1, 0, 0]])   # jaw x -> forward, jaw z -> across
     for nm in ("GripperLeft", "GripperRight"):
-        xf = a @ tr(-4.25, 22.85 - 11.8, 2.0) @ jaw
+        xf = a @ tr(-4.25, 22.85 - 11.8, gz - 8.0) @ jaw
         parts.append(Part(nm, "tool", load(f"{BASE}/{nm}.stl", xf), f"{BASE}/{nm}.stl"))
     gs = servo_part("servo_gripper", "tool",
-                    a @ frame_from_axes((-10, 22.85, -2.0), (0, 1, 0), (0, 0, 1)))
-    tcp = trimesh.transform_points([(-10, 22.85, 32.0)], a)[0]
+                    a @ frame_from_axes((-10, 22.85, 0.0), (0, 1, 0), (0, 0, 1)))
+    tcp = trimesh.transform_points([(-10, 22.85, 32.0 + gz - 2.8)], a)[0]
     tool_axis = a[:3, :3] @ np.array([0, 0, 1.0])
     info = dict(name="Original rack-and-pinion", tcp=tcp, tool_axis=tool_axis,
                 opening_mm=(0.0, 18.8), servo_travel_deg=120,
@@ -224,17 +250,20 @@ def gripper_original():
     return parts + [gs], info
 
 
+SPANNER_ZOFF = 8.3     # v2 lift (spanner_gripper.py zoff_v2): pinion on the real spline
+
+
 def gripper_spanner(gap=13.5):
     a = FPS_TO_AF
     parts = [Part("FrontPlate", "tool", load(f"{BASE}/FrontPlate.stl", a @ FP_STL_TO_FPS),
                   f"{BASE}/FrontPlate.stl")]
-    for nm, hw in (("GripperSpannerHead_v1", 2 * M2_MASS), ("GripperSpannerSlider_v1", 0),
-                   ("GripperSpannerJaw_v1", M2_MASS), ("GripperSpannerPinion_v1", 0)):
+    for nm, hw in (("GripperSpannerHead_v2", 2 * M2_MASS), ("GripperSpannerSlider_v2", 0),
+                   ("GripperSpannerJaw_v2", M2_MASS), ("GripperSpannerPinion_v2", 0)):
         parts.append(Part(nm, "tool", load(f"{NEW}/{nm}.stl", a), f"{NEW}/{nm}.stl",
                           status="new", extra_mass=hw))
     gs = servo_part("servo_gripper", "tool",
-                    a @ frame_from_axes((-10, 22.85, -2.0), (0, 1, 0), (0, 0, 1)))
-    tcp = trimesh.transform_points([(-10, 10.75 + gap / 2, 31.0)], a)[0]
+                    a @ frame_from_axes((-10, 22.85, 0.0), (0, 1, 0), (0, 0, 1)))
+    tcp = trimesh.transform_points([(-10, 10.75 + gap / 2, 31.0 + SPANNER_ZOFF)], a)[0]
     info = dict(name="Spanner (fixed datum jaw + sliding jaw)", tcp=tcp,
                 tool_axis=a[:3, :3] @ np.array([0, 0, 1.0]),
                 opening_mm=(1.0, 20.5), servo_travel_deg=140,
@@ -254,7 +283,7 @@ def gripper_mini_claw():
         parts.append(Part(nm, "tool", load(f"{CLAW}/{nm}.stl", full), f"{CLAW}/{nm}.stl",
                           status="new", extra_mass=hw))
     gs = servo_part("servo_gripper", "tool",
-                    full @ frame_from_axes((0, 0, -2.0), (1, 0, 0), (0, 0, 1)))
+                    full @ frame_from_axes((0, 0, -4.5), (1, 0, 0), (0, 0, 1)))   # mini claw: interface not re-verified
     tcp = trimesh.transform_points([(0, 24.0, 12.5)], full)[0]
     tool_axis = full[:3, :3] @ np.array([0, 1.0, 0])
     info = dict(name="Mini geared claw (30 deg curled tips)", tcp=tcp, tool_axis=tool_axis,

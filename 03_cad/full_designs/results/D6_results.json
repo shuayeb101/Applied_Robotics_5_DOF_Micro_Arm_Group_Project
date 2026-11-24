@@ -16,9 +16,9 @@
     "part": "Foot_v2_wide",
     "status": "modified",
     "watertight": true,
-    "volume_cm3": 47.14,
-    "print_mass_g": 45.37,
-    "solid_mass_g": 58.46
+    "volume_cm3": 52.45,
+    "print_mass_g": 45.75,
+    "solid_mass_g": 65.03
    },
    {
     "part": "Swing_v2_counterweight",
@@ -69,15 +69,15 @@
     "solid_mass_g": 1.38
    },
    {
-    "part": "GripperSpannerHead_v1",
+    "part": "GripperSpannerHead_v2",
     "status": "new",
     "watertight": true,
-    "volume_cm3": 8.73,
-    "print_mass_g": 6.07,
-    "solid_mass_g": 10.82
+    "volume_cm3": 12.81,
+    "print_mass_g": 8.42,
+    "solid_mass_g": 15.88
    },
    {
-    "part": "GripperSpannerSlider_v1",
+    "part": "GripperSpannerSlider_v2",
     "status": "new",
     "watertight": true,
     "volume_cm3": 1.3,
@@ -85,7 +85,7 @@
     "solid_mass_g": 1.61
    },
    {
-    "part": "GripperSpannerJaw_v1",
+    "part": "GripperSpannerJaw_v2",
     "status": "new",
     "watertight": true,
     "volume_cm3": 3.27,
@@ -93,7 +93,7 @@
     "solid_mass_g": 4.06
    },
    {
-    "part": "GripperSpannerPinion_v1",
+    "part": "GripperSpannerPinion_v2",
     "status": "new",
     "watertight": true,
     "volume_cm3": 0.97,
@@ -112,7 +112,7 @@
     "id": "ASM-2",
     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
     "result": "PASS",
-    "detail": "FrontPlate: hole clear; FrontPlate: hole clear; GripperSpannerHead_v1: hole clear; GripperSpannerHead_v1: hole clear"
+    "detail": "FrontPlate: hole clear; FrontPlate: hole clear; GripperSpannerHead_v2: hole clear; GripperSpannerHead_v2: hole clear"
    },
    {
     "id": "ASM-3",
@@ -130,7 +130,7 @@
     "id": "ASM-4",
     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
     "result": "PASS",
-    "detail": "closest approach 2.6 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    "detail": "closest approach 8.7 mm (swing underside assumed 15 mm above the foot top: MEASURE)"
    }
   ],
   "neutral_contacts": [
@@ -139,52 +139,49 @@
    "Arm/servo_elbow",
    "Arm/servo_wrist",
    "ArmFront/FrontPlate",
-   "ArmFront/servo_gripper",
    "ArmFront/servo_wrist",
    "ArmSpring/Swing_v2_counterweight",
    "ArmSpring/servo_elbow",
    "ArmSpring/servo_shoulder",
    "Foot_v2_wide/servo_base",
-   "FrontPlate/GripperSpannerHead_v1",
    "FrontPlate/servo_gripper",
-   "GripperSpannerHead_v1/GripperSpannerSlider_v1",
-   "GripperSpannerJaw_v1/GripperSpannerSlider_v1",
-   "GripperSpannerPinion_v1/servo_gripper",
+   "GripperSpannerHead_v2/GripperSpannerSlider_v2",
+   "GripperSpannerHead_v2/servo_gripper",
+   "GripperSpannerJaw_v2/GripperSpannerSlider_v2",
+   "GripperSpannerPinion_v2/servo_gripper",
    "Swing_v2_counterweight/Swing_v2_counterweight_lid",
-   "Swing_v2_counterweight/coins_7x2p",
-   "Swing_v2_counterweight/servo_base",
-   "Swing_v2_counterweight/servo_shoulder"
+   "Swing_v2_counterweight/coins_7x2p"
   ]
  },
  "mass": {
-  "printed_g": 85.1,
-  "printed_solid_g": 119.2,
+  "printed_g": 87.8,
+  "printed_solid_g": 130.8,
   "hardware_g": 99.2,
-  "total_g": 184.3,
-  "moving_g": 129.3,
-  "beyond_shoulder_g": 57.4,
-  "tool_g": 26.6,
-  "print_volume_cm3": 96.1,
+  "total_g": 187.0,
+  "moving_g": 131.7,
+  "beyond_shoulder_g": 59.8,
+  "tool_g": 29.0,
+  "print_volume_cm3": 105.49,
   "printed_parts": 11,
   "new_or_modified_parts": 7
  },
  "sweep": {
   "poses_swept": 34447,
   "poses_in_servo_windows": 17797,
-  "collision_free": 9846,
-  "collision_free_pct": 55.3,
+  "collision_free": 9925,
+  "collision_free_pct": 55.8,
   "top_collisions": [
    [
     "ArmSpring~Arm",
     4329
    ],
    [
-    "Foot_v2_wide/ArmFront",
-    3862
+    "Foot_v2_wide/GripperSpannerHead_v2",
+    3559
    ],
    [
-    "Foot_v2_wide/GripperSpannerHead_v1",
-    3372
+    "Foot_v2_wide/ArmFront",
+    3169
    ],
    [
     "Swing_v2_counterweight/ArmFront",
@@ -196,15 +193,15 @@
    ],
    [
     "Foot_v2_wide/servo_gripper",
-    3046
+    2914
    ]
   ],
   "stable_pct_worst_yaw": 100.0,
   "stable_pct_front": 100.0,
   "stable_pct_back": 100.0,
-  "max_stable_forward_reach_any_yaw_mm": 175.3,
+  "max_stable_forward_reach_any_yaw_mm": 183.6,
   "stable_pct_worst_yaw_empty": 100.0,
-  "min_margin_mm": 39.4,
+  "min_margin_mm": 37.3,
   "min_margin_pose": [
    0,
    180,
@@ -212,19 +209,19 @@
    0
   ],
   "max_torque_gmm": {
-   "shoulder": 6538,
-   "elbow": 3647,
-   "wrist": 1515
+   "shoulder": 7054,
+   "elbow": 4048,
+   "wrist": 1800
   },
   "max_torque_pct": {
-   "shoulder": 36,
-   "elbow": 20,
-   "wrist": 8
+   "shoulder": 39,
+   "elbow": 22,
+   "wrist": 10
   },
-  "max_side_moment_gmm": 9483,
-  "usable_poses": 9846,
-  "max_reach_mm": 175.3,
-  "max_reach_table_mm": 174.8
+  "max_side_moment_gmm": 10000,
+  "usable_poses": 9925,
+  "max_reach_mm": 183.6,
+  "max_reach_table_mm": 181.6
  },
  "pnp": [
   {
@@ -233,9 +230,9 @@
    "reason": "",
    "grasp_z": 9.1,
    "tilt_deg": 0.0,
-   "min_margin_mm": 78.9,
-   "max_torque_pct": 15,
-   "max_side_gmm": 1978,
+   "min_margin_mm": 78.6,
+   "max_torque_pct": 16,
+   "max_side_gmm": 2029,
    "surface_z": 1.6
   },
   {
@@ -244,9 +241,9 @@
    "reason": "",
    "grasp_z": 14.1,
    "tilt_deg": 15.0,
-   "min_margin_mm": 84.6,
+   "min_margin_mm": 84.5,
    "max_torque_pct": 17,
-   "max_side_gmm": 916,
+   "max_side_gmm": 933,
    "surface_z": 1.6
   },
   {
@@ -255,9 +252,9 @@
    "reason": "",
    "grasp_z": 14.5,
    "tilt_deg": 15.0,
-   "min_margin_mm": 83.2,
+   "min_margin_mm": 82.8,
    "max_torque_pct": 24,
-   "max_side_gmm": 1307,
+   "max_side_gmm": 1425,
    "surface_z": 0.0
   },
   {
@@ -307,12 +304,12 @@
   0
  ],
  "yaw": {
-  "inertia_gmm2": 822715,
-  "side_moment_straight_out_gmm": 3594,
-  "tip_margin_straight_out_worst_yaw_mm": 70.5,
-  "tip_margin_home_worst_yaw_mm": 85.8,
-  "side_moment_home_gmm": 691,
-  "base_torque_90deg_0.6s_pct": 11.7
+  "inertia_gmm2": 912910,
+  "side_moment_straight_out_gmm": 4109,
+  "tip_margin_straight_out_worst_yaw_mm": 68.0,
+  "tip_margin_home_worst_yaw_mm": 86.8,
+  "side_moment_home_gmm": 475,
+  "base_torque_90deg_0.6s_pct": 13.0
  },
  "parts": [
   {
@@ -320,7 +317,7 @@
    "link": "foot",
    "status": "modified",
    "source": "03_cad/stl/Foot_v2_wide.stl",
-   "mass_g": 45.37
+   "mass_g": 45.75
   },
   {
    "name": "Swing_v2_counterweight",
@@ -400,31 +397,31 @@
    "mass_g": 1.19
   },
   {
-   "name": "GripperSpannerHead_v1",
+   "name": "GripperSpannerHead_v2",
    "link": "tool",
    "status": "new",
-   "source": "03_cad/stl/GripperSpannerHead_v1.stl",
-   "mass_g": 6.67
+   "source": "03_cad/stl/GripperSpannerHead_v2.stl",
+   "mass_g": 9.02
   },
   {
-   "name": "GripperSpannerSlider_v1",
+   "name": "GripperSpannerSlider_v2",
    "link": "tool",
    "status": "new",
-   "source": "03_cad/stl/GripperSpannerSlider_v1.stl",
+   "source": "03_cad/stl/GripperSpannerSlider_v2.stl",
    "mass_g": 1.04
   },
   {
-   "name": "GripperSpannerJaw_v1",
+   "name": "GripperSpannerJaw_v2",
    "link": "tool",
    "status": "new",
-   "source": "03_cad/stl/GripperSpannerJaw_v1.stl",
+   "source": "03_cad/stl/GripperSpannerJaw_v2.stl",
    "mass_g": 2.36
   },
   {
-   "name": "GripperSpannerPinion_v1",
+   "name": "GripperSpannerPinion_v2",
    "link": "tool",
    "status": "new",
-   "source": "03_cad/stl/GripperSpannerPinion_v1.stl",
+   "source": "03_cad/stl/GripperSpannerPinion_v2.stl",
    "mass_g": 0.85
   },
   {
@@ -435,5 +432,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 40.0
+ "runtime_s": 39.9
 }

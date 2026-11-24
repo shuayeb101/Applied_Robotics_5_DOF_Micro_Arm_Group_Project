@@ -1,0 +1,327 @@
+{
+ "self_test": {
+  "base_1mm_low": 1.0,
+  "elbow_1mm_into_wall": 1.0
+ },
+ "fit": [
+  {
+   "servo": "servo_base",
+   "part": "Foot_v2_wide",
+   "status": "modified",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_shoulder",
+   "part": "Swing_v2_counterweight",
+   "status": "modified",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_shoulder",
+   "part": "Swing_v2_counterweight_lid",
+   "status": "new",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_elbow",
+   "part": "ArmSpring",
+   "status": "original",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_wrist",
+   "part": "Arm",
+   "status": "original",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_gripper",
+   "part": "ArmFront",
+   "status": "original",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_gripper",
+   "part": "FrontPlate",
+   "status": "original",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_gripper",
+   "part": "GripperSpannerHead_v2",
+   "status": "new",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_gripper",
+   "part": "GripperSpannerSlider_v2",
+   "status": "new",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_gripper",
+   "part": "GripperSpannerJaw_v2",
+   "status": "new",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_gripper",
+   "part": "GripperSpannerPinion_v2",
+   "status": "new",
+   "depth_mm": 0.03,
+   "result": "contact"
+  }
+ ],
+ "assembly": [
+  {
+   "step": 1,
+   "part": "base SG90 -> Foot_v2_wide cradle",
+   "how": "lowered in from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 2,
+   "part": "base tab screw at x=-19.5",
+   "how": "screwdriver from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 2,
+   "part": "base tab screw at x=8.5",
+   "how": "screwdriver from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 3,
+   "part": "Swing_v2_counterweight -> base spline",
+   "how": "lowered onto the horn",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 4,
+   "part": "shoulder SG90 -> swing bay",
+   "how": "lowered in from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 4,
+   "part": "shoulder tab screw at x=-19.0",
+   "how": "screwdriver along the shaft axis (+y)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 4,
+   "part": "shoulder tab screw at x=8.0",
+   "how": "screwdriver along the shaft axis (+y)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 5,
+   "part": "7 x 2p coins -> pocket",
+   "how": "dropped in from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 5,
+   "part": "counterweight lid",
+   "how": "placed from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 5,
+   "part": "counterweight lid screw (x = -30), whole arm fitted at HOME",
+   "how": "screwdriver from above",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "coins can be changed without dismantling the arm"
+  },
+  {
+   "step": 6,
+   "part": "gripper SG90 -> FrontPlate window -> ArmFront bay",
+   "how": "pushed in case-first",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 7,
+   "part": "GripperSpannerHead_v2 -> onto the servo tabs",
+   "how": "pushed on along the shaft",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 7,
+   "part": "head/tab screw at FrontPlate (-10.0, 3.75)",
+   "how": "screwdriver down the counterbore",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "stack: 1.5 head floor + 2.5 tab + 2 plate, then 3.1 mm into the ArmFront post: the supplied ~8 mm SG90 tab screw is long enough"
+  },
+  {
+   "step": 7,
+   "part": "head/tab screw at FrontPlate (-10.0, 31.25)",
+   "how": "screwdriver down the counterbore",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "stack: 1.5 head floor + 2.5 tab + 2 plate, then 3.1 mm into the ArmFront post: the supplied ~8 mm SG90 tab screw is long enough"
+  },
+  {
+   "step": 8,
+   "part": "GripperSpannerSlider_v2 -> dovetail",
+   "how": "slid in from the open end",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 9,
+   "part": "GripperSpannerPinion_v2 -> spline",
+   "how": "pressed on along the shaft",
+   "worst_mm": 0.03,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 9,
+   "part": "pinion horn screw",
+   "how": "screwdriver along the shaft",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  },
+  {
+   "step": 10,
+   "part": "GripperSpannerJaw_v2 -> slider tenon",
+   "how": "pushed on along the shaft",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": ""
+  }
+ ],
+ "wires": [
+  {
+   "check": "servo_base: wire exit corridor (12 mm straight out of the shaft-end face)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "supplied parts alone: clear"
+  },
+  {
+   "check": "servo_shoulder: wire exit corridor (12 mm straight out of the shaft-end face)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "as supplied, Swing already turns the wire (it bends round a 0.9 mm lip in the original build too); no new material in the way"
+  },
+  {
+   "check": "servo_elbow: wire exit corridor (12 mm straight out of the shaft-end face)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "as supplied, ArmSpring already turns the wire (it bends round a 1.2 mm lip in the original build too); no new material in the way"
+  },
+  {
+   "check": "servo_wrist: wire exit corridor (12 mm straight out of the shaft-end face)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "as supplied, Arm already turns the wire (it bends round a 1.2 mm lip in the original build too); no new material in the way"
+  },
+  {
+   "check": "servo_gripper: wire exit corridor (12 mm straight out of the shaft-end face)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "as supplied, ArmFront already turns the wire (it bends round a 2.2 mm lip in the original build too); no new material in the way"
+  },
+  {
+   "check": "base wire: lane from the cradle exit, under 3 clips, to the plate edge",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK"
+  },
+  {
+   "check": "swing + counterweight turning over the base wire (wire with 4 mm slack loop)",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "lowest swing part is 12.2 mm above the top of a 4 mm wire loop"
+  },
+  {
+   "check": "arm wire bundle drop zone (+x end of the swing) vs counterweight pocket",
+   "worst_mm": 0.0,
+   "blocked_by": "",
+   "result": "OK",
+   "note": "counterweight stays 45 mm from the bundle: it is on the far (-x) side and turns with the swing"
+  }
+ ],
+ "clash_threshold_mm": 0.3,
+ "sg90": {
+  "case_l": 22.8,
+  "case_w": 12.4,
+  "tab_l": 32.2,
+  "tab_t": 2.5,
+  "tab_h": 15.9,
+  "case_top": 22.7,
+  "boss_r": 5.9,
+  "boss_top": 26.7,
+  "spline_r": 2.4,
+  "spline_top": 29.4,
+  "shaft_from_end": 5.9,
+  "wire_w": 3.8,
+  "wire_t": 1.4,
+  "wire_h": [
+   1.0,
+   5.0
+  ]
+ },
+ "swing_z": 33.7
+}
