@@ -387,6 +387,12 @@ if (part == "top_plate")     translate([0,0,-zt]) top_plate_3d();
 if (part == "plate_2d")      bottom_plate2d();
 if (part == "pinion_2d")     pinion2d();
 if (part == "finger_2d")     finger2d();   // right jaw finger outline, local frame (used by sim/grip_sim.py)
+if (part == "jawR_l1_2d")    jaw_layer2d(1, true);   // 2D layers in each part's own frame (used by sim/mechanism_sim.py)
+if (part == "jawR_l2_2d")    jaw_layer2d(2, true);
+if (part == "jawL_l1_2d")    jawL_layer2d(1);
+if (part == "jawL_l2_2d")    jawL_layer2d(2);
+if (part == "drop_2d")       drop2d();
+if (part == "servo_2d")      servo_body2d();
 
 // 2D collision checks: each must render EMPTY at every theta
 if (part == "check_l1_pinion_jawR") intersection() { posedP() pinion2d(); posedR() jaw_layer2d(1, true); }

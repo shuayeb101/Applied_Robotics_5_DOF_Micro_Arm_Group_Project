@@ -144,7 +144,38 @@ python3 -I sim/grip_sim.py --gif          # full run, ~10 min
 python3 -I sim/grip_sim.py --quick        # one trial per curl, ~10 s
 ```
 
-### 3. Gear tooth strength (hand calculation)
+### 3. Open/close mechanism simulation (kinematic)
+
+[`sim/mechanism_sim.py`](sim/mechanism_sim.py) moves the real CAD outlines of every part through the stroke, from −3° (driven past closed) to 45° (well past fully open), in 0.25° steps: 193 poses and 2,895 pair checks. At each step the pinion turns 1.5× the jaw angle and the jaws mirror each other. It checks every pair of parts that share a height band (gear layer 1, gear layer 2, the lowered fingers). It also measures gear backlash by holding each driving gear still and turning the driven gear until its teeth touch. Full report: [`sim/results/mechanism_report.md`](sim/results/mechanism_report.md).
+
+![Open/close cycle](sim/results/mechanism_cycle.gif)
+
+![Clearance, backlash and opening curves](sim/results/mechanism_plots.png)
+
+| Check | Result |
+| --- | --- |
+| Any parts overlapping, 0–30° | **None** |
+| Gear mesh gap (both meshes) | 0.07 mm at every angle: the teeth roll without binding |
+| Tightest other clearance | 0.40 mm (jaw tips at fully closed, by design). Next: pinion to left jaw hub 0.43 mm at 14.5° |
+| Gear sectors in mesh | Yes, over the whole sweep up to 44°, so they can't jump teeth inside the range |
+| End-stop when closing | Jaw tips touch at −0.5°, so the closed limit is the tips themselves |
+| End-stop when opening | Nothing touches up to 45°. Only the servo limit stops it, so set the firmware limit. |
+| Mesh centring (phase error) | 0.016°, so the teeth are correctly phased |
+| Stroke time at SG90 speed | ≈ 75 ms closed → open. Tips move at ≈ 214 mm/s, which is a pinch hazard, so use a low `SPEED` |
+
+**Finding: free play.**
+
+- **Each gear mesh has 1.3° of backlash** (from the 0.15 mm `backlash` setting). The ≈ 31 mm jaws magnify it to about **0.7 mm at the right tip**.
+- **The left tip gets about 1.4 mm**, because its play passes through both meshes.
+- That's **≈ 2.1 mm of play in the tip gap**, plus up to 0.25 mm from each pivot hole.
+
+The play disappears once the jaws are squeezing an object, because the load holds the teeth against one flank. So it affects **where an open or empty claw sits**, not grip. Play scales directly with `backlash`: 0.08 mm would roughly halve it. Use the smallest value that still turns freely in the printed fit test (see MEASURE, step 4).
+
+```bash
+python3 -I sim/mechanism_sim.py     # ~30 s, writes sim/results/mechanism_*
+```
+
+### 4. Gear tooth strength (hand calculation)
 
 The Lewis bending formula gives the stress at the root of a tooth: σ = F_t / (b · m · Y). Here F_t is the force at the pitch circle, b the face width (3 mm), m the module (0.9 mm) and Y the Lewis form factor (10 teeth 0.201, 15 teeth ≈ 0.29 [Shigley, via EES](https://fchartsoftware.com/ees/mechanical_design/gear%20design/hs103.htm); [gearpy table](https://gearpy.readthedocs.io/en/latest/mechanical_objects/HelicalGear/lewis_factor.html)). The servo is assumed to be stalled.
 
@@ -173,7 +204,7 @@ Printed PLA reaches about **48–55 MPa** in its strongest direction ([MDPI 2025
 | **FreeCAD** | Free, open source | Gears workbench (involute gears), Assembly workbench to animate, **FEM** workbench for stress |
 | **MuJoCo** / PyBullet / Gazebo | Free, open source | **Physics**: gripping, slip, drops and shaking with real masses and friction. This is what `sim/grip_sim.py` uses. |
 
-**What each type answers.** CAD motion and interference checks answer "do the parts collide?" (done here in OpenSCAD). Physics simulators answer "does it hold the object?" (done here in MuJoCo). FEA answers "will a tooth or sleeve break?" (estimated here by hand with Lewis; a Fusion or FreeCAD FEA would firm it up).
+**What each type answers.** CAD motion and interference checks answer "do the parts collide?" (done here in OpenSCAD, and over the full stroke in `mechanism_sim.py`). Physics simulators answer "does it hold the object?" (done here in MuJoCo). FEA answers "will a tooth or sleeve break?" (estimated here by hand with Lewis; a Fusion or FreeCAD FEA would firm it up).
 
 ---
 
