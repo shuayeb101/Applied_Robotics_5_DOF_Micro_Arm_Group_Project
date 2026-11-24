@@ -41,8 +41,8 @@ P = dict(
     module=1.0, teeth=16, pressure=20.0, backlash=0.15,
     pinion_z0=2.8, pinion_b=5.5, spline_d=4.7, spline_depth=3.6,
     # body
-    base_t=2.0, x_left=-20.0, wall_out=9.0,
-    slider_top=8.5, slider_right_bot=6.0, slider_right_top=4.25, slide_clear=0.3,
+    base_t=2.0, x_left=-20.0, wall_out=10.0,
+    slider_top=8.5, slider_right_bot=7.25, slider_right_top=3.5, slide_clear=0.2,   # 30 deg dovetail
     # jaws
     fixed_face_y=10.75, jaw_t=5.0, jaw_x=(-18.0, 4.2), jaw_tip_z=38.0,
     jaw_bottom_z=9.2, gap_min=1.0, travel_deg=140.0,
@@ -212,12 +212,12 @@ def make_slider(p, d, face):
 
 def MORTISE(p, face, c):
     """Socket in the slider (c=0) / tenon on the jaw (c=clearance)."""
-    return (0.25 + c, face + 0.5 + c, 3.5 + c, 3.25 - c, face + 4.5 - c, p['slider_top'] + 0.01)
+    return (0.25 + c, face + 0.5 + c, 3.5 + c, 2.9 - c, face + 4.5 - c, p['slider_top'] + 0.01)
 
 def make_jaw(p, d, face):
     x0, x1 = p['jaw_x']; t = p['jaw_t']; st = p['slider_top']
     j = box(x0, face, p['jaw_bottom_z'], x1, face + t, p['jaw_tip_z'])      # finger
-    j += box(-0.75, face, st, x1, face + 12.0, st + 3.0)                    # foot on slider
+    j += box(-0.75, face, st, p['slider_right_top'] - 0.15, face + 12.0, st + 3.0)  # foot on slider
     j += box(*MORTISE(p, face, 0.15)[:5], st + 0.5)                         # tenon
     j += ext_yz([(face + t, st + 3.0), (face + t + 2.5, st + 3.0),
                  (face + t, 24.0)], -0.75, x1)                              # gusset
