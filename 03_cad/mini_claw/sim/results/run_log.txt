@@ -1,0 +1,265 @@
+curl  5.44 cube     mu 0.12 trial 1  held=False slip=  38.27 mm  released=False grip= 19.8 deg
+curl  5.44 cube     mu 0.12 trial 2  held=False slip=  38.26 mm  released=False grip= 19.8 deg
+curl  5.44 cube     mu 0.12 trial 3  held=False slip=  38.47 mm  released=False grip= 20.0 deg
+curl  5.44 cube     mu 0.12 trial 4  held=False slip=  38.25 mm  released=False grip= 19.7 deg
+curl  5.44 cube     mu 0.12 trial 5  held=False slip=  38.34 mm  released=False grip= 19.7 deg
+curl  5.44 cube     mu 0.12 trial 6  held=False slip=  38.26 mm  released=False grip= 19.8 deg
+curl  5.44 cube     mu 0.12 trial 7  held=False slip=  38.49 mm  released=False grip= 19.9 deg
+curl  5.44 cube     mu 0.12 trial 8  held=False slip=  39.97 mm  released=True  grip=  0.0 deg
+curl  5.44 cube     mu 0.12 trial 9  held=False slip=  38.24 mm  released=False grip= 19.8 deg
+curl  5.44 cube     mu 0.25 trial 1  held=False slip=  38.42 mm  released=False grip= 19.8 deg
+curl  5.44 cube     mu 0.25 trial 2  held=True  slip=  10.87 mm  released=True  grip= 19.6 deg
+curl  5.44 cube     mu 0.25 trial 3  held=False slip=  40.90 mm  released=True  grip= 20.5 deg
+curl  5.44 cube     mu 0.25 trial 4  held=False slip=  72.76 mm  released=True  grip= 19.7 deg
+curl  5.44 cube     mu 0.25 trial 5  held=False slip=  38.12 mm  released=False grip= 19.7 deg
+curl  5.44 cube     mu 0.25 trial 6  held=False slip=  43.40 mm  released=True  grip=  0.0 deg
+curl  5.44 cube     mu 0.25 trial 7  held=False slip=  41.79 mm  released=True  grip=  0.0 deg
+curl  5.44 cube     mu 0.25 trial 8  held=False slip=  39.38 mm  released=True  grip=  0.0 deg
+curl  5.44 cube     mu 0.25 trial 9  held=False slip=  44.44 mm  released=True  grip=  0.0 deg
+curl  5.44 cube     mu 0.38 trial 1  held=True  slip=   0.08 mm  released=True  grip= 20.4 deg
+curl  5.44 cube     mu 0.38 trial 2  held=True  slip=   0.07 mm  released=True  grip= 20.5 deg
+curl  5.44 cube     mu 0.38 trial 3  held=True  slip=   0.08 mm  released=True  grip= 20.5 deg
+curl  5.44 cube     mu 0.38 trial 4  held=True  slip=   0.08 mm  released=True  grip= 20.6 deg
+curl  5.44 cube     mu 0.38 trial 5  held=True  slip=   0.08 mm  released=True  grip= 20.5 deg
+curl  5.44 cube     mu 0.38 trial 6  held=False slip= 302.31 mm  released=True  grip= 20.2 deg
+curl  5.44 cube     mu 0.38 trial 7  held=False slip=  64.79 mm  released=True  grip= 20.1 deg
+curl  5.44 cube     mu 0.38 trial 8  held=False slip= 238.50 mm  released=True  grip= 20.9 deg
+curl  5.44 cube     mu 0.38 trial 9  held=False slip=  79.94 mm  released=True  grip= 20.3 deg
+curl  5.44 cylinder mu 0.12 trial 1  held=False slip=  47.98 mm  released=True  grip= 18.4 deg
+curl  5.44 cylinder mu 0.12 trial 2  held=False slip=  69.24 mm  released=True  grip= 18.2 deg
+curl  5.44 cylinder mu 0.12 trial 3  held=False slip=  55.16 mm  released=True  grip= 18.5 deg
+curl  5.44 cylinder mu 0.12 trial 4  held=False slip=  60.38 mm  released=True  grip= 18.2 deg
+curl  5.44 cylinder mu 0.12 trial 5  held=False slip=  48.40 mm  released=True  grip= 18.4 deg
+curl  5.44 cylinder mu 0.25 trial 1  held=False slip=  60.04 mm  released=True  grip= 18.4 deg
+curl  5.44 cylinder mu 0.25 trial 2  held=True  slip=   9.26 mm  released=True  grip= 18.3 deg
+curl  5.44 cylinder mu 0.25 trial 3  held=False slip=  53.07 mm  released=True  grip= 19.3 deg
+curl  5.44 cylinder mu 0.25 trial 4  held=True  slip=   8.76 mm  released=True  grip= 18.2 deg
+curl  5.44 cylinder mu 0.25 trial 5  held=False slip=  45.81 mm  released=True  grip= 18.5 deg
+curl  5.44 cylinder mu 0.38 trial 1  held=True  slip=   0.06 mm  released=True  grip= 19.3 deg
+curl  5.44 cylinder mu 0.38 trial 2  held=True  slip=   0.05 mm  released=True  grip= 19.2 deg
+curl  5.44 cylinder mu 0.38 trial 3  held=True  slip=   0.05 mm  released=True  grip= 19.3 deg
+curl  5.44 cylinder mu 0.38 trial 4  held=True  slip=   0.05 mm  released=True  grip= 19.2 deg
+curl  5.44 cylinder mu 0.38 trial 5  held=True  slip=   0.05 mm  released=True  grip= 19.2 deg
+curl  12.0 cube     mu 0.12 trial 1  held=True  slip=   6.19 mm  released=True  grip= 17.4 deg
+curl  12.0 cube     mu 0.12 trial 2  held=True  slip=   6.27 mm  released=True  grip= 17.4 deg
+curl  12.0 cube     mu 0.12 trial 3  held=True  slip=   6.46 mm  released=True  grip= 17.6 deg
+curl  12.0 cube     mu 0.12 trial 4  held=True  slip=   6.38 mm  released=True  grip= 17.5 deg
+curl  12.0 cube     mu 0.12 trial 5  held=True  slip=   6.36 mm  released=True  grip= 17.5 deg
+curl  12.0 cube     mu 0.12 trial 6  held=False slip=  61.68 mm  released=True  grip=  0.0 deg
+curl  12.0 cube     mu 0.12 trial 7  held=False slip=  88.48 mm  released=True  grip=  0.0 deg
+curl  12.0 cube     mu 0.12 trial 8  held=False slip=  42.82 mm  released=True  grip=  0.0 deg
+curl  12.0 cube     mu 0.12 trial 9  held=True  slip=   6.70 mm  released=True  grip= 17.4 deg
+curl  12.0 cube     mu 0.25 trial 1  held=True  slip=   6.06 mm  released=True  grip= 17.3 deg
+curl  12.0 cube     mu 0.25 trial 2  held=True  slip=   6.09 mm  released=True  grip= 17.3 deg
+curl  12.0 cube     mu 0.25 trial 3  held=True  slip=   6.93 mm  released=True  grip= 18.1 deg
+curl  12.0 cube     mu 0.25 trial 4  held=True  slip=   6.14 mm  released=True  grip= 17.4 deg
+curl  12.0 cube     mu 0.25 trial 5  held=True  slip=   6.00 mm  released=True  grip= 17.3 deg
+curl  12.0 cube     mu 0.25 trial 6  held=False slip=  45.61 mm  released=True  grip=  0.0 deg
+curl  12.0 cube     mu 0.25 trial 7  held=False slip= 124.38 mm  released=True  grip= 17.6 deg
+curl  12.0 cube     mu 0.25 trial 8  held=False slip= 141.47 mm  released=True  grip= 17.3 deg
+curl  12.0 cube     mu 0.25 trial 9  held=False slip=  41.63 mm  released=True  grip=  0.0 deg
+curl  12.0 cube     mu 0.38 trial 1  held=True  slip=   0.13 mm  released=True  grip= 17.7 deg
+curl  12.0 cube     mu 0.38 trial 2  held=True  slip=   0.12 mm  released=True  grip= 17.7 deg
+curl  12.0 cube     mu 0.38 trial 3  held=True  slip=   0.16 mm  released=True  grip= 18.3 deg
+curl  12.0 cube     mu 0.38 trial 4  held=True  slip=   0.15 mm  released=True  grip= 17.9 deg
+curl  12.0 cube     mu 0.38 trial 5  held=True  slip=   0.14 mm  released=True  grip= 18.0 deg
+curl  12.0 cube     mu 0.38 trial 6  held=True  slip=   0.14 mm  released=True  grip= 17.3 deg
+curl  12.0 cube     mu 0.38 trial 7  held=True  slip=   3.46 mm  released=True  grip= 17.6 deg
+curl  12.0 cube     mu 0.38 trial 8  held=False slip= 248.38 mm  released=True  grip= 17.8 deg
+curl  12.0 cube     mu 0.38 trial 9  held=True  slip=   0.15 mm  released=True  grip= 17.5 deg
+curl  12.0 cylinder mu 0.12 trial 1  held=True  slip=  10.53 mm  released=True  grip= 17.1 deg
+curl  12.0 cylinder mu 0.12 trial 2  held=True  slip=   8.95 mm  released=True  grip= 16.9 deg
+curl  12.0 cylinder mu 0.12 trial 3  held=True  slip=  10.76 mm  released=True  grip= 17.0 deg
+curl  12.0 cylinder mu 0.12 trial 4  held=True  slip=   8.83 mm  released=True  grip= 16.9 deg
+curl  12.0 cylinder mu 0.12 trial 5  held=True  slip=  11.03 mm  released=True  grip= 17.2 deg
+curl  12.0 cylinder mu 0.25 trial 1  held=False slip=  42.63 mm  released=False grip= 17.6 deg
+curl  12.0 cylinder mu 0.25 trial 2  held=True  slip=  11.79 mm  released=True  grip= 17.2 deg
+curl  12.0 cylinder mu 0.25 trial 3  held=False slip=  60.39 mm  released=True  grip= 17.9 deg
+curl  12.0 cylinder mu 0.25 trial 4  held=False slip=  64.91 mm  released=True  grip= 17.1 deg
+curl  12.0 cylinder mu 0.25 trial 5  held=False slip=  50.64 mm  released=True  grip= 17.5 deg
+curl  12.0 cylinder mu 0.38 trial 1  held=True  slip=   7.78 mm  released=True  grip= 18.1 deg
+curl  12.0 cylinder mu 0.38 trial 2  held=True  slip=   0.06 mm  released=True  grip= 17.4 deg
+curl  12.0 cylinder mu 0.38 trial 3  held=True  slip=   0.11 mm  released=True  grip= 18.4 deg
+curl  12.0 cylinder mu 0.38 trial 4  held=True  slip=   0.07 mm  released=True  grip= 17.2 deg
+curl  12.0 cylinder mu 0.38 trial 5  held=True  slip=   8.09 mm  released=True  grip= 18.2 deg
+curl  18.0 cube     mu 0.12 trial 1  held=True  slip=   3.14 mm  released=True  grip= 15.4 deg
+curl  18.0 cube     mu 0.12 trial 2  held=True  slip=   3.18 mm  released=True  grip= 15.3 deg
+curl  18.0 cube     mu 0.12 trial 3  held=True  slip=   3.29 mm  released=True  grip= 15.5 deg
+curl  18.0 cube     mu 0.12 trial 4  held=True  slip=   3.13 mm  released=True  grip= 15.3 deg
+curl  18.0 cube     mu 0.12 trial 5  held=True  slip=   3.14 mm  released=True  grip= 15.4 deg
+curl  18.0 cube     mu 0.12 trial 6  held=False slip=  44.81 mm  released=True  grip=  0.0 deg
+curl  18.0 cube     mu 0.12 trial 7  held=False slip= 271.31 mm  released=True  grip=  0.0 deg
+curl  18.0 cube     mu 0.12 trial 8  held=False slip=  52.93 mm  released=True  grip=  0.0 deg
+curl  18.0 cube     mu 0.12 trial 9  held=False slip=  42.18 mm  released=True  grip=  0.0 deg
+curl  18.0 cube     mu 0.25 trial 1  held=True  slip=   3.35 mm  released=True  grip= 15.2 deg
+curl  18.0 cube     mu 0.25 trial 2  held=True  slip=   3.31 mm  released=True  grip= 15.0 deg
+curl  18.0 cube     mu 0.25 trial 3  held=True  slip=   4.05 mm  released=True  grip= 16.1 deg
+curl  18.0 cube     mu 0.25 trial 4  held=True  slip=   3.30 mm  released=True  grip= 15.2 deg
+curl  18.0 cube     mu 0.25 trial 5  held=True  slip=   3.25 mm  released=True  grip= 14.9 deg
+curl  18.0 cube     mu 0.25 trial 6  held=True  slip=   3.41 mm  released=True  grip= 15.3 deg
+curl  18.0 cube     mu 0.25 trial 7  held=True  slip=   3.21 mm  released=False grip= 15.2 deg
+curl  18.0 cube     mu 0.25 trial 8  held=True  slip=   7.10 mm  released=True  grip= 15.6 deg
+curl  18.0 cube     mu 0.25 trial 9  held=False slip= 172.56 mm  released=True  grip= 15.6 deg
+curl  18.0 cube     mu 0.38 trial 1  held=True  slip=   0.19 mm  released=True  grip= 15.0 deg
+curl  18.0 cube     mu 0.38 trial 2  held=True  slip=   0.24 mm  released=True  grip= 15.1 deg
+curl  18.0 cube     mu 0.38 trial 3  held=False slip= 254.61 mm  released=True  grip= 16.4 deg
+curl  18.0 cube     mu 0.38 trial 4  held=True  slip=   0.19 mm  released=True  grip= 15.0 deg
+curl  18.0 cube     mu 0.38 trial 5  held=True  slip=   0.19 mm  released=True  grip= 15.4 deg
+curl  18.0 cube     mu 0.38 trial 6  held=True  slip=   2.93 mm  released=True  grip= 15.7 deg
+curl  18.0 cube     mu 0.38 trial 7  held=True  slip=   3.84 mm  released=True  grip= 15.7 deg
+curl  18.0 cube     mu 0.38 trial 8  held=True  slip=   6.95 mm  released=True  grip= 15.8 deg
+curl  18.0 cube     mu 0.38 trial 9  held=True  slip=   7.11 mm  released=True  grip= 15.9 deg
+curl  18.0 cylinder mu 0.12 trial 1  held=True  slip=   6.52 mm  released=True  grip= 16.0 deg
+curl  18.0 cylinder mu 0.12 trial 2  held=True  slip=   6.23 mm  released=True  grip= 15.7 deg
+curl  18.0 cylinder mu 0.12 trial 3  held=True  slip=   6.50 mm  released=True  grip= 15.5 deg
+curl  18.0 cylinder mu 0.12 trial 4  held=True  slip=   6.13 mm  released=True  grip= 15.7 deg
+curl  18.0 cylinder mu 0.12 trial 5  held=True  slip=   6.61 mm  released=True  grip= 16.0 deg
+curl  18.0 cylinder mu 0.25 trial 1  held=True  slip=   7.22 mm  released=True  grip= 16.3 deg
+curl  18.0 cylinder mu 0.25 trial 2  held=True  slip=   6.24 mm  released=True  grip= 16.2 deg
+curl  18.0 cylinder mu 0.25 trial 3  held=True  slip=   7.35 mm  released=True  grip= 16.5 deg
+curl  18.0 cylinder mu 0.25 trial 4  held=True  slip=   6.50 mm  released=True  grip= 16.1 deg
+curl  18.0 cylinder mu 0.25 trial 5  held=True  slip=   7.36 mm  released=True  grip= 16.2 deg
+curl  18.0 cylinder mu 0.38 trial 1  held=True  slip=   6.48 mm  released=True  grip= 16.1 deg
+curl  18.0 cylinder mu 0.38 trial 2  held=True  slip=   0.17 mm  released=True  grip= 15.2 deg
+curl  18.0 cylinder mu 0.38 trial 3  held=True  slip=   8.38 mm  released=True  grip= 17.5 deg
+curl  18.0 cylinder mu 0.38 trial 4  held=True  slip=   0.10 mm  released=True  grip= 15.4 deg
+curl  18.0 cylinder mu 0.38 trial 5  held=True  slip=   5.19 mm  released=True  grip= 16.2 deg
+curl  24.0 cube     mu 0.12 trial 1  held=True  slip=   0.26 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.12 trial 2  held=True  slip=   0.31 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.12 trial 3  held=True  slip=   0.23 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.12 trial 4  held=True  slip=   0.23 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.12 trial 5  held=True  slip=   0.23 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.12 trial 6  held=True  slip=   0.28 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.12 trial 7  held=False slip=  66.44 mm  released=True  grip= -0.1 deg
+curl  24.0 cube     mu 0.12 trial 8  held=True  slip=   0.26 mm  released=True  grip= 13.9 deg
+curl  24.0 cube     mu 0.12 trial 9  held=True  slip=   0.24 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 1  held=True  slip=   0.38 mm  released=True  grip= 13.9 deg
+curl  24.0 cube     mu 0.25 trial 2  held=True  slip=   0.29 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 3  held=True  slip=   0.21 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 4  held=True  slip=   0.10 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 5  held=True  slip=   0.08 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 6  held=True  slip=   0.32 mm  released=True  grip= 13.9 deg
+curl  24.0 cube     mu 0.25 trial 7  held=True  slip=   0.27 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 8  held=True  slip=   0.22 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.25 trial 9  held=True  slip=   0.21 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.38 trial 1  held=True  slip=   1.43 mm  released=True  grip= 14.1 deg
+curl  24.0 cube     mu 0.38 trial 2  held=True  slip=   1.10 mm  released=True  grip= 14.1 deg
+curl  24.0 cube     mu 0.38 trial 3  held=True  slip=   0.12 mm  released=True  grip= 13.9 deg
+curl  24.0 cube     mu 0.38 trial 4  held=True  slip=   0.06 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.38 trial 5  held=True  slip=   0.04 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.38 trial 6  held=True  slip=   0.06 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.38 trial 7  held=True  slip=   0.11 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.38 trial 8  held=True  slip=   0.04 mm  released=True  grip= 13.8 deg
+curl  24.0 cube     mu 0.38 trial 9  held=True  slip=   0.19 mm  released=True  grip= 13.9 deg
+curl  24.0 cylinder mu 0.12 trial 1  held=True  slip=   4.58 mm  released=True  grip= 14.6 deg
+curl  24.0 cylinder mu 0.12 trial 2  held=True  slip=   4.32 mm  released=True  grip= 14.3 deg
+curl  24.0 cylinder mu 0.12 trial 3  held=True  slip=   3.81 mm  released=True  grip= 14.0 deg
+curl  24.0 cylinder mu 0.12 trial 4  held=True  slip=   3.78 mm  released=True  grip= 14.3 deg
+curl  24.0 cylinder mu 0.12 trial 5  held=True  slip=   3.87 mm  released=True  grip= 14.6 deg
+curl  24.0 cylinder mu 0.25 trial 1  held=True  slip=   5.10 mm  released=True  grip= 15.4 deg
+curl  24.0 cylinder mu 0.25 trial 2  held=True  slip=   4.84 mm  released=True  grip= 15.1 deg
+curl  24.0 cylinder mu 0.25 trial 3  held=True  slip=   4.85 mm  released=True  grip= 15.1 deg
+curl  24.0 cylinder mu 0.25 trial 4  held=True  slip=   4.74 mm  released=True  grip= 15.0 deg
+curl  24.0 cylinder mu 0.25 trial 5  held=True  slip=   4.69 mm  released=True  grip= 15.3 deg
+curl  24.0 cylinder mu 0.38 trial 1  held=True  slip=   5.48 mm  released=True  grip= 16.0 deg
+curl  24.0 cylinder mu 0.38 trial 2  held=True  slip=   4.01 mm  released=True  grip= 15.0 deg
+curl  24.0 cylinder mu 0.38 trial 3  held=True  slip=   5.03 mm  released=True  grip= 16.2 deg
+curl  24.0 cylinder mu 0.38 trial 4  held=True  slip=   4.95 mm  released=True  grip= 15.0 deg
+curl  24.0 cylinder mu 0.38 trial 5  held=True  slip=   5.10 mm  released=True  grip= 15.9 deg
+curl  30.0 cube     mu 0.12 trial 1  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 2  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 3  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 4  held=True  slip=   0.09 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 5  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 6  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 7  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 8  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.12 trial 9  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 1  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 2  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 3  held=True  slip=   0.06 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 4  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 5  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 6  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 7  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 8  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.25 trial 9  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 1  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 2  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 3  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 4  held=True  slip=   0.02 mm  released=True  grip= 16.6 deg
+curl  30.0 cube     mu 0.38 trial 5  held=True  slip=   3.48 mm  released=True  grip= 16.2 deg
+curl  30.0 cube     mu 0.38 trial 6  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 7  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 8  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cube     mu 0.38 trial 9  held=True  slip=   0.07 mm  released=True  grip= 13.9 deg
+curl  30.0 cylinder mu 0.12 trial 1  held=True  slip=   2.31 mm  released=True  grip= 13.2 deg
+curl  30.0 cylinder mu 0.12 trial 2  held=True  slip=   2.22 mm  released=True  grip= 12.8 deg
+curl  30.0 cylinder mu 0.12 trial 3  held=True  slip=   1.52 mm  released=True  grip= 12.7 deg
+curl  30.0 cylinder mu 0.12 trial 4  held=True  slip=   2.98 mm  released=True  grip= 12.6 deg
+curl  30.0 cylinder mu 0.12 trial 5  held=True  slip=   2.28 mm  released=True  grip= 13.2 deg
+curl  30.0 cylinder mu 0.25 trial 1  held=True  slip=   3.52 mm  released=True  grip= 14.2 deg
+curl  30.0 cylinder mu 0.25 trial 2  held=True  slip=   3.06 mm  released=True  grip= 13.8 deg
+curl  30.0 cylinder mu 0.25 trial 3  held=True  slip=   3.29 mm  released=True  grip= 13.9 deg
+curl  30.0 cylinder mu 0.25 trial 4  held=True  slip=   2.83 mm  released=True  grip= 13.8 deg
+curl  30.0 cylinder mu 0.25 trial 5  held=True  slip=   3.34 mm  released=True  grip= 14.3 deg
+curl  30.0 cylinder mu 0.38 trial 1  held=True  slip=   3.72 mm  released=True  grip= 14.1 deg
+curl  30.0 cylinder mu 0.38 trial 2  held=True  slip=   3.57 mm  released=True  grip= 14.5 deg
+curl  30.0 cylinder mu 0.38 trial 3  held=True  slip=   3.80 mm  released=True  grip= 14.2 deg
+curl  30.0 cylinder mu 0.38 trial 4  held=True  slip=   3.47 mm  released=True  grip= 14.4 deg
+curl  30.0 cylinder mu 0.38 trial 5  held=True  slip=   3.71 mm  released=True  grip= 14.2 deg
+## Placement shifted across the jaws (-1.5 to +1.5 mm, not rotated)
+
+| Tip curl (deg) | Object | mu | Held | Secure (slip < 2 mm) | Median slip of held (mm) | Released (of held) | Grip angle (deg) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 5.44 | cube | 0.12 | 0/5 | 0/5 | nan | 0/0 | nan |
+| 5.44 | cube | 0.25 | 1/5 | 0/5 | 10.87 | 1/1 | 19.6 |
+| 5.44 | cube | 0.38 | 5/5 | 5/5 | 0.08 | 5/5 | 20.5 |
+| 5.44 | cylinder | 0.12 | 0/5 | 0/5 | nan | 0/0 | nan |
+| 5.44 | cylinder | 0.25 | 2/5 | 0/5 | 9.01 | 2/2 | 18.2 |
+| 5.44 | cylinder | 0.38 | 5/5 | 5/5 | 0.05 | 5/5 | 19.2 |
+| 12 | cube | 0.12 | 5/5 | 0/5 | 6.36 | 5/5 | 17.5 |
+| 12 | cube | 0.25 | 5/5 | 0/5 | 6.09 | 5/5 | 17.3 |
+| 12 | cube | 0.38 | 5/5 | 5/5 | 0.14 | 5/5 | 17.9 |
+| 12 | cylinder | 0.12 | 5/5 | 0/5 | 10.53 | 5/5 | 17.0 |
+| 12 | cylinder | 0.25 | 1/5 | 0/5 | 11.79 | 1/1 | 17.2 |
+| 12 | cylinder | 0.38 | 5/5 | 3/5 | 0.11 | 5/5 | 18.1 |
+| 18 | cube | 0.12 | 5/5 | 0/5 | 3.14 | 5/5 | 15.4 |
+| 18 | cube | 0.25 | 5/5 | 0/5 | 3.31 | 5/5 | 15.2 |
+| 18 | cube | 0.38 | 4/5 | 4/5 | 0.19 | 4/4 | 15.0 |
+| 18 | cylinder | 0.12 | 5/5 | 0/5 | 6.50 | 5/5 | 15.7 |
+| 18 | cylinder | 0.25 | 5/5 | 0/5 | 7.22 | 5/5 | 16.2 |
+| 18 | cylinder | 0.38 | 5/5 | 2/5 | 5.19 | 5/5 | 16.1 |
+| 24 | cube | 0.12 | 5/5 | 5/5 | 0.23 | 5/5 | 13.8 |
+| 24 | cube | 0.25 | 5/5 | 5/5 | 0.21 | 5/5 | 13.8 |
+| 24 | cube | 0.38 | 5/5 | 5/5 | 0.12 | 5/5 | 13.9 |
+| 24 | cylinder | 0.12 | 5/5 | 0/5 | 3.87 | 5/5 | 14.3 |
+| 24 | cylinder | 0.25 | 5/5 | 0/5 | 4.84 | 5/5 | 15.1 |
+| 24 | cylinder | 0.38 | 5/5 | 0/5 | 5.03 | 5/5 | 15.9 |
+| 30 | cube | 0.12 | 5/5 | 5/5 | 0.07 | 5/5 | 13.9 |
+| 30 | cube | 0.25 | 5/5 | 5/5 | 0.07 | 5/5 | 13.9 |
+| 30 | cube | 0.38 | 5/5 | 4/5 | 0.07 | 5/5 | 13.9 |
+| 30 | cylinder | 0.12 | 5/5 | 1/5 | 2.28 | 5/5 | 12.8 |
+| 30 | cylinder | 0.25 | 5/5 | 0/5 | 3.29 | 5/5 | 13.9 |
+| 30 | cylinder | 0.38 | 5/5 | 0/5 | 3.71 | 5/5 | 14.2 |
+
+## Cube rotated on the table (centred): largest rotation still held securely
+
+| Tip curl (deg) | mu | Secure at 0 / 2 / 4 / 6 / 8 deg |
+| --- | --- | --- |
+| 5.44 | 0.12 | ✗ ✗ ✗ ✗ ✗ |
+| 5.44 | 0.25 | ✗ ✗ ✗ ✗ ✗ |
+| 5.44 | 0.38 | ✓ ✗ ✗ ✗ ✗ |
+| 12 | 0.12 | ✗ ✗ ✗ ✗ ✗ |
+| 12 | 0.25 | ✗ ✗ ✗ ✗ ✗ |
+| 12 | 0.38 | ✓ ✓ ✗ ✗ ✓ |
+| 18 | 0.12 | ✗ ✗ ✗ ✗ ✗ |
+| 18 | 0.25 | ✗ ✗ ✗ ✗ ✗ |
+| 18 | 0.38 | ✗ ✗ ✗ ✗ ✗ |
+| 24 | 0.12 | ✓ ✓ ✗ ✓ ✓ |
+| 24 | 0.25 | ✓ ✓ ✓ ✓ ✓ |
+| 24 | 0.38 | ✓ ✓ ✓ ✓ ✓ |
+| 30 | 0.12 | ✓ ✓ ✓ ✓ ✓ |
+| 30 | 0.25 | ✓ ✓ ✓ ✓ ✓ |
+| 30 | 0.38 | ✓ ✓ ✓ ✓ ✓ |
+worst jaw coupling error (deg): 0.0021399325586801596
