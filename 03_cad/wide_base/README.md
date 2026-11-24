@@ -32,7 +32,16 @@ Check with a straight edge that the plate lies flat after printing. If it rocks,
 
 ## Simulated effect (full arm, `../full_designs/`)
 
-D6 = spanner gripper + swing counterweight + wide base, D7 = spanner gripper + wide base, no counterweight. D5 is the same arm on the supplied foot. See `../full_designs/README.md` for the full table.
+D6 (the group's chosen build: spanner gripper + swing counterweight) compared with the same arm on the supplied foot (D5). Full details in [`../spanner_build/README.md`](../spanner_build/README.md).
+
+| | D5 supplied foot | **D6 wide base** |
+| --- | --- | --- |
+| Stable poses (worst yaw), arm in front / reaching back | 100 % / 49 % | **100 % / 100 %** |
+| Worst tip margin anywhere in the servo windows | −23 mm (tips) | **+39 mm** |
+| Tip margin, arm straight out | +16 mm | **+70 mm** |
+| Tip margin during pick-and-place (60–100 mm) | 26–34 mm | **79–85 mm** |
+| Shoulder ≤ 110° firmware rule needed | yes | **no** |
+| Servo torques, reach, base load | – | unchanged |
 
 ## Regenerate
 

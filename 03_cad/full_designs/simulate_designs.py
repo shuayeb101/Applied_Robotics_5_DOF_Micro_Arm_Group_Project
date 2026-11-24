@@ -536,9 +536,11 @@ def render(d, q, path, title):
             else:
                 base = np.array([0.35, 0.55, 0.80]) if p.link != "foot" else np.array([.55, .55, .55])
             shade = 0.45 + 0.55 * np.clip(m.face_normals @ light, 0, 1)
-            ax.add_collection3d(Poly3DCollection(m.vertices[m.faces],
-                                                 facecolors=np.clip(shade[:, None] * base, 0, 1),
-                                                 edgecolor="none"))
+            pc = Poly3DCollection(m.vertices[m.faces],
+                                  facecolors=np.clip(shade[:, None] * base, 0, 1), edgecolor="none")
+            if p.link == "foot" and p.printed:
+                pc.set_sort_zpos(-500)       # flat base: always draw it behind the arm
+            ax.add_collection3d(pc)
         xx, yy = np.meshgrid([-100, 190], [-110, 110])
         ax.plot_surface(xx, yy, np.zeros_like(xx), color="0.9", alpha=0.35)
         ax.set_xlim(-100, 190); ax.set_ylim(-130, 130); ax.set_zlim(0, 260)

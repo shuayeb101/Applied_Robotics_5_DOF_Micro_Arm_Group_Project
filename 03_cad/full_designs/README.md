@@ -5,9 +5,11 @@
 
 The team has three part redesigns, each on its own branch: two replacement grippers and one swing counterweight. This folder combines them with the 11 supplied parts into **six complete arms**, every valid combination of {original, mini claw, spanner} gripper × {original, counterweight} swing. It then puts each full arm through the same set of simulated tests.
 
-![Comparison of all six designs](results/comparison.png)
+**Update: the group chose the spanner gripper with the counterweight.** **D6** is that build on the new wide base (`../wide_base/`, `Foot_v2_wide.stl`). It is simulated with the same tests below, and in more depth in [`../spanner_build/`](../spanner_build/README.md): start there for the chosen build.
 
-## The six designs
+![Comparison of all designs](results/comparison.png)
+
+## The designs
 
 | Key | Gripper | Swing | New / modified parts | Printed parts | Total mass\* |
 | --- | --- | --- | --- | --- | --- |
@@ -17,6 +19,7 @@ The team has three part redesigns, each on its own branch: two replacement gripp
 | **D3** | **Mini geared claw** | **Counterweight** | 7 + coins | 11 | 140 g |
 | **D4** | **Spanner** | Original | 4 | 10 | 89 g |
 | **D5** | **Spanner** | **Counterweight** | 6 + coins | 11 | 146 g |
+| **D6** | **Spanner** | **Counterweight** + **wide base** | 7 + coins | 11 | 184 g |
 
 \* Printed parts estimated at 3 perimeters + 20 % infill, PLA, plus 5 × SG90 (9 g), horns, screws and coins. Weigh the real parts.
 
@@ -31,7 +34,7 @@ The printable STLs are not duplicated. The BOMs point to the single copy of each
 
 ### Videos
 
-`videos/` has an MP4 for each of the two new grippers with the counterweight fitted: **D3** (mini claw) and **D5** (spanner). Each video shows:
+`videos/` has an MP4 for each of the two new grippers with the counterweight fitted: **D3** (mini claw) and **D5** (spanner), plus the chosen build **D6** (spanner + counterweight + wide base). Each video shows:
 
 1. **Range-of-motion limit test.** From HOME, each joint (base, shoulder, elbow, wrist) is driven towards each end of its servo window in 3° steps. Every frame is checked for collisions, table contact and tipping. The joint stops at the first failing step, and the reason is shown on screen.
 2. **Gripper test:** fully open, then closed.
@@ -47,21 +50,21 @@ The right-hand panel shows the view from above: the foot outline, the arm, the c
 
 ### Summary
 
-| Test | D0 | D1 | D2 | D3 | D4 | D5 |
-| --- | --- | --- | --- | --- | --- | --- |
-| **ASM** interfaces | pass\* | pass\* | pass\* | pass\* | pass\* | pass\* |
-| **COL** collision-free poses inside the servo windows | 56.7 % | 56.7 % | 56.5 % | 56.5 % | 55.4 % | 55.4 % |
-| **STAB** arm straight out, worst yaw (tip margin) | **−23 mm, tips** | +21 mm | **−21 mm, tips** | +23 mm | **−29 mm, tips** | +16 mm |
-| **STAB** stable poses, arm in front (any yaw) | 72 % | **100 %** | 76 % | **100 %** | 68 % | **100 %** |
-| **STAB** stable poses, arm reaching back over the tail | 63 % | 51 % | 61 % | 46 % | 60 % | 49 % |
-| **TRQ** peak shoulder torque (% of SG90 stall) | 32 % | 32 % | 30 % | 30 % | 36 % | 36 % |
-| **TRQ** peak elbow / wrist torque | 17 / 7 % | 17 / 7 % | 16 / 6 % | 16 / 6 % | 20 / 8 % | 20 / 8 % |
-| **WS** furthest usable forward reach, TCP 0–30 mm above table | 131 mm | **176 mm** | 117 mm | 161 mm | 120 mm | **175 mm** |
-| **PNP** pick-and-place radii passed (of 60–160 mm) | 60, 80 (+120 marginal) | **60–120** | 80, 100 | **80–140** | 60, 80 | 60–100 |
-| **YAW** base side moment, arm straight out | 5.6 kg·mm | 2.8 | 5.4 | **2.5** | 6.5 | 3.6 |
-| **YAW** base side moment, HOME | 2.1 kg·mm | 0.8 | 2.2 | **0.6** | 2.2 | 0.7 |
-| **YAW** yaw inertia, arm out (vs D0) | – | +26 % | −5 % | +21 % | +24 % | +50 % |
-| Gripper opening range | 0–18.8 mm | 0–18.8 | 0.4–32 | 0.4–32 | 1–20.5 | 1–20.5 |
+| Test | D0 | D1 | D2 | D3 | D4 | D5 | D6 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **ASM** interfaces | pass\* | pass\* | pass\* | pass\* | pass\* | pass\* | pass\* |
+| **COL** collision-free poses inside the servo windows | 56.7 % | 56.7 % | 56.5 % | 56.5 % | 55.4 % | 55.4 % | 55.3 % |
+| **STAB** arm straight out, worst yaw (tip margin) | **−23 mm, tips** | +21 mm | **−21 mm, tips** | +23 mm | **−29 mm, tips** | +16 mm | **+70 mm** |
+| **STAB** stable poses, arm in front (any yaw) | 72 % | **100 %** | 76 % | **100 %** | 68 % | **100 %** | **100 %** |
+| **STAB** stable poses, arm reaching back over the tail | 63 % | 51 % | 61 % | 46 % | 60 % | 49 % | **100 %** |
+| **TRQ** peak shoulder torque (% of SG90 stall) | 32 % | 32 % | 30 % | 30 % | 36 % | 36 % | 36 % |
+| **TRQ** peak elbow / wrist torque | 17 / 7 % | 17 / 7 % | 16 / 6 % | 16 / 6 % | 20 / 8 % | 20 / 8 % | 20 / 8 % |
+| **WS** furthest usable forward reach, TCP 0–30 mm above table | 131 mm | **176 mm** | 117 mm | 161 mm | 120 mm | **175 mm** | **175 mm** |
+| **PNP** pick-and-place radii passed (of 60–160 mm) | 60, 80 (+120 marginal) | **60–120** | 80, 100 | **80–140** | 60, 80 | 60–100 | 60–100 |
+| **YAW** base side moment, arm straight out | 5.6 kg·mm | 2.8 | 5.4 | **2.5** | 6.5 | 3.6 | 3.6 |
+| **YAW** base side moment, HOME | 2.1 kg·mm | 0.8 | 2.2 | **0.6** | 2.2 | 0.7 | 0.7 |
+| **YAW** yaw inertia, arm out (vs D0) | – | +26 % | −5 % | +21 % | +24 % | +50 % | +50 % |
+| Gripper opening range | 0–18.8 mm | 0–18.8 | 0.4–32 | 0.4–32 | 1–20.5 | 1–20.5 | 1–20.5 |
 
 \* ASM passes for every design. The only warning: three supplied STLs (`Arm`, `ArmSpring`, `ArmFront`) are not closed solids. This is a fault in the supplied files: repair them in the slicer and log it in `03_cad/flaw_log.csv`.
 
@@ -69,15 +72,15 @@ The right-hand panel shows the view from above: the foot outline, the arm, the c
 
 Task: 15 mm cube, 5 g, picked at −45° yaw and placed at +45° yaw (both are diagonals of the foot, its weakest directions). The path is HOME → 30 mm above → grasp → lift → transfer → place → lift → HOME. Each leg is sampled 16 times. At every sample the test checks collisions, table clearance, tipping (at the actual yaw) and servo torque. The tool points straight down where possible, otherwise tilted in 15° steps.
 
-| Object distance | D0 | D1 | D2 | D3 | D4 | D5 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 60 mm | PASS | PASS | FAIL (no pose) | FAIL (no pose) | PASS | PASS |
-| 80 mm | PASS | PASS | PASS | PASS | PASS | PASS |
-| 100 mm | FAIL (tips, −0.7 mm) | PASS | PASS | PASS | FAIL (tips) | PASS |
-| 120 mm | MARGINAL (0.7 mm margin) | PASS | FAIL (tips) | PASS | FAIL (no pose) | FAIL (no pose) |
-| 140 mm | FAIL (reach) | FAIL (reach) | FAIL (tips) | **PASS** | FAIL (no pose) | FAIL (no pose) |
-| 160 mm | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL |
-| Tip margin in passing runs | 11–15 mm | **24–36 mm** | 7–14 mm | **28–34 mm** | 9–13 mm | **26–34 mm** |
+| Object distance | D0 | D1 | D2 | D3 | D4 | D5 | D6 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 60 mm | PASS | PASS | FAIL (no pose) | FAIL (no pose) | PASS | PASS | PASS |
+| 80 mm | PASS | PASS | PASS | PASS | PASS | PASS | PASS |
+| 100 mm | FAIL (tips, −0.7 mm) | PASS | PASS | PASS | FAIL (tips) | PASS | PASS |
+| 120 mm | MARGINAL (0.7 mm margin) | PASS | FAIL (tips) | PASS | FAIL (no pose) | FAIL (no pose) | FAIL (no pose) |
+| 140 mm | FAIL (reach) | FAIL (reach) | FAIL (tips) | **PASS** | FAIL (no pose) | FAIL (no pose) | FAIL (no pose) |
+| 160 mm | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL | FAIL |
+| Tip margin in passing runs | 11–15 mm | **24–36 mm** | 7–14 mm | **28–34 mm** | 9–13 mm | **26–34 mm** | **79–85 mm** |
 
 "No pose" means there's no collision-free tool angle at grasp height inside the servo windows. Peak servo load in every passing run was ≤ 26 % of stall.
 
@@ -92,7 +95,7 @@ Task: 15 mm cube, 5 g, picked at −45° yaw and placed at +45° yaw (both are d
    | D0 stable poses | 0–79 % | 100 % | 100 % | 100 % | 83 % | 64 % | 50 % |
    | D1 stable poses | **100 %** | 100 % | 100 % | 94 % | 75 % | 55 % | 39 % |
 
-   **Firmware rule for D1/D3/D5: limit the shoulder to ≤ 110°** (link 1 at most 20° past vertical). Nothing in the pick-and-place task needs more.
+   **Firmware rule for D1/D3/D5: limit the shoulder to ≤ 110°** (link 1 at most 20° past vertical). Nothing in the pick-and-place task needs more. **D6 (wide base) does not need this rule:** it stays stable (≥ +39 mm) all the way to 180°.
 4. **Servo torque is not the limit.** Peak static torque is ≤ 36 % of SG90 stall at the shoulder (spanner) and ≤ 32 % with the other grippers, across the whole usable workspace with a 5 g payload. Tipping, collisions and the table limit the arm long before the servos do. The spanner's extra ~5 g at the tip adds ~4 percentage points at the shoulder.
 5. **Gripper comparison on the full arm:**
    - **Mini claw (D2/D3)** is the lightest tool (20.6 g), puts the least torque on every joint, and opens widest (32 mm). Its jaws point down with the wrist level, so it picks with a short reach and no awkward wrist angle. That's why D3 has the widest pick-and-place band (80–140 mm). It can't pick at 60 mm: with the claw hanging down, the arm has to fold so tightly that link 2 hits the swing or the elbow folds into link 1.
@@ -102,6 +105,10 @@ Task: 15 mm cube, 5 g, picked at −45° yaw and placed at +45° yaw (both are d
 7. **Swing-to-foot clearance with the counterweight is 2.6 mm** (ribs under the boom vs. the foot post), against 8 mm without it. This assumes the swing sits 8 mm above the foot top. **MEASURE this.** If the swing sits more than ~2.5 mm lower, the ribs will rub on the foot post.
 
 ### Recommendation
+
+**Group decision: spanner + counterweight, built on the wide base (D6).** With the wide base it is stable in 100 % of collision-free poses (front and back) and passes pick-and-place at 60–100 mm with 79–85 mm tip margin. Details, the pick-and-place map and firmware notes: [`../spanner_build/README.md`](../spanner_build/README.md).
+
+*Original recommendation, before the group's decision and the wide base:*
 
 **D3 (mini claw + counterweight)** scores best on these tests. It is stable everywhere in front of the robot, has the widest pick-and-place band (80–140 mm), puts the lowest load on the base servo and the lightest load on the arm servos, and has the widest gripper opening. **D1 (original gripper + counterweight)** is the low-risk fallback: only 2 new prints, and pick-and-place at 60–120 mm.
 
@@ -176,7 +183,7 @@ python3 build_assemblies.py
 
 | File | Purpose |
 | --- | --- |
-| `arm_model.py` | Part placement, kinematics, mass model, the six designs |
+| `arm_model.py` | Part placement, kinematics, mass model, the designs D0–D6 |
 | `simulate_designs.py` | All tests and plots |
 | `build_assemblies.py` | Assembled STL/3MF and BOM per design |
 | `results/` | Results, renders, comparison plot, per-pose sweeps |

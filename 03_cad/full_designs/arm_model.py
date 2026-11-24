@@ -344,7 +344,6 @@ DESIGNS = [
     Design("D4", "Spanner gripper", "spanner", False),
     Design("D5", "Spanner gripper + swing counterweight", "spanner", True),
     Design("D6", "Spanner gripper + swing counterweight + wide base", "spanner", True, "wide"),
-    Design("D7", "Spanner gripper + wide base (no counterweight)", "spanner", False, "wide"),
 ]
 
 

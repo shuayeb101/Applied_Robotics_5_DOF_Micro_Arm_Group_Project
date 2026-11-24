@@ -3,6 +3,7 @@
  "title": "Spanner gripper",
  "gripper": "Spanner (fixed datum jaw + sliding jaw)",
  "counterweight": false,
+ "foot": "original",
  "tool_notes": "Grasp centre is off the arm axis by gap/2 - 6.75 mm (shown for a 13.5 mm object).",
  "opening_mm": [
   1.0,
@@ -212,7 +213,8 @@
    "tilt_deg": 0.0,
    "min_margin_mm": 13.4,
    "max_torque_pct": 15,
-   "max_side_gmm": 2581
+   "max_side_gmm": 2581,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 80,
@@ -222,7 +224,8 @@
    "tilt_deg": 15.0,
    "min_margin_mm": 9.1,
    "max_torque_pct": 17,
-   "max_side_gmm": 2987
+   "max_side_gmm": 2987,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 100,
@@ -232,7 +235,8 @@
    "tilt_deg": 15.0,
    "min_margin_mm": -3.4,
    "max_torque_pct": 24,
-   "max_side_gmm": 4169
+   "max_side_gmm": 4169,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 120,
@@ -242,7 +246,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 140,
@@ -252,7 +257,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 160,
@@ -262,7 +268,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   }
  ],
  "home": [
@@ -392,5 +399,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 34.8
+ "runtime_s": 33.5
 }

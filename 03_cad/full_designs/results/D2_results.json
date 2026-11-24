@@ -3,6 +3,7 @@
  "title": "Mini claw gripper",
  "gripper": "Mini geared claw (30 deg curled tips)",
  "counterweight": false,
+ "foot": "original",
  "tool_notes": "Plate mounted turned 180 deg about the arm axis so the jaws point down with the wrist level (same two screw holes).",
  "opening_mm": [
   0.4,
@@ -215,7 +216,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 80,
@@ -225,7 +227,8 @@
    "tilt_deg": 30.0,
    "min_margin_mm": 14.4,
    "max_torque_pct": 15,
-   "max_side_gmm": 2333
+   "max_side_gmm": 2333,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 100,
@@ -235,7 +238,8 @@
    "tilt_deg": 0.0,
    "min_margin_mm": 7.3,
    "max_torque_pct": 17,
-   "max_side_gmm": 2962
+   "max_side_gmm": 2962,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 120,
@@ -245,7 +249,8 @@
    "tilt_deg": 0.0,
    "min_margin_mm": -2.3,
    "max_torque_pct": 22,
-   "max_side_gmm": 3805
+   "max_side_gmm": 3805,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 140,
@@ -255,7 +260,8 @@
    "tilt_deg": 0.0,
    "min_margin_mm": -12.1,
    "max_torque_pct": 26,
-   "max_side_gmm": 4675
+   "max_side_gmm": 4675,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 160,
@@ -265,7 +271,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   }
  ],
  "home": [
@@ -395,5 +402,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 34.8
+ "runtime_s": 33.3
 }

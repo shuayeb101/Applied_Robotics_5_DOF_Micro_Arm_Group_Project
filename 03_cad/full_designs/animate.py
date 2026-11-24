@@ -240,6 +240,15 @@ def render_frame(args):
     ax = fig.add_axes([-0.06, -0.08, 0.76, 1.08], projection="3d")
     polys, cols = [], []
     for p in d.parts:
+        if p.link == "foot" and p.printed:      # flat base: its own collection, drawn behind
+            m = simplified(p)
+            v, n = m.vertices, m.face_normals
+            shade = 0.42 + 0.58 * np.clip(n @ light, 0, 1)
+            pc = Poly3DCollection(v[m.faces], facecolors=np.clip(shade[:, None] * part_colour(p), 0, 1),
+                                  edgecolor="none")
+            pc.set_sort_zpos(-500)
+            ax.add_collection3d(pc)
+            continue
         m = simplified(p)
         M = T[p.link] @ jt.get(p.name, np.eye(4))
         v = trimesh.transform_points(m.vertices, M)

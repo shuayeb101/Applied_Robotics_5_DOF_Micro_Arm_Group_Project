@@ -3,6 +3,7 @@
  "title": "Baseline + swing counterweight",
  "gripper": "Original rack-and-pinion",
  "counterweight": true,
+ "foot": "original",
  "tool_notes": "Supplied design. Jaw placement approximate.",
  "opening_mm": [
   0.0,
@@ -243,7 +244,8 @@
    "tilt_deg": 0.0,
    "min_margin_mm": 24.3,
    "max_torque_pct": 13,
-   "max_side_gmm": 2216
+   "max_side_gmm": 2216,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 80,
@@ -253,7 +255,8 @@
    "tilt_deg": 15.0,
    "min_margin_mm": 30.9,
    "max_torque_pct": 15,
-   "max_side_gmm": 1287
+   "max_side_gmm": 1287,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 100,
@@ -263,7 +266,8 @@
    "tilt_deg": 15.0,
    "min_margin_mm": 34.9,
    "max_torque_pct": 21,
-   "max_side_gmm": 828
+   "max_side_gmm": 828,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 120,
@@ -273,7 +277,8 @@
    "tilt_deg": 45.0,
    "min_margin_mm": 35.8,
    "max_torque_pct": 20,
-   "max_side_gmm": 772
+   "max_side_gmm": 772,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 140,
@@ -283,7 +288,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   },
   {
    "radius_mm": 160,
@@ -293,7 +299,8 @@
    "tilt_deg": null,
    "min_margin_mm": null,
    "max_torque_pct": null,
-   "max_side_gmm": null
+   "max_side_gmm": null,
+   "surface_z": 0.0
   }
  ],
  "home": [
@@ -444,5 +451,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 39.2
+ "runtime_s": 37.5
 }

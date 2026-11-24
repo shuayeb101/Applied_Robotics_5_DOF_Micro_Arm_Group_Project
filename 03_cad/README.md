@@ -11,6 +11,10 @@
 - `counterweight/` — swing counterweight to stop the arm tipping the foot over. STLs in `stl/Swing_v2_counterweight*.stl`
 - `wide_base/` — wide, stiffer base: the supplied foot kept intact inside a Ø180 × 1.6 mm plate, with gusset ribs on the servo cradle and engraved pick/place targets. STL in `stl/Foot_v2_wide.stl`
 
+## Chosen build
+
+- `spanner_build/` — **the group's chosen build: spanner gripper + swing counterweight, on the wide base (D6).** Parts list, detailed simulation (pick-and-place map, dynamic tipping, joint limits), assembly order and firmware notes. Start here.
+
 ## Full arm designs
 
-- `full_designs/` — the redesigns combined into eight complete arms (D0 baseline to D7; **D6 = spanner gripper + counterweight + wide base**), each assembled from the STLs and tested in simulation: collisions, tipping, servo torque, workspace and a pick-and-place task. Start with its README.
+- `full_designs/` — the redesigns combined into seven complete arms (D0 baseline to D6; **D6 = spanner gripper + counterweight + wide base**), each assembled from the STLs and tested in simulation: collisions, tipping, servo torque, workspace and a pick-and-place task. Start with its README.
