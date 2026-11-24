@@ -29,6 +29,16 @@ Each design has:
 
 The printable STLs are not duplicated. The BOMs point to the single copy of each file in `00_baseline/3d_models/`, `03_cad/stl/` and `03_cad/mini_claw/stl/`.
 
+### Videos
+
+`videos/` has an MP4 for each of the two new grippers with the counterweight fitted: **D3** (mini claw) and **D5** (spanner). Each video shows:
+
+1. **Range-of-motion limit test.** From HOME, each joint (base, shoulder, elbow, wrist) is driven towards each end of its servo window in 3° steps. Every frame is checked for collisions, table contact and tipping. The joint stops at the first failing step, and the reason is shown on screen.
+2. **Gripper test:** fully open, then closed.
+3. **Pick-and-place of two objects:** the 15 mm cube at the design's furthest passing distance (−45° → +45°), then a 12 × 20 mm cylinder at 80 mm. Every frame is checked for collisions, table contact, tipping and servo load.
+
+The right-hand panel shows the view from above: the foot outline, the arm, the counterweight and the centre of mass. The centre-of-mass dot turns orange below a 5 mm tip margin and red if the robot would tip. Rebuild the videos with `python3 animate.py` (about 10 minutes, needs ffmpeg).
+
 | D0 baseline | D3 mini claw + counterweight | D5 spanner + counterweight |
 | --- | --- | --- |
 | ![](results/D0_home.png) | ![](results/D3_home.png) | ![](results/D5_home.png) |
