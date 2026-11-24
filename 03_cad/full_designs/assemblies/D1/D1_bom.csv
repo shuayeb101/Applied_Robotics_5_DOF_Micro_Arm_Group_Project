@@ -1,0 +1,19 @@
+Part,Moves with,Status,Qty,Source file / item,Est. mass incl. fitted hardware (g),Print (Y/N)
+Foot,foot,original,1,00_baseline/3d_models/Foot.stl,6.6,Y
+Swing_v2_counterweight,swing,modified,1,03_cad/stl/Swing_v2_counterweight.stl,10.6,Y
+Swing_v2_counterweight_lid,swing,new,1,03_cad/stl/Swing_v2_counterweight_lid.stl,1.9,Y
+coins_7x2p,swing,hardware,1,7 x UK 2p coins (or ~50 g filler),49.8,N
+ArmSpring,link1,original,1,00_baseline/3d_models/ArmSpring.stl,6.1,Y
+Arm,link2,original,1,00_baseline/3d_models/Arm.stl,5.5,Y
+ArmFront,tool,original,1,00_baseline/3d_models/ArmFront.stl,4.9,Y
+servo_base,foot,hardware,1,SG90 envelope,9.6,N
+servo_shoulder,swing,hardware,1,SG90 envelope,9.6,N
+servo_elbow,link1,hardware,1,SG90 envelope,9.6,N
+servo_wrist,link2,hardware,1,SG90 envelope,9.6,N
+FrontPlate,tool,original,1,00_baseline/3d_models/FrontPlate.stl,1.8,Y
+GripperGear,tool,original,1,00_baseline/3d_models/GripperGear.stl,0.2,Y
+GripperRackTop,tool,original,1,00_baseline/3d_models/GripperRackTop.stl,0.5,Y
+GripperRackBottom,tool,original,1,00_baseline/3d_models/GripperRackBottom.stl,0.5,Y
+GripperLeft,tool,original,1,00_baseline/3d_models/GripperLeft.stl,1.9,Y
+GripperRight,tool,original,1,00_baseline/3d_models/GripperRight.stl,1.9,Y
+servo_gripper,tool,hardware,1,SG90 envelope,9.6,N

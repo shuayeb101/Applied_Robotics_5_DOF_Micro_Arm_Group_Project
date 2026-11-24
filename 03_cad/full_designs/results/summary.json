@@ -1,0 +1,2518 @@
+[
+ {
+  "key": "D0",
+  "title": "Baseline (as supplied)",
+  "gripper": "Original rack-and-pinion",
+  "counterweight": false,
+  "tool_notes": "Supplied design. Jaw placement approximate.",
+  "opening_mm": [
+   0.0,
+   18.8
+  ],
+  "grip_force": "~20 (ideal, both jaws, at stall)",
+  "asm": {
+   "parts": [
+    {
+     "part": "Foot",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 8.15,
+     "print_mass_g": 6.62,
+     "solid_mass_g": 10.1
+    },
+    {
+     "part": "Swing",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 9.33,
+     "print_mass_g": 6.05,
+     "solid_mass_g": 11.57
+    },
+    {
+     "part": "ArmSpring",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 6.73,
+     "print_mass_g": 6.11,
+     "solid_mass_g": 8.35
+    },
+    {
+     "part": "Arm",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.89,
+     "print_mass_g": 5.46,
+     "solid_mass_g": 7.31
+    },
+    {
+     "part": "ArmFront",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.06,
+     "print_mass_g": 4.94,
+     "solid_mass_g": 6.28
+    },
+    {
+     "part": "FrontPlate",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 1.12,
+     "print_mass_g": 1.19,
+     "solid_mass_g": 1.38
+    },
+    {
+     "part": "GripperGear",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 0.14,
+     "print_mass_g": 0.17,
+     "solid_mass_g": 0.17
+    },
+    {
+     "part": "GripperRackTop",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 0.47,
+     "print_mass_g": 0.51,
+     "solid_mass_g": 0.58
+    },
+    {
+     "part": "GripperRackBottom",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 0.47,
+     "print_mass_g": 0.51,
+     "solid_mass_g": 0.58
+    },
+    {
+     "part": "GripperLeft",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 2.07,
+     "print_mass_g": 1.87,
+     "solid_mass_g": 2.57
+    },
+    {
+     "part": "GripperRight",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 2.07,
+     "print_mass_g": 1.87,
+     "solid_mass_g": 2.57
+    }
+   ],
+   "checks": [
+    {
+     "id": "ASM-1",
+     "check": "Every printed STL is a closed solid",
+     "result": "WARN",
+     "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+    },
+    {
+     "id": "ASM-2",
+     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+     "result": "PASS",
+     "detail": "FrontPlate: hole clear; FrontPlate: hole clear"
+    },
+    {
+     "id": "ASM-4",
+     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+     "result": "PASS",
+     "detail": "closest approach 8.0 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    }
+   ],
+   "neutral_contacts": [
+    "Arm/ArmFront",
+    "Arm/ArmSpring",
+    "Arm/servo_elbow",
+    "Arm/servo_wrist",
+    "ArmFront/FrontPlate",
+    "ArmFront/servo_gripper",
+    "ArmFront/servo_wrist",
+    "ArmSpring/Swing",
+    "ArmSpring/servo_elbow",
+    "ArmSpring/servo_shoulder",
+    "Foot/servo_base",
+    "FrontPlate/servo_gripper",
+    "GripperGear/GripperLeft",
+    "GripperGear/GripperRackBottom",
+    "GripperGear/GripperRackTop",
+    "GripperGear/GripperRight",
+    "GripperLeft/GripperRackBottom",
+    "GripperLeft/GripperRight",
+    "GripperLeft/servo_gripper",
+    "GripperRackBottom/GripperRight",
+    "GripperRackBottom/servo_gripper",
+    "GripperRackTop/servo_gripper",
+    "GripperRight/servo_gripper",
+    "Swing/servo_base",
+    "Swing/servo_shoulder"
+   ]
+  },
+  "mass": {
+   "printed_g": 35.3,
+   "printed_solid_g": 51.5,
+   "hardware_g": 48.6,
+   "total_g": 83.9,
+   "moving_g": 67.7,
+   "beyond_shoulder_g": 52.0,
+   "tool_g": 21.2,
+   "print_volume_cm3": 41.5,
+   "printed_parts": 11,
+   "new_or_modified_parts": 0
+  },
+  "sweep": {
+   "poses_swept": 34447,
+   "poses_in_servo_windows": 17797,
+   "collision_free": 10091,
+   "collision_free_pct": 56.7,
+   "top_collisions": [
+    [
+     "ArmSpring~Arm",
+     4329
+    ],
+    [
+     "Swing/ArmFront",
+     3103
+    ],
+    [
+     "Swing/Arm",
+     3094
+    ],
+    [
+     "Swing/servo_wrist",
+     2873
+    ],
+    [
+     "Foot/servo_gripper",
+     2595
+    ],
+    [
+     "ArmFront/servo_shoulder",
+     2472
+    ]
+   ],
+   "stable_pct_worst_yaw": 69.4,
+   "stable_pct_front": 72.2,
+   "stable_pct_back": 63.4,
+   "max_stable_forward_reach_any_yaw_mm": 136.3,
+   "stable_pct_worst_yaw_empty": 76.3,
+   "min_margin_mm": -25.1,
+   "min_margin_pose": [
+    0,
+    180,
+    0,
+    0
+   ],
+   "max_torque_gmm": {
+    "shoulder": 5702,
+    "elbow": 3078,
+    "wrist": 1213
+   },
+   "max_torque_pct": {
+    "shoulder": 32,
+    "elbow": 17,
+    "wrist": 7
+   },
+   "max_side_moment_gmm": 5778,
+   "usable_poses": 7001,
+   "max_reach_mm": 136.3,
+   "max_reach_table_mm": 130.6
+  },
+  "pnp": [
+   {
+    "radius_mm": 60,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 10.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 15.0,
+    "max_torque_pct": 13,
+    "max_side_gmm": 2302
+   },
+   {
+    "radius_mm": 80,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 11.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": 11.4,
+    "max_torque_pct": 15,
+    "max_side_gmm": 2620
+   },
+   {
+    "radius_mm": 100,
+    "result": "FAIL",
+    "reason": "tips over",
+    "grasp_z": 11.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": -0.7,
+    "max_torque_pct": 21,
+    "max_side_gmm": 3695
+   },
+   {
+    "radius_mm": 120,
+    "result": "MARGINAL",
+    "reason": "tip margin < 5 mm",
+    "grasp_z": 11.5,
+    "tilt_deg": 45.0,
+    "min_margin_mm": 0.7,
+    "max_torque_pct": 20,
+    "max_side_gmm": 3573
+   },
+   {
+    "radius_mm": 140,
+    "result": "FAIL",
+    "reason": "cannot reach 30 mm above the object",
+    "grasp_z": 11.5,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 160,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   }
+  ],
+  "home": [
+   0.0,
+   90.0,
+   -90.0,
+   -45.0
+  ],
+  "reach_pose": [
+   0,
+   75,
+   -95,
+   15
+  ],
+  "yaw": {
+   "inertia_gmm2": 548579,
+   "side_moment_straight_out_gmm": 5627,
+   "tip_margin_straight_out_worst_yaw_mm": -23.4,
+   "tip_margin_home_worst_yaw_mm": 14.8,
+   "side_moment_home_gmm": 2098,
+   "base_torque_90deg_0.6s_pct": 7.8
+  },
+  "parts": [
+   {
+    "name": "Foot",
+    "link": "foot",
+    "status": "original",
+    "source": "00_baseline/3d_models/Foot.stl",
+    "mass_g": 6.62
+   },
+   {
+    "name": "Swing",
+    "link": "swing",
+    "status": "original",
+    "source": "00_baseline/3d_models/Swing.stl",
+    "mass_g": 6.05
+   },
+   {
+    "name": "ArmSpring",
+    "link": "link1",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmSpring.stl",
+    "mass_g": 6.11
+   },
+   {
+    "name": "Arm",
+    "link": "link2",
+    "status": "original",
+    "source": "00_baseline/3d_models/Arm.stl",
+    "mass_g": 5.46
+   },
+   {
+    "name": "ArmFront",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmFront.stl",
+    "mass_g": 4.94
+   },
+   {
+    "name": "servo_base",
+    "link": "foot",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_shoulder",
+    "link": "swing",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_elbow",
+    "link": "link1",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_wrist",
+    "link": "link2",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "FrontPlate",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/FrontPlate.stl",
+    "mass_g": 1.79
+   },
+   {
+    "name": "GripperGear",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperGear.stl",
+    "mass_g": 0.17
+   },
+   {
+    "name": "GripperRackTop",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperRackTop.stl",
+    "mass_g": 0.51
+   },
+   {
+    "name": "GripperRackBottom",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperRackBottom.stl",
+    "mass_g": 0.51
+   },
+   {
+    "name": "GripperLeft",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperLeft.stl",
+    "mass_g": 1.87
+   },
+   {
+    "name": "GripperRight",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperRight.stl",
+    "mass_g": 1.87
+   },
+   {
+    "name": "servo_gripper",
+    "link": "tool",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   }
+  ],
+  "runtime_s": 36.0
+ },
+ {
+  "key": "D1",
+  "title": "Baseline + swing counterweight",
+  "gripper": "Original rack-and-pinion",
+  "counterweight": true,
+  "tool_notes": "Supplied design. Jaw placement approximate.",
+  "opening_mm": [
+   0.0,
+   18.8
+  ],
+  "grip_force": "~20 (ideal, both jaws, at stall)",
+  "asm": {
+   "parts": [
+    {
+     "part": "Foot",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 8.15,
+     "print_mass_g": 6.62,
+     "solid_mass_g": 10.1
+    },
+    {
+     "part": "Swing_v2_counterweight",
+     "status": "modified",
+     "watertight": true,
+     "volume_cm3": 14.7,
+     "print_mass_g": 10.61,
+     "solid_mass_g": 18.22
+    },
+    {
+     "part": "Swing_v2_counterweight_lid",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.2,
+     "print_mass_g": 1.36,
+     "solid_mass_g": 1.48
+    },
+    {
+     "part": "ArmSpring",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 6.73,
+     "print_mass_g": 6.11,
+     "solid_mass_g": 8.35
+    },
+    {
+     "part": "Arm",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.89,
+     "print_mass_g": 5.46,
+     "solid_mass_g": 7.31
+    },
+    {
+     "part": "ArmFront",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.06,
+     "print_mass_g": 4.94,
+     "solid_mass_g": 6.28
+    },
+    {
+     "part": "FrontPlate",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 1.12,
+     "print_mass_g": 1.19,
+     "solid_mass_g": 1.38
+    },
+    {
+     "part": "GripperGear",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 0.14,
+     "print_mass_g": 0.17,
+     "solid_mass_g": 0.17
+    },
+    {
+     "part": "GripperRackTop",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 0.47,
+     "print_mass_g": 0.51,
+     "solid_mass_g": 0.58
+    },
+    {
+     "part": "GripperRackBottom",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 0.47,
+     "print_mass_g": 0.51,
+     "solid_mass_g": 0.58
+    },
+    {
+     "part": "GripperLeft",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 2.07,
+     "print_mass_g": 1.87,
+     "solid_mass_g": 2.57
+    },
+    {
+     "part": "GripperRight",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 2.07,
+     "print_mass_g": 1.87,
+     "solid_mass_g": 2.57
+    }
+   ],
+   "checks": [
+    {
+     "id": "ASM-1",
+     "check": "Every printed STL is a closed solid",
+     "result": "WARN",
+     "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+    },
+    {
+     "id": "ASM-2",
+     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+     "result": "PASS",
+     "detail": "FrontPlate: hole clear; FrontPlate: hole clear"
+    },
+    {
+     "id": "ASM-3",
+     "check": "Swing_v2 keeps every feature of Swing (servo cradle, hub, pivot boss): material removed from the original",
+     "result": "PASS",
+     "detail": "0.00 mm^3 removed"
+    },
+    {
+     "id": "ASM-4",
+     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+     "result": "PASS",
+     "detail": "closest approach 2.6 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    }
+   ],
+   "neutral_contacts": [
+    "Arm/ArmFront",
+    "Arm/ArmSpring",
+    "Arm/servo_elbow",
+    "Arm/servo_wrist",
+    "ArmFront/FrontPlate",
+    "ArmFront/servo_gripper",
+    "ArmFront/servo_wrist",
+    "ArmSpring/Swing_v2_counterweight",
+    "ArmSpring/servo_elbow",
+    "ArmSpring/servo_shoulder",
+    "Foot/servo_base",
+    "FrontPlate/servo_gripper",
+    "GripperGear/GripperLeft",
+    "GripperGear/GripperRackBottom",
+    "GripperGear/GripperRackTop",
+    "GripperGear/GripperRight",
+    "GripperLeft/GripperRackBottom",
+    "GripperLeft/GripperRight",
+    "GripperLeft/servo_gripper",
+    "GripperRackBottom/GripperRight",
+    "GripperRackBottom/servo_gripper",
+    "GripperRackTop/servo_gripper",
+    "GripperRight/servo_gripper",
+    "Swing_v2_counterweight/Swing_v2_counterweight_lid",
+    "Swing_v2_counterweight/coins_7x2p",
+    "Swing_v2_counterweight/servo_base",
+    "Swing_v2_counterweight/servo_shoulder"
+   ]
+  },
+  "mass": {
+   "printed_g": 41.2,
+   "printed_solid_g": 59.6,
+   "hardware_g": 98.9,
+   "total_g": 140.1,
+   "moving_g": 123.9,
+   "beyond_shoulder_g": 52.0,
+   "tool_g": 21.2,
+   "print_volume_cm3": 48.06,
+   "printed_parts": 12,
+   "new_or_modified_parts": 2
+  },
+  "sweep": {
+   "poses_swept": 34447,
+   "poses_in_servo_windows": 17797,
+   "collision_free": 10091,
+   "collision_free_pct": 56.7,
+   "top_collisions": [
+    [
+     "ArmSpring~Arm",
+     4329
+    ],
+    [
+     "Swing_v2_counterweight/ArmFront",
+     3112
+    ],
+    [
+     "Swing_v2_counterweight/Arm",
+     3094
+    ],
+    [
+     "Swing_v2_counterweight/servo_wrist",
+     2873
+    ],
+    [
+     "Foot/servo_gripper",
+     2595
+    ],
+    [
+     "ArmFront/servo_shoulder",
+     2472
+    ]
+   ],
+   "stable_pct_worst_yaw": 84.2,
+   "stable_pct_front": 100.0,
+   "stable_pct_back": 50.9,
+   "max_stable_forward_reach_any_yaw_mm": 176.3,
+   "stable_pct_worst_yaw_empty": 85.6,
+   "min_margin_mm": -19.5,
+   "min_margin_pose": [
+    0,
+    180,
+    0,
+    0
+   ],
+   "max_torque_gmm": {
+    "shoulder": 5702,
+    "elbow": 3078,
+    "wrist": 1213
+   },
+   "max_torque_pct": {
+    "shoulder": 32,
+    "elbow": 17,
+    "wrist": 7
+   },
+   "max_side_moment_gmm": 8647,
+   "usable_poses": 8495,
+   "max_reach_mm": 176.3,
+   "max_reach_table_mm": 175.8
+  },
+  "pnp": [
+   {
+    "radius_mm": 60,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 10.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 24.3,
+    "max_torque_pct": 13,
+    "max_side_gmm": 2216
+   },
+   {
+    "radius_mm": 80,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 11.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": 30.9,
+    "max_torque_pct": 15,
+    "max_side_gmm": 1287
+   },
+   {
+    "radius_mm": 100,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 11.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": 34.9,
+    "max_torque_pct": 21,
+    "max_side_gmm": 828
+   },
+   {
+    "radius_mm": 120,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 11.5,
+    "tilt_deg": 45.0,
+    "min_margin_mm": 35.8,
+    "max_torque_pct": 20,
+    "max_side_gmm": 772
+   },
+   {
+    "radius_mm": 140,
+    "result": "FAIL",
+    "reason": "cannot reach 30 mm above the object",
+    "grasp_z": 11.5,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 160,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   }
+  ],
+  "home": [
+   0.0,
+   90.0,
+   -90.0,
+   -45.0
+  ],
+  "reach_pose": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "yaw": {
+   "inertia_gmm2": 692019,
+   "side_moment_straight_out_gmm": 2758,
+   "tip_margin_straight_out_worst_yaw_mm": 21.1,
+   "tip_margin_home_worst_yaw_mm": 34.5,
+   "side_moment_home_gmm": 772,
+   "base_torque_90deg_0.6s_pct": 9.9
+  },
+  "parts": [
+   {
+    "name": "Foot",
+    "link": "foot",
+    "status": "original",
+    "source": "00_baseline/3d_models/Foot.stl",
+    "mass_g": 6.62
+   },
+   {
+    "name": "Swing_v2_counterweight",
+    "link": "swing",
+    "status": "modified",
+    "source": "03_cad/stl/Swing_v2_counterweight.stl",
+    "mass_g": 10.61
+   },
+   {
+    "name": "Swing_v2_counterweight_lid",
+    "link": "swing",
+    "status": "new",
+    "source": "03_cad/stl/Swing_v2_counterweight_lid.stl",
+    "mass_g": 1.86
+   },
+   {
+    "name": "coins_7x2p",
+    "link": "swing",
+    "status": "hardware",
+    "source": "7 x UK 2p coins (or ~50 g filler)",
+    "mass_g": 49.84
+   },
+   {
+    "name": "ArmSpring",
+    "link": "link1",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmSpring.stl",
+    "mass_g": 6.11
+   },
+   {
+    "name": "Arm",
+    "link": "link2",
+    "status": "original",
+    "source": "00_baseline/3d_models/Arm.stl",
+    "mass_g": 5.46
+   },
+   {
+    "name": "ArmFront",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmFront.stl",
+    "mass_g": 4.94
+   },
+   {
+    "name": "servo_base",
+    "link": "foot",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_shoulder",
+    "link": "swing",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_elbow",
+    "link": "link1",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_wrist",
+    "link": "link2",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "FrontPlate",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/FrontPlate.stl",
+    "mass_g": 1.79
+   },
+   {
+    "name": "GripperGear",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperGear.stl",
+    "mass_g": 0.17
+   },
+   {
+    "name": "GripperRackTop",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperRackTop.stl",
+    "mass_g": 0.51
+   },
+   {
+    "name": "GripperRackBottom",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperRackBottom.stl",
+    "mass_g": 0.51
+   },
+   {
+    "name": "GripperLeft",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperLeft.stl",
+    "mass_g": 1.87
+   },
+   {
+    "name": "GripperRight",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/GripperRight.stl",
+    "mass_g": 1.87
+   },
+   {
+    "name": "servo_gripper",
+    "link": "tool",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   }
+  ],
+  "runtime_s": 39.2
+ },
+ {
+  "key": "D2",
+  "title": "Mini claw gripper",
+  "gripper": "Mini geared claw (30 deg curled tips)",
+  "counterweight": false,
+  "tool_notes": "Plate mounted turned 180 deg about the arm axis so the jaws point down with the wrist level (same two screw holes).",
+  "opening_mm": [
+   0.4,
+   32.2
+  ],
+  "grip_force": "3.0-4.4 per jaw at the tips",
+  "asm": {
+   "parts": [
+    {
+     "part": "Foot",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 8.15,
+     "print_mass_g": 6.62,
+     "solid_mass_g": 10.1
+    },
+    {
+     "part": "Swing",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 9.33,
+     "print_mass_g": 6.05,
+     "solid_mass_g": 11.57
+    },
+    {
+     "part": "ArmSpring",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 6.73,
+     "print_mass_g": 6.11,
+     "solid_mass_g": 8.35
+    },
+    {
+     "part": "Arm",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.89,
+     "print_mass_g": 5.46,
+     "solid_mass_g": 7.31
+    },
+    {
+     "part": "ArmFront",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.06,
+     "print_mass_g": 4.94,
+     "solid_mass_g": 6.28
+    },
+    {
+     "part": "mini_claw_bottom_plate",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.86,
+     "print_mass_g": 1.91,
+     "solid_mass_g": 2.31
+    },
+    {
+     "part": "mini_claw_top_plate",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 0.49,
+     "print_mass_g": 0.55,
+     "solid_mass_g": 0.61
+    },
+    {
+     "part": "mini_claw_jaw_left",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.16,
+     "print_mass_g": 1.25,
+     "solid_mass_g": 1.44
+    },
+    {
+     "part": "mini_claw_jaw_right",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.21,
+     "print_mass_g": 1.31,
+     "solid_mass_g": 1.5
+    },
+    {
+     "part": "mini_claw_pinion",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 0.14,
+     "print_mass_g": 0.17,
+     "solid_mass_g": 0.17
+    }
+   ],
+   "checks": [
+    {
+     "id": "ASM-1",
+     "check": "Every printed STL is a closed solid",
+     "result": "WARN",
+     "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+    },
+    {
+     "id": "ASM-2",
+     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+     "result": "PASS",
+     "detail": "mini_claw_bottom_plate: hole clear; mini_claw_bottom_plate: hole clear"
+    },
+    {
+     "id": "ASM-4",
+     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+     "result": "PASS",
+     "detail": "closest approach 8.0 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    }
+   ],
+   "neutral_contacts": [
+    "Arm/ArmFront",
+    "Arm/ArmSpring",
+    "Arm/servo_elbow",
+    "Arm/servo_wrist",
+    "ArmFront/mini_claw_bottom_plate",
+    "ArmFront/servo_gripper",
+    "ArmFront/servo_wrist",
+    "ArmSpring/Swing",
+    "ArmSpring/servo_elbow",
+    "ArmSpring/servo_shoulder",
+    "Foot/servo_base",
+    "Swing/servo_base",
+    "Swing/servo_shoulder",
+    "mini_claw_bottom_plate/mini_claw_jaw_left",
+    "mini_claw_bottom_plate/mini_claw_jaw_right",
+    "mini_claw_bottom_plate/mini_claw_top_plate",
+    "mini_claw_bottom_plate/servo_gripper",
+    "mini_claw_jaw_left/mini_claw_jaw_right",
+    "mini_claw_pinion/mini_claw_top_plate",
+    "mini_claw_pinion/servo_gripper",
+    "mini_claw_top_plate/servo_gripper"
+   ]
+  },
+  "mass": {
+   "printed_g": 34.4,
+   "printed_solid_g": 49.6,
+   "hardware_g": 48.9,
+   "total_g": 83.3,
+   "moving_g": 67.0,
+   "beyond_shoulder_g": 51.4,
+   "tool_g": 20.6,
+   "print_volume_cm3": 40.03,
+   "printed_parts": 10,
+   "new_or_modified_parts": 5
+  },
+  "sweep": {
+   "poses_swept": 34447,
+   "poses_in_servo_windows": 17797,
+   "collision_free": 10058,
+   "collision_free_pct": 56.5,
+   "top_collisions": [
+    [
+     "ArmSpring~Arm",
+     4329
+    ],
+    [
+     "Swing/ArmFront",
+     3103
+    ],
+    [
+     "Swing/Arm",
+     3094
+    ],
+    [
+     "Swing/servo_wrist",
+     2873
+    ],
+    [
+     "Foot/servo_gripper",
+     2597
+    ],
+    [
+     "ArmFront/servo_shoulder",
+     2472
+    ]
+   ],
+   "stable_pct_worst_yaw": 72.1,
+   "stable_pct_front": 76.3,
+   "stable_pct_back": 61.3,
+   "max_stable_forward_reach_any_yaw_mm": 125.9,
+   "stable_pct_worst_yaw_empty": 77.9,
+   "min_margin_mm": -23.0,
+   "min_margin_pose": [
+    0,
+    180,
+    0,
+    15
+   ],
+   "max_torque_gmm": {
+    "shoulder": 5473,
+    "elbow": 2880,
+    "wrist": 1052
+   },
+   "max_torque_pct": {
+    "shoulder": 30,
+    "elbow": 16,
+    "wrist": 6
+   },
+   "max_side_moment_gmm": 5549,
+   "usable_poses": 7248,
+   "max_reach_mm": 125.9,
+   "max_reach_table_mm": 116.5
+  },
+  "pnp": [
+   {
+    "radius_mm": 60,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 80,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 30.0,
+    "min_margin_mm": 14.4,
+    "max_torque_pct": 15,
+    "max_side_gmm": 2333
+   },
+   {
+    "radius_mm": 100,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 7.3,
+    "max_torque_pct": 17,
+    "max_side_gmm": 2962
+   },
+   {
+    "radius_mm": 120,
+    "result": "FAIL",
+    "reason": "tips over",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": -2.3,
+    "max_torque_pct": 22,
+    "max_side_gmm": 3805
+   },
+   {
+    "radius_mm": 140,
+    "result": "FAIL",
+    "reason": "tips over",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": -12.1,
+    "max_torque_pct": 26,
+    "max_side_gmm": 4675
+   },
+   {
+    "radius_mm": 160,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   }
+  ],
+  "home": [
+   0.0,
+   90.0,
+   -90.0,
+   0.0
+  ],
+  "reach_pose": [
+   0,
+   70,
+   -75,
+   45
+  ],
+  "yaw": {
+   "inertia_gmm2": 520454,
+   "side_moment_straight_out_gmm": 5392,
+   "tip_margin_straight_out_worst_yaw_mm": -21.2,
+   "tip_margin_home_worst_yaw_mm": 13.0,
+   "side_moment_home_gmm": 2237,
+   "base_torque_90deg_0.6s_pct": 7.4
+  },
+  "parts": [
+   {
+    "name": "Foot",
+    "link": "foot",
+    "status": "original",
+    "source": "00_baseline/3d_models/Foot.stl",
+    "mass_g": 6.62
+   },
+   {
+    "name": "Swing",
+    "link": "swing",
+    "status": "original",
+    "source": "00_baseline/3d_models/Swing.stl",
+    "mass_g": 6.05
+   },
+   {
+    "name": "ArmSpring",
+    "link": "link1",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmSpring.stl",
+    "mass_g": 6.11
+   },
+   {
+    "name": "Arm",
+    "link": "link2",
+    "status": "original",
+    "source": "00_baseline/3d_models/Arm.stl",
+    "mass_g": 5.46
+   },
+   {
+    "name": "ArmFront",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmFront.stl",
+    "mass_g": 4.94
+   },
+   {
+    "name": "servo_base",
+    "link": "foot",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_shoulder",
+    "link": "swing",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_elbow",
+    "link": "link1",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_wrist",
+    "link": "link2",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "mini_claw_bottom_plate",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_bottom_plate.stl",
+    "mass_g": 1.91
+   },
+   {
+    "name": "mini_claw_top_plate",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_top_plate.stl",
+    "mass_g": 1.45
+   },
+   {
+    "name": "mini_claw_jaw_left",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_jaw_left.stl",
+    "mass_g": 1.25
+   },
+   {
+    "name": "mini_claw_jaw_right",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_jaw_right.stl",
+    "mass_g": 1.31
+   },
+   {
+    "name": "mini_claw_pinion",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_pinion.stl",
+    "mass_g": 0.17
+   },
+   {
+    "name": "servo_gripper",
+    "link": "tool",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   }
+  ],
+  "runtime_s": 34.8
+ },
+ {
+  "key": "D3",
+  "title": "Mini claw gripper + swing counterweight",
+  "gripper": "Mini geared claw (30 deg curled tips)",
+  "counterweight": true,
+  "tool_notes": "Plate mounted turned 180 deg about the arm axis so the jaws point down with the wrist level (same two screw holes).",
+  "opening_mm": [
+   0.4,
+   32.2
+  ],
+  "grip_force": "3.0-4.4 per jaw at the tips",
+  "asm": {
+   "parts": [
+    {
+     "part": "Foot",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 8.15,
+     "print_mass_g": 6.62,
+     "solid_mass_g": 10.1
+    },
+    {
+     "part": "Swing_v2_counterweight",
+     "status": "modified",
+     "watertight": true,
+     "volume_cm3": 14.7,
+     "print_mass_g": 10.61,
+     "solid_mass_g": 18.22
+    },
+    {
+     "part": "Swing_v2_counterweight_lid",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.2,
+     "print_mass_g": 1.36,
+     "solid_mass_g": 1.48
+    },
+    {
+     "part": "ArmSpring",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 6.73,
+     "print_mass_g": 6.11,
+     "solid_mass_g": 8.35
+    },
+    {
+     "part": "Arm",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.89,
+     "print_mass_g": 5.46,
+     "solid_mass_g": 7.31
+    },
+    {
+     "part": "ArmFront",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.06,
+     "print_mass_g": 4.94,
+     "solid_mass_g": 6.28
+    },
+    {
+     "part": "mini_claw_bottom_plate",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.86,
+     "print_mass_g": 1.91,
+     "solid_mass_g": 2.31
+    },
+    {
+     "part": "mini_claw_top_plate",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 0.49,
+     "print_mass_g": 0.55,
+     "solid_mass_g": 0.61
+    },
+    {
+     "part": "mini_claw_jaw_left",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.16,
+     "print_mass_g": 1.25,
+     "solid_mass_g": 1.44
+    },
+    {
+     "part": "mini_claw_jaw_right",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.21,
+     "print_mass_g": 1.31,
+     "solid_mass_g": 1.5
+    },
+    {
+     "part": "mini_claw_pinion",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 0.14,
+     "print_mass_g": 0.17,
+     "solid_mass_g": 0.17
+    }
+   ],
+   "checks": [
+    {
+     "id": "ASM-1",
+     "check": "Every printed STL is a closed solid",
+     "result": "WARN",
+     "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+    },
+    {
+     "id": "ASM-2",
+     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+     "result": "PASS",
+     "detail": "mini_claw_bottom_plate: hole clear; mini_claw_bottom_plate: hole clear"
+    },
+    {
+     "id": "ASM-3",
+     "check": "Swing_v2 keeps every feature of Swing (servo cradle, hub, pivot boss): material removed from the original",
+     "result": "PASS",
+     "detail": "0.00 mm^3 removed"
+    },
+    {
+     "id": "ASM-4",
+     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+     "result": "PASS",
+     "detail": "closest approach 2.6 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    }
+   ],
+   "neutral_contacts": [
+    "Arm/ArmFront",
+    "Arm/ArmSpring",
+    "Arm/servo_elbow",
+    "Arm/servo_wrist",
+    "ArmFront/mini_claw_bottom_plate",
+    "ArmFront/servo_gripper",
+    "ArmFront/servo_wrist",
+    "ArmSpring/Swing_v2_counterweight",
+    "ArmSpring/servo_elbow",
+    "ArmSpring/servo_shoulder",
+    "Foot/servo_base",
+    "Swing_v2_counterweight/Swing_v2_counterweight_lid",
+    "Swing_v2_counterweight/coins_7x2p",
+    "Swing_v2_counterweight/servo_base",
+    "Swing_v2_counterweight/servo_shoulder",
+    "mini_claw_bottom_plate/mini_claw_jaw_left",
+    "mini_claw_bottom_plate/mini_claw_jaw_right",
+    "mini_claw_bottom_plate/mini_claw_top_plate",
+    "mini_claw_bottom_plate/servo_gripper",
+    "mini_claw_jaw_left/mini_claw_jaw_right",
+    "mini_claw_pinion/mini_claw_top_plate",
+    "mini_claw_pinion/servo_gripper",
+    "mini_claw_top_plate/servo_gripper"
+   ]
+  },
+  "mass": {
+   "printed_g": 40.3,
+   "printed_solid_g": 57.8,
+   "hardware_g": 99.2,
+   "total_g": 139.5,
+   "moving_g": 123.3,
+   "beyond_shoulder_g": 51.4,
+   "tool_g": 20.6,
+   "print_volume_cm3": 46.59,
+   "printed_parts": 11,
+   "new_or_modified_parts": 7
+  },
+  "sweep": {
+   "poses_swept": 34447,
+   "poses_in_servo_windows": 17797,
+   "collision_free": 10058,
+   "collision_free_pct": 56.5,
+   "top_collisions": [
+    [
+     "ArmSpring~Arm",
+     4329
+    ],
+    [
+     "Swing_v2_counterweight/ArmFront",
+     3112
+    ],
+    [
+     "Swing_v2_counterweight/Arm",
+     3094
+    ],
+    [
+     "Swing_v2_counterweight/servo_wrist",
+     2873
+    ],
+    [
+     "Foot/servo_gripper",
+     2597
+    ],
+    [
+     "ArmFront/servo_shoulder",
+     2472
+    ]
+   ],
+   "stable_pct_worst_yaw": 84.9,
+   "stable_pct_front": 100.0,
+   "stable_pct_back": 46.3,
+   "max_stable_forward_reach_any_yaw_mm": 161.3,
+   "stable_pct_worst_yaw_empty": 85.6,
+   "min_margin_mm": -18.2,
+   "min_margin_pose": [
+    0,
+    180,
+    0,
+    15
+   ],
+   "max_torque_gmm": {
+    "shoulder": 5473,
+    "elbow": 2880,
+    "wrist": 1052
+   },
+   "max_torque_pct": {
+    "shoulder": 30,
+    "elbow": 16,
+    "wrist": 6
+   },
+   "max_side_moment_gmm": 8418,
+   "usable_poses": 8541,
+   "max_reach_mm": 161.3,
+   "max_reach_table_mm": 160.8
+  },
+  "pnp": [
+   {
+    "radius_mm": 60,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 80,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 30.0,
+    "min_margin_mm": 28.9,
+    "max_torque_pct": 15,
+    "max_side_gmm": 1564
+   },
+   {
+    "radius_mm": 100,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 34.0,
+    "max_torque_pct": 17,
+    "max_side_gmm": 852
+   },
+   {
+    "radius_mm": 120,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 34.2,
+    "max_torque_pct": 22,
+    "max_side_gmm": 938
+   },
+   {
+    "radius_mm": 140,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 28.1,
+    "max_torque_pct": 26,
+    "max_side_gmm": 1807
+   },
+   {
+    "radius_mm": 160,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   }
+  ],
+  "home": [
+   0.0,
+   90.0,
+   -90.0,
+   0.0
+  ],
+  "reach_pose": [
+   0,
+   0,
+   -5,
+   30
+  ],
+  "yaw": {
+   "inertia_gmm2": 663893,
+   "side_moment_straight_out_gmm": 2523,
+   "tip_margin_straight_out_worst_yaw_mm": 22.6,
+   "tip_margin_home_worst_yaw_mm": 35.5,
+   "side_moment_home_gmm": 634,
+   "base_torque_90deg_0.6s_pct": 9.5
+  },
+  "parts": [
+   {
+    "name": "Foot",
+    "link": "foot",
+    "status": "original",
+    "source": "00_baseline/3d_models/Foot.stl",
+    "mass_g": 6.62
+   },
+   {
+    "name": "Swing_v2_counterweight",
+    "link": "swing",
+    "status": "modified",
+    "source": "03_cad/stl/Swing_v2_counterweight.stl",
+    "mass_g": 10.61
+   },
+   {
+    "name": "Swing_v2_counterweight_lid",
+    "link": "swing",
+    "status": "new",
+    "source": "03_cad/stl/Swing_v2_counterweight_lid.stl",
+    "mass_g": 1.86
+   },
+   {
+    "name": "coins_7x2p",
+    "link": "swing",
+    "status": "hardware",
+    "source": "7 x UK 2p coins (or ~50 g filler)",
+    "mass_g": 49.84
+   },
+   {
+    "name": "ArmSpring",
+    "link": "link1",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmSpring.stl",
+    "mass_g": 6.11
+   },
+   {
+    "name": "Arm",
+    "link": "link2",
+    "status": "original",
+    "source": "00_baseline/3d_models/Arm.stl",
+    "mass_g": 5.46
+   },
+   {
+    "name": "ArmFront",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmFront.stl",
+    "mass_g": 4.94
+   },
+   {
+    "name": "servo_base",
+    "link": "foot",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_shoulder",
+    "link": "swing",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_elbow",
+    "link": "link1",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_wrist",
+    "link": "link2",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "mini_claw_bottom_plate",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_bottom_plate.stl",
+    "mass_g": 1.91
+   },
+   {
+    "name": "mini_claw_top_plate",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_top_plate.stl",
+    "mass_g": 1.45
+   },
+   {
+    "name": "mini_claw_jaw_left",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_jaw_left.stl",
+    "mass_g": 1.25
+   },
+   {
+    "name": "mini_claw_jaw_right",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_jaw_right.stl",
+    "mass_g": 1.31
+   },
+   {
+    "name": "mini_claw_pinion",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/mini_claw/stl/mini_claw_pinion.stl",
+    "mass_g": 0.17
+   },
+   {
+    "name": "servo_gripper",
+    "link": "tool",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   }
+  ],
+  "runtime_s": 39.8
+ },
+ {
+  "key": "D4",
+  "title": "Spanner gripper",
+  "gripper": "Spanner (fixed datum jaw + sliding jaw)",
+  "counterweight": false,
+  "tool_notes": "Grasp centre is off the arm axis by gap/2 - 6.75 mm (shown for a 13.5 mm object).",
+  "opening_mm": [
+   1.0,
+   20.5
+  ],
+  "grip_force": "~22 (ideal, at stall)",
+  "asm": {
+   "parts": [
+    {
+     "part": "Foot",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 8.15,
+     "print_mass_g": 6.62,
+     "solid_mass_g": 10.1
+    },
+    {
+     "part": "Swing",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 9.33,
+     "print_mass_g": 6.05,
+     "solid_mass_g": 11.57
+    },
+    {
+     "part": "ArmSpring",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 6.73,
+     "print_mass_g": 6.11,
+     "solid_mass_g": 8.35
+    },
+    {
+     "part": "Arm",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.89,
+     "print_mass_g": 5.46,
+     "solid_mass_g": 7.31
+    },
+    {
+     "part": "ArmFront",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.06,
+     "print_mass_g": 4.94,
+     "solid_mass_g": 6.28
+    },
+    {
+     "part": "FrontPlate",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 1.12,
+     "print_mass_g": 1.19,
+     "solid_mass_g": 1.38
+    },
+    {
+     "part": "GripperSpannerHead_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 8.73,
+     "print_mass_g": 6.07,
+     "solid_mass_g": 10.82
+    },
+    {
+     "part": "GripperSpannerSlider_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.3,
+     "print_mass_g": 1.04,
+     "solid_mass_g": 1.61
+    },
+    {
+     "part": "GripperSpannerJaw_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 3.27,
+     "print_mass_g": 2.06,
+     "solid_mass_g": 4.06
+    },
+    {
+     "part": "GripperSpannerPinion_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 0.97,
+     "print_mass_g": 0.85,
+     "solid_mass_g": 1.2
+    }
+   ],
+   "checks": [
+    {
+     "id": "ASM-1",
+     "check": "Every printed STL is a closed solid",
+     "result": "WARN",
+     "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+    },
+    {
+     "id": "ASM-2",
+     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+     "result": "PASS",
+     "detail": "FrontPlate: hole clear; FrontPlate: hole clear; GripperSpannerHead_v1: hole clear; GripperSpannerHead_v1: hole clear"
+    },
+    {
+     "id": "ASM-4",
+     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+     "result": "PASS",
+     "detail": "closest approach 8.0 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    }
+   ],
+   "neutral_contacts": [
+    "Arm/ArmFront",
+    "Arm/ArmSpring",
+    "Arm/servo_elbow",
+    "Arm/servo_wrist",
+    "ArmFront/FrontPlate",
+    "ArmFront/servo_gripper",
+    "ArmFront/servo_wrist",
+    "ArmSpring/Swing",
+    "ArmSpring/servo_elbow",
+    "ArmSpring/servo_shoulder",
+    "Foot/servo_base",
+    "FrontPlate/GripperSpannerHead_v1",
+    "FrontPlate/servo_gripper",
+    "GripperSpannerHead_v1/GripperSpannerSlider_v1",
+    "GripperSpannerJaw_v1/GripperSpannerSlider_v1",
+    "GripperSpannerPinion_v1/servo_gripper",
+    "Swing/servo_base",
+    "Swing/servo_shoulder"
+   ]
+  },
+  "mass": {
+   "printed_g": 40.4,
+   "printed_solid_g": 62.7,
+   "hardware_g": 48.9,
+   "total_g": 89.3,
+   "moving_g": 73.1,
+   "beyond_shoulder_g": 57.4,
+   "tool_g": 26.6,
+   "print_volume_cm3": 50.55,
+   "printed_parts": 10,
+   "new_or_modified_parts": 4
+  },
+  "sweep": {
+   "poses_swept": 34447,
+   "poses_in_servo_windows": 17797,
+   "collision_free": 9867,
+   "collision_free_pct": 55.4,
+   "top_collisions": [
+    [
+     "ArmSpring~Arm",
+     4329
+    ],
+    [
+     "Swing/ArmFront",
+     3103
+    ],
+    [
+     "Swing/Arm",
+     3094
+    ],
+    [
+     "Swing/servo_wrist",
+     2873
+    ],
+    [
+     "Foot/servo_gripper",
+     2595
+    ],
+    [
+     "ArmFront/servo_shoulder",
+     2472
+    ]
+   ],
+   "stable_pct_worst_yaw": 65.2,
+   "stable_pct_front": 67.8,
+   "stable_pct_back": 60.0,
+   "max_stable_forward_reach_any_yaw_mm": 129.1,
+   "stable_pct_worst_yaw_empty": 70.6,
+   "min_margin_mm": -30.3,
+   "min_margin_pose": [
+    0,
+    180,
+    0,
+    0
+   ],
+   "max_torque_gmm": {
+    "shoulder": 6538,
+    "elbow": 3647,
+    "wrist": 1515
+   },
+   "max_torque_pct": {
+    "shoulder": 36,
+    "elbow": 20,
+    "wrist": 8
+   },
+   "max_side_moment_gmm": 6614,
+   "usable_poses": 6437,
+   "max_reach_mm": 129.1,
+   "max_reach_table_mm": 120.4
+  },
+  "pnp": [
+   {
+    "radius_mm": 60,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 13.4,
+    "max_torque_pct": 15,
+    "max_side_gmm": 2581
+   },
+   {
+    "radius_mm": 80,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 12.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": 9.1,
+    "max_torque_pct": 17,
+    "max_side_gmm": 2987
+   },
+   {
+    "radius_mm": 100,
+    "result": "FAIL",
+    "reason": "tips over",
+    "grasp_z": 12.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": -3.4,
+    "max_torque_pct": 24,
+    "max_side_gmm": 4169
+   },
+   {
+    "radius_mm": 120,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 140,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 160,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   }
+  ],
+  "home": [
+   0.0,
+   90.0,
+   -70.0,
+   -80.0
+  ],
+  "reach_pose": [
+   0,
+   85,
+   -75,
+   -15
+  ],
+  "yaw": {
+   "inertia_gmm2": 679275,
+   "side_moment_straight_out_gmm": 6462,
+   "tip_margin_straight_out_worst_yaw_mm": -28.6,
+   "tip_margin_home_worst_yaw_mm": 15.5,
+   "side_moment_home_gmm": 2178,
+   "base_torque_90deg_0.6s_pct": 9.7
+  },
+  "parts": [
+   {
+    "name": "Foot",
+    "link": "foot",
+    "status": "original",
+    "source": "00_baseline/3d_models/Foot.stl",
+    "mass_g": 6.62
+   },
+   {
+    "name": "Swing",
+    "link": "swing",
+    "status": "original",
+    "source": "00_baseline/3d_models/Swing.stl",
+    "mass_g": 6.05
+   },
+   {
+    "name": "ArmSpring",
+    "link": "link1",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmSpring.stl",
+    "mass_g": 6.11
+   },
+   {
+    "name": "Arm",
+    "link": "link2",
+    "status": "original",
+    "source": "00_baseline/3d_models/Arm.stl",
+    "mass_g": 5.46
+   },
+   {
+    "name": "ArmFront",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmFront.stl",
+    "mass_g": 4.94
+   },
+   {
+    "name": "servo_base",
+    "link": "foot",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_shoulder",
+    "link": "swing",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_elbow",
+    "link": "link1",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_wrist",
+    "link": "link2",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "FrontPlate",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/FrontPlate.stl",
+    "mass_g": 1.19
+   },
+   {
+    "name": "GripperSpannerHead_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerHead_v1.stl",
+    "mass_g": 6.67
+   },
+   {
+    "name": "GripperSpannerSlider_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerSlider_v1.stl",
+    "mass_g": 1.04
+   },
+   {
+    "name": "GripperSpannerJaw_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerJaw_v1.stl",
+    "mass_g": 2.36
+   },
+   {
+    "name": "GripperSpannerPinion_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerPinion_v1.stl",
+    "mass_g": 0.85
+   },
+   {
+    "name": "servo_gripper",
+    "link": "tool",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   }
+  ],
+  "runtime_s": 34.8
+ },
+ {
+  "key": "D5",
+  "title": "Spanner gripper + swing counterweight",
+  "gripper": "Spanner (fixed datum jaw + sliding jaw)",
+  "counterweight": true,
+  "tool_notes": "Grasp centre is off the arm axis by gap/2 - 6.75 mm (shown for a 13.5 mm object).",
+  "opening_mm": [
+   1.0,
+   20.5
+  ],
+  "grip_force": "~22 (ideal, at stall)",
+  "asm": {
+   "parts": [
+    {
+     "part": "Foot",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 8.15,
+     "print_mass_g": 6.62,
+     "solid_mass_g": 10.1
+    },
+    {
+     "part": "Swing_v2_counterweight",
+     "status": "modified",
+     "watertight": true,
+     "volume_cm3": 14.7,
+     "print_mass_g": 10.61,
+     "solid_mass_g": 18.22
+    },
+    {
+     "part": "Swing_v2_counterweight_lid",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.2,
+     "print_mass_g": 1.36,
+     "solid_mass_g": 1.48
+    },
+    {
+     "part": "ArmSpring",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 6.73,
+     "print_mass_g": 6.11,
+     "solid_mass_g": 8.35
+    },
+    {
+     "part": "Arm",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.89,
+     "print_mass_g": 5.46,
+     "solid_mass_g": 7.31
+    },
+    {
+     "part": "ArmFront",
+     "status": "original",
+     "watertight": false,
+     "volume_cm3": 5.06,
+     "print_mass_g": 4.94,
+     "solid_mass_g": 6.28
+    },
+    {
+     "part": "FrontPlate",
+     "status": "original",
+     "watertight": true,
+     "volume_cm3": 1.12,
+     "print_mass_g": 1.19,
+     "solid_mass_g": 1.38
+    },
+    {
+     "part": "GripperSpannerHead_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 8.73,
+     "print_mass_g": 6.07,
+     "solid_mass_g": 10.82
+    },
+    {
+     "part": "GripperSpannerSlider_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 1.3,
+     "print_mass_g": 1.04,
+     "solid_mass_g": 1.61
+    },
+    {
+     "part": "GripperSpannerJaw_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 3.27,
+     "print_mass_g": 2.06,
+     "solid_mass_g": 4.06
+    },
+    {
+     "part": "GripperSpannerPinion_v1",
+     "status": "new",
+     "watertight": true,
+     "volume_cm3": 0.97,
+     "print_mass_g": 0.85,
+     "solid_mass_g": 1.2
+    }
+   ],
+   "checks": [
+    {
+     "id": "ASM-1",
+     "check": "Every printed STL is a closed solid",
+     "result": "WARN",
+     "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+    },
+    {
+     "id": "ASM-2",
+     "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+     "result": "PASS",
+     "detail": "FrontPlate: hole clear; FrontPlate: hole clear; GripperSpannerHead_v1: hole clear; GripperSpannerHead_v1: hole clear"
+    },
+    {
+     "id": "ASM-3",
+     "check": "Swing_v2 keeps every feature of Swing (servo cradle, hub, pivot boss): material removed from the original",
+     "result": "PASS",
+     "detail": "0.00 mm^3 removed"
+    },
+    {
+     "id": "ASM-4",
+     "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+     "result": "PASS",
+     "detail": "closest approach 2.6 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+    }
+   ],
+   "neutral_contacts": [
+    "Arm/ArmFront",
+    "Arm/ArmSpring",
+    "Arm/servo_elbow",
+    "Arm/servo_wrist",
+    "ArmFront/FrontPlate",
+    "ArmFront/servo_gripper",
+    "ArmFront/servo_wrist",
+    "ArmSpring/Swing_v2_counterweight",
+    "ArmSpring/servo_elbow",
+    "ArmSpring/servo_shoulder",
+    "Foot/servo_base",
+    "FrontPlate/GripperSpannerHead_v1",
+    "FrontPlate/servo_gripper",
+    "GripperSpannerHead_v1/GripperSpannerSlider_v1",
+    "GripperSpannerJaw_v1/GripperSpannerSlider_v1",
+    "GripperSpannerPinion_v1/servo_gripper",
+    "Swing_v2_counterweight/Swing_v2_counterweight_lid",
+    "Swing_v2_counterweight/coins_7x2p",
+    "Swing_v2_counterweight/servo_base",
+    "Swing_v2_counterweight/servo_shoulder"
+   ]
+  },
+  "mass": {
+   "printed_g": 46.3,
+   "printed_solid_g": 70.8,
+   "hardware_g": 99.2,
+   "total_g": 145.5,
+   "moving_g": 129.3,
+   "beyond_shoulder_g": 57.4,
+   "tool_g": 26.6,
+   "print_volume_cm3": 57.11,
+   "printed_parts": 11,
+   "new_or_modified_parts": 6
+  },
+  "sweep": {
+   "poses_swept": 34447,
+   "poses_in_servo_windows": 17797,
+   "collision_free": 9867,
+   "collision_free_pct": 55.4,
+   "top_collisions": [
+    [
+     "ArmSpring~Arm",
+     4329
+    ],
+    [
+     "Swing_v2_counterweight/ArmFront",
+     3112
+    ],
+    [
+     "Swing_v2_counterweight/Arm",
+     3094
+    ],
+    [
+     "Swing_v2_counterweight/servo_wrist",
+     2873
+    ],
+    [
+     "Foot/servo_gripper",
+     2595
+    ],
+    [
+     "ArmFront/servo_shoulder",
+     2472
+    ]
+   ],
+   "stable_pct_worst_yaw": 83.3,
+   "stable_pct_front": 100.0,
+   "stable_pct_back": 49.3,
+   "max_stable_forward_reach_any_yaw_mm": 175.3,
+   "stable_pct_worst_yaw_empty": 84.3,
+   "min_margin_mm": -22.9,
+   "min_margin_pose": [
+    0,
+    180,
+    0,
+    0
+   ],
+   "max_torque_gmm": {
+    "shoulder": 6538,
+    "elbow": 3647,
+    "wrist": 1515
+   },
+   "max_torque_pct": {
+    "shoulder": 36,
+    "elbow": 20,
+    "wrist": 8
+   },
+   "max_side_moment_gmm": 9483,
+   "usable_poses": 8217,
+   "max_reach_mm": 175.3,
+   "max_reach_table_mm": 174.8
+  },
+  "pnp": [
+   {
+    "radius_mm": 60,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 7.5,
+    "tilt_deg": 0.0,
+    "min_margin_mm": 26.4,
+    "max_torque_pct": 15,
+    "max_side_gmm": 1987
+   },
+   {
+    "radius_mm": 80,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 12.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": 33.7,
+    "max_torque_pct": 17,
+    "max_side_gmm": 927
+   },
+   {
+    "radius_mm": 100,
+    "result": "PASS",
+    "reason": "",
+    "grasp_z": 12.5,
+    "tilt_deg": 15.0,
+    "min_margin_mm": 32.0,
+    "max_torque_pct": 24,
+    "max_side_gmm": 1301
+   },
+   {
+    "radius_mm": 120,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 140,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   },
+   {
+    "radius_mm": 160,
+    "result": "FAIL",
+    "reason": "no collision-free tool pose at grasp height",
+    "grasp_z": null,
+    "tilt_deg": null,
+    "min_margin_mm": null,
+    "max_torque_pct": null,
+    "max_side_gmm": null
+   }
+  ],
+  "home": [
+   0.0,
+   90.0,
+   -70.0,
+   -80.0
+  ],
+  "reach_pose": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "yaw": {
+   "inertia_gmm2": 822715,
+   "side_moment_straight_out_gmm": 3594,
+   "tip_margin_straight_out_worst_yaw_mm": 16.2,
+   "tip_margin_home_worst_yaw_mm": 35.3,
+   "side_moment_home_gmm": 691,
+   "base_torque_90deg_0.6s_pct": 11.7
+  },
+  "parts": [
+   {
+    "name": "Foot",
+    "link": "foot",
+    "status": "original",
+    "source": "00_baseline/3d_models/Foot.stl",
+    "mass_g": 6.62
+   },
+   {
+    "name": "Swing_v2_counterweight",
+    "link": "swing",
+    "status": "modified",
+    "source": "03_cad/stl/Swing_v2_counterweight.stl",
+    "mass_g": 10.61
+   },
+   {
+    "name": "Swing_v2_counterweight_lid",
+    "link": "swing",
+    "status": "new",
+    "source": "03_cad/stl/Swing_v2_counterweight_lid.stl",
+    "mass_g": 1.86
+   },
+   {
+    "name": "coins_7x2p",
+    "link": "swing",
+    "status": "hardware",
+    "source": "7 x UK 2p coins (or ~50 g filler)",
+    "mass_g": 49.84
+   },
+   {
+    "name": "ArmSpring",
+    "link": "link1",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmSpring.stl",
+    "mass_g": 6.11
+   },
+   {
+    "name": "Arm",
+    "link": "link2",
+    "status": "original",
+    "source": "00_baseline/3d_models/Arm.stl",
+    "mass_g": 5.46
+   },
+   {
+    "name": "ArmFront",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/ArmFront.stl",
+    "mass_g": 4.94
+   },
+   {
+    "name": "servo_base",
+    "link": "foot",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_shoulder",
+    "link": "swing",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_elbow",
+    "link": "link1",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "servo_wrist",
+    "link": "link2",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   },
+   {
+    "name": "FrontPlate",
+    "link": "tool",
+    "status": "original",
+    "source": "00_baseline/3d_models/FrontPlate.stl",
+    "mass_g": 1.19
+   },
+   {
+    "name": "GripperSpannerHead_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerHead_v1.stl",
+    "mass_g": 6.67
+   },
+   {
+    "name": "GripperSpannerSlider_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerSlider_v1.stl",
+    "mass_g": 1.04
+   },
+   {
+    "name": "GripperSpannerJaw_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerJaw_v1.stl",
+    "mass_g": 2.36
+   },
+   {
+    "name": "GripperSpannerPinion_v1",
+    "link": "tool",
+    "status": "new",
+    "source": "03_cad/stl/GripperSpannerPinion_v1.stl",
+    "mass_g": 0.85
+   },
+   {
+    "name": "servo_gripper",
+    "link": "tool",
+    "status": "hardware",
+    "source": "SG90 envelope",
+    "mass_g": 9.6
+   }
+  ],
+  "runtime_s": 37.9
+ }
+]

@@ -1,0 +1,418 @@
+{
+ "key": "D0",
+ "title": "Baseline (as supplied)",
+ "gripper": "Original rack-and-pinion",
+ "counterweight": false,
+ "tool_notes": "Supplied design. Jaw placement approximate.",
+ "opening_mm": [
+  0.0,
+  18.8
+ ],
+ "grip_force": "~20 (ideal, both jaws, at stall)",
+ "asm": {
+  "parts": [
+   {
+    "part": "Foot",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 8.15,
+    "print_mass_g": 6.62,
+    "solid_mass_g": 10.1
+   },
+   {
+    "part": "Swing",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 9.33,
+    "print_mass_g": 6.05,
+    "solid_mass_g": 11.57
+   },
+   {
+    "part": "ArmSpring",
+    "status": "original",
+    "watertight": false,
+    "volume_cm3": 6.73,
+    "print_mass_g": 6.11,
+    "solid_mass_g": 8.35
+   },
+   {
+    "part": "Arm",
+    "status": "original",
+    "watertight": false,
+    "volume_cm3": 5.89,
+    "print_mass_g": 5.46,
+    "solid_mass_g": 7.31
+   },
+   {
+    "part": "ArmFront",
+    "status": "original",
+    "watertight": false,
+    "volume_cm3": 5.06,
+    "print_mass_g": 4.94,
+    "solid_mass_g": 6.28
+   },
+   {
+    "part": "FrontPlate",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 1.12,
+    "print_mass_g": 1.19,
+    "solid_mass_g": 1.38
+   },
+   {
+    "part": "GripperGear",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 0.14,
+    "print_mass_g": 0.17,
+    "solid_mass_g": 0.17
+   },
+   {
+    "part": "GripperRackTop",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 0.47,
+    "print_mass_g": 0.51,
+    "solid_mass_g": 0.58
+   },
+   {
+    "part": "GripperRackBottom",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 0.47,
+    "print_mass_g": 0.51,
+    "solid_mass_g": 0.58
+   },
+   {
+    "part": "GripperLeft",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 2.07,
+    "print_mass_g": 1.87,
+    "solid_mass_g": 2.57
+   },
+   {
+    "part": "GripperRight",
+    "status": "original",
+    "watertight": true,
+    "volume_cm3": 2.07,
+    "print_mass_g": 1.87,
+    "solid_mass_g": 2.57
+   }
+  ],
+  "checks": [
+   {
+    "id": "ASM-1",
+    "check": "Every printed STL is a closed solid",
+    "result": "WARN",
+    "detail": "not watertight: ArmSpring, Arm, ArmFront (supplied files; repair in the slicer)"
+   },
+   {
+    "id": "ASM-2",
+    "check": "Gripper mount: screw path through the plate/head lines up with both ArmFront end-face holes",
+    "result": "PASS",
+    "detail": "FrontPlate: hole clear; FrontPlate: hole clear"
+   },
+   {
+    "id": "ASM-4",
+    "check": "Swing (with counterweight if fitted) clears the static foot over a full turn",
+    "result": "PASS",
+    "detail": "closest approach 8.0 mm (swing underside assumed 8 mm above the foot top: MEASURE)"
+   }
+  ],
+  "neutral_contacts": [
+   "Arm/ArmFront",
+   "Arm/ArmSpring",
+   "Arm/servo_elbow",
+   "Arm/servo_wrist",
+   "ArmFront/FrontPlate",
+   "ArmFront/servo_gripper",
+   "ArmFront/servo_wrist",
+   "ArmSpring/Swing",
+   "ArmSpring/servo_elbow",
+   "ArmSpring/servo_shoulder",
+   "Foot/servo_base",
+   "FrontPlate/servo_gripper",
+   "GripperGear/GripperLeft",
+   "GripperGear/GripperRackBottom",
+   "GripperGear/GripperRackTop",
+   "GripperGear/GripperRight",
+   "GripperLeft/GripperRackBottom",
+   "GripperLeft/GripperRight",
+   "GripperLeft/servo_gripper",
+   "GripperRackBottom/GripperRight",
+   "GripperRackBottom/servo_gripper",
+   "GripperRackTop/servo_gripper",
+   "GripperRight/servo_gripper",
+   "Swing/servo_base",
+   "Swing/servo_shoulder"
+  ]
+ },
+ "mass": {
+  "printed_g": 35.3,
+  "printed_solid_g": 51.5,
+  "hardware_g": 48.6,
+  "total_g": 83.9,
+  "moving_g": 67.7,
+  "beyond_shoulder_g": 52.0,
+  "tool_g": 21.2,
+  "print_volume_cm3": 41.5,
+  "printed_parts": 11,
+  "new_or_modified_parts": 0
+ },
+ "sweep": {
+  "poses_swept": 34447,
+  "poses_in_servo_windows": 17797,
+  "collision_free": 10091,
+  "collision_free_pct": 56.7,
+  "top_collisions": [
+   [
+    "ArmSpring~Arm",
+    4329
+   ],
+   [
+    "Swing/ArmFront",
+    3103
+   ],
+   [
+    "Swing/Arm",
+    3094
+   ],
+   [
+    "Swing/servo_wrist",
+    2873
+   ],
+   [
+    "Foot/servo_gripper",
+    2595
+   ],
+   [
+    "ArmFront/servo_shoulder",
+    2472
+   ]
+  ],
+  "stable_pct_worst_yaw": 69.4,
+  "stable_pct_front": 72.2,
+  "stable_pct_back": 63.4,
+  "max_stable_forward_reach_any_yaw_mm": 136.3,
+  "stable_pct_worst_yaw_empty": 76.3,
+  "min_margin_mm": -25.1,
+  "min_margin_pose": [
+   0,
+   180,
+   0,
+   0
+  ],
+  "max_torque_gmm": {
+   "shoulder": 5702,
+   "elbow": 3078,
+   "wrist": 1213
+  },
+  "max_torque_pct": {
+   "shoulder": 32,
+   "elbow": 17,
+   "wrist": 7
+  },
+  "max_side_moment_gmm": 5778,
+  "usable_poses": 7001,
+  "max_reach_mm": 136.3,
+  "max_reach_table_mm": 130.6
+ },
+ "pnp": [
+  {
+   "radius_mm": 60,
+   "result": "PASS",
+   "reason": "",
+   "grasp_z": 10.5,
+   "tilt_deg": 0.0,
+   "min_margin_mm": 15.0,
+   "max_torque_pct": 13,
+   "max_side_gmm": 2302
+  },
+  {
+   "radius_mm": 80,
+   "result": "PASS",
+   "reason": "",
+   "grasp_z": 11.5,
+   "tilt_deg": 15.0,
+   "min_margin_mm": 11.4,
+   "max_torque_pct": 15,
+   "max_side_gmm": 2620
+  },
+  {
+   "radius_mm": 100,
+   "result": "FAIL",
+   "reason": "tips over",
+   "grasp_z": 11.5,
+   "tilt_deg": 15.0,
+   "min_margin_mm": -0.7,
+   "max_torque_pct": 21,
+   "max_side_gmm": 3695
+  },
+  {
+   "radius_mm": 120,
+   "result": "MARGINAL",
+   "reason": "tip margin < 5 mm",
+   "grasp_z": 11.5,
+   "tilt_deg": 45.0,
+   "min_margin_mm": 0.7,
+   "max_torque_pct": 20,
+   "max_side_gmm": 3573
+  },
+  {
+   "radius_mm": 140,
+   "result": "FAIL",
+   "reason": "cannot reach 30 mm above the object",
+   "grasp_z": 11.5,
+   "tilt_deg": null,
+   "min_margin_mm": null,
+   "max_torque_pct": null,
+   "max_side_gmm": null
+  },
+  {
+   "radius_mm": 160,
+   "result": "FAIL",
+   "reason": "no collision-free tool pose at grasp height",
+   "grasp_z": null,
+   "tilt_deg": null,
+   "min_margin_mm": null,
+   "max_torque_pct": null,
+   "max_side_gmm": null
+  }
+ ],
+ "home": [
+  0.0,
+  90.0,
+  -90.0,
+  -45.0
+ ],
+ "reach_pose": [
+  0,
+  75,
+  -95,
+  15
+ ],
+ "yaw": {
+  "inertia_gmm2": 548579,
+  "side_moment_straight_out_gmm": 5627,
+  "tip_margin_straight_out_worst_yaw_mm": -23.4,
+  "tip_margin_home_worst_yaw_mm": 14.8,
+  "side_moment_home_gmm": 2098,
+  "base_torque_90deg_0.6s_pct": 7.8
+ },
+ "parts": [
+  {
+   "name": "Foot",
+   "link": "foot",
+   "status": "original",
+   "source": "00_baseline/3d_models/Foot.stl",
+   "mass_g": 6.62
+  },
+  {
+   "name": "Swing",
+   "link": "swing",
+   "status": "original",
+   "source": "00_baseline/3d_models/Swing.stl",
+   "mass_g": 6.05
+  },
+  {
+   "name": "ArmSpring",
+   "link": "link1",
+   "status": "original",
+   "source": "00_baseline/3d_models/ArmSpring.stl",
+   "mass_g": 6.11
+  },
+  {
+   "name": "Arm",
+   "link": "link2",
+   "status": "original",
+   "source": "00_baseline/3d_models/Arm.stl",
+   "mass_g": 5.46
+  },
+  {
+   "name": "ArmFront",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/ArmFront.stl",
+   "mass_g": 4.94
+  },
+  {
+   "name": "servo_base",
+   "link": "foot",
+   "status": "hardware",
+   "source": "SG90 envelope",
+   "mass_g": 9.6
+  },
+  {
+   "name": "servo_shoulder",
+   "link": "swing",
+   "status": "hardware",
+   "source": "SG90 envelope",
+   "mass_g": 9.6
+  },
+  {
+   "name": "servo_elbow",
+   "link": "link1",
+   "status": "hardware",
+   "source": "SG90 envelope",
+   "mass_g": 9.6
+  },
+  {
+   "name": "servo_wrist",
+   "link": "link2",
+   "status": "hardware",
+   "source": "SG90 envelope",
+   "mass_g": 9.6
+  },
+  {
+   "name": "FrontPlate",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/FrontPlate.stl",
+   "mass_g": 1.79
+  },
+  {
+   "name": "GripperGear",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/GripperGear.stl",
+   "mass_g": 0.17
+  },
+  {
+   "name": "GripperRackTop",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/GripperRackTop.stl",
+   "mass_g": 0.51
+  },
+  {
+   "name": "GripperRackBottom",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/GripperRackBottom.stl",
+   "mass_g": 0.51
+  },
+  {
+   "name": "GripperLeft",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/GripperLeft.stl",
+   "mass_g": 1.87
+  },
+  {
+   "name": "GripperRight",
+   "link": "tool",
+   "status": "original",
+   "source": "00_baseline/3d_models/GripperRight.stl",
+   "mass_g": 1.87
+  },
+  {
+   "name": "servo_gripper",
+   "link": "tool",
+   "status": "hardware",
+   "source": "SG90 envelope",
+   "mass_g": 9.6
+  }
+ ],
+ "runtime_s": 36.0
+}
