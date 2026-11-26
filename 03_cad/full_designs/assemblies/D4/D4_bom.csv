@@ -9,7 +9,7 @@ servo_shoulder,swing,hardware,1,SG90 envelope,9.6,N
 servo_elbow,link1,hardware,1,SG90 envelope,9.6,N
 servo_wrist,link2,hardware,1,SG90 envelope,9.6,N
 FrontPlate,tool,original,1,00_baseline/3d_models/FrontPlate.stl,1.2,Y
-GripperSpannerHead_v2,tool,new,1,03_cad/stl/GripperSpannerHead_v2.stl,9.0,Y
+GripperSpannerHead_v2,tool,new,1,03_cad/stl/GripperSpannerHead_v2.stl,9.1,Y
 GripperSpannerSlider_v2,tool,new,1,03_cad/stl/GripperSpannerSlider_v2.stl,1.0,Y
 GripperSpannerJaw_v2,tool,new,1,03_cad/stl/GripperSpannerJaw_v2.stl,2.4,Y
 GripperSpannerPinion_v2,tool,new,1,03_cad/stl/GripperSpannerPinion_v2.stl,0.9,Y

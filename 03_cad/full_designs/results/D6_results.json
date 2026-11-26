@@ -72,9 +72,9 @@
     "part": "GripperSpannerHead_v2",
     "status": "new",
     "watertight": true,
-    "volume_cm3": 12.81,
-    "print_mass_g": 8.42,
-    "solid_mass_g": 15.88
+    "volume_cm3": 12.92,
+    "print_mass_g": 8.47,
+    "solid_mass_g": 16.02
    },
    {
     "part": "GripperSpannerSlider_v2",
@@ -155,13 +155,13 @@
  },
  "mass": {
   "printed_g": 87.8,
-  "printed_solid_g": 130.8,
+  "printed_solid_g": 130.9,
   "hardware_g": 99.2,
-  "total_g": 187.0,
+  "total_g": 187.1,
   "moving_g": 131.7,
   "beyond_shoulder_g": 59.8,
-  "tool_g": 29.0,
-  "print_volume_cm3": 105.49,
+  "tool_g": 29.1,
+  "print_volume_cm3": 105.6,
   "printed_parts": 11,
   "new_or_modified_parts": 7
  },
@@ -209,16 +209,16 @@
    0
   ],
   "max_torque_gmm": {
-   "shoulder": 7054,
-   "elbow": 4048,
-   "wrist": 1800
+   "shoulder": 7061,
+   "elbow": 4053,
+   "wrist": 1803
   },
   "max_torque_pct": {
    "shoulder": 39,
-   "elbow": 22,
+   "elbow": 23,
    "wrist": 10
   },
-  "max_side_moment_gmm": 10000,
+  "max_side_moment_gmm": 10008,
   "usable_poses": 9925,
   "max_reach_mm": 183.6,
   "max_reach_table_mm": 181.6
@@ -232,7 +232,7 @@
    "tilt_deg": 0.0,
    "min_margin_mm": 78.6,
    "max_torque_pct": 16,
-   "max_side_gmm": 2029,
+   "max_side_gmm": 2027,
    "surface_z": 1.6
   },
   {
@@ -243,7 +243,7 @@
    "tilt_deg": 15.0,
    "min_margin_mm": 84.5,
    "max_torque_pct": 17,
-   "max_side_gmm": 933,
+   "max_side_gmm": 930,
    "surface_z": 1.6
   },
   {
@@ -254,7 +254,7 @@
    "tilt_deg": 15.0,
    "min_margin_mm": 82.8,
    "max_torque_pct": 24,
-   "max_side_gmm": 1425,
+   "max_side_gmm": 1430,
    "surface_z": 0.0
   },
   {
@@ -304,11 +304,11 @@
   0
  ],
  "yaw": {
-  "inertia_gmm2": 912910,
-  "side_moment_straight_out_gmm": 4109,
-  "tip_margin_straight_out_worst_yaw_mm": 68.0,
+  "inertia_gmm2": 913984,
+  "side_moment_straight_out_gmm": 4116,
+  "tip_margin_straight_out_worst_yaw_mm": 67.9,
   "tip_margin_home_worst_yaw_mm": 86.8,
-  "side_moment_home_gmm": 475,
+  "side_moment_home_gmm": 472,
   "base_torque_90deg_0.6s_pct": 13.0
  },
  "parts": [
@@ -401,7 +401,7 @@
    "link": "tool",
    "status": "new",
    "source": "03_cad/stl/GripperSpannerHead_v2.stl",
-   "mass_g": 9.02
+   "mass_g": 9.07
   },
   {
    "name": "GripperSpannerSlider_v2",
@@ -432,5 +432,5 @@
    "mass_g": 9.6
   }
  ],
- "runtime_s": 39.9
+ "runtime_s": 40.5
 }

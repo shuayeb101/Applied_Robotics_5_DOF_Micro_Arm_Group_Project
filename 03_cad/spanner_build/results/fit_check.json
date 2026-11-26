@@ -26,8 +26,22 @@
    "result": "clear"
   },
   {
+   "servo": "servo_shoulder",
+   "part": "ArmSpring",
+   "status": "original",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
    "servo": "servo_elbow",
    "part": "ArmSpring",
+   "status": "original",
+   "depth_mm": 0.0,
+   "result": "clear"
+  },
+  {
+   "servo": "servo_elbow",
+   "part": "Arm",
    "status": "original",
    "depth_mm": 0.0,
    "result": "clear"

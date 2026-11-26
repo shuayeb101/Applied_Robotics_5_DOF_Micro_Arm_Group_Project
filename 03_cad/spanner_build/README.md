@@ -1,6 +1,6 @@
-# Main design candidate: D6, spanner gripper + swing counterweight + wide base
+# Main design (confirmed 26 Nov 2026): D6, spanner gripper + swing counterweight + wide base
 
-> **Status: designed and checked in CAD and simulation. Not printed or built yet.** These results come from the design stage. They are not measured evidence for `08_tests/`. Dry-fit the first prints before relying on them.
+> **Status: confirmed as the build design after a full check against the brief and the group's objectives (below). Designed and checked in CAD and simulation; not printed or built yet.** These results come from the design stage. They are not measured evidence for `08_tests/`. Dry-fit the first prints before relying on them.
 > **AI disclosure:** the wide base, spanner v2, these checks and this README were produced with AI assistance (Claude Code). The group must check and understand them before using them in the report.
 
 The group chose to build the **spanner gripper with the swing counterweight**. D6 is that build, plus:
@@ -8,7 +8,38 @@ The group chose to build the **spanner gripper with the swing counterweight**. D
 1. **Wide base** (`../wide_base/`, `Foot_v2_wide.stl`). The supplied foot stays intact inside a Ø180 × 1.6 mm plate, with sloped buttresses on the servo cradle, a wire lane and engraved pick/place targets. It removes the counterweight's one weak point (tipping backward when the shoulder leans back).
 2. **Spanner gripper v2** (`../spanner_gripper/`, `GripperSpanner*_v2.stl`). Same mechanism as v1, but it now fits the real SG90 stack (see below). **v1 does not fit and must not be printed.**
 
-## Confirmation checklist
+## Objectives check (26 Nov 2026)
+
+Every objective that applies to the mechanical design, from the brief (CT6056 case study), the spanner gripper's requirements (`../spanner_gripper/README.md` §8) and the group's own goals. **Design** = met by the CAD / simulation. **Build** = the design is ready, and the evidence comes from the physical tests the brief asks for.
+
+| # | Objective (source) | Result | Evidence |
+| --- | --- | --- | --- |
+| G1 | Wider, more stable base (group) | **Met.** Tipping edge ~39 → ~90 mm; stable in 100 % of collision-free poses, front and back; worst margin +37 mm | `simulate_build.py`, D6 STAB |
+| G2 | Spanner gripper + counterweight is the build (group) | **Met.** D6 = spanner v2 + `Swing_v2_counterweight` + `Foot_v2_wide` | this folder |
+| G3 | All servos fit; size taken from the supplied slots (group) | **Met.** 5/5 SG90s, 0.00 mm overlap; model checked against all 5 slots and 2 datasheets | `fit_check.py` FIT |
+| G4 | Assembled step by step by hand (group) | **Met.** 10 moves, 8 screw accesses clear; lid reachable with the arm fitted | `fit_check.py` ASSY |
+| G5 | Room for the wires (group) | **Met.** No new material in any wire path; base wire lane under 3 clips; swing ≥ 12 mm above it; counterweight 45 mm from the arm bundle | `fit_check.py` WIRE |
+| G6 | Uses the supplied servo horns and screws (group) | **Met.** Horns under the swing and on the fork outer faces as supplied; supplied tab screws fix the spanner head (counterbored) | spanner README §4 |
+| B1 | Build on the supplied resources; keep them traceable (brief, files) | **Met.** Supplied parts untouched in `00_baseline/`; Foot and Swing keep 0.00 mm³ of original material removed; links, ArmFront, FrontPlate unchanged | ASM-3, ASM-5 |
+| B2 | Assemble progressively, check free movement and self-collision at every joint (Task 2.6) | **Design: met.** Range test of every joint from HOME; 34,447-pose collision sweep | D6 video, `full_designs` COL |
+| B3 | Cables: bend radius, strain relief, full range without pulling a connector (Task 2.7) | **Design: met.** The base wire doesn't twist (the base servo is static) and is held in a lane. The arm bundle turns with the swing. Leave a ~60 mm slack loop for ±90°. **Build:** check after routing | `fit_check.py` WIRE |
+| B4 | Material and print strategy: orientation, supports, print time (Task 2.3) | **Met.** All new parts are watertight and print without supports except the counterweight pocket (documented). Min wall 0.85 mm at the head's screw seat, ≥ 1 mm elsewhere (gear teeth, grip serrations and the tip of the 30° dovetail lip excepted). ~106 cm³ printed | printability check, part READMEs |
+| B5 | Move smoothly inside a defined safe workspace (challenge, Task 8) | **Design: met.** Workspace defined: floor rule (1.6 mm plate, 0 outside), joint limits, no tipping anywhere, quasi-static tipping only at moves faster than the servos can go | `simulate_build.py` |
+| B6 | Operate the gripper; repeatable pick-and-place of a lightweight object (challenge) | **Design: met.** 10/10 simulated tasks pass (cube + cylinder, 60–100 mm, up to ±90°). **Build:** repeated physical runs (TASK-01) | `simulate_build.py` TASK |
+| B7 | Servo loads within limits (Tasks 3, 4) | **Met.** Peak static 39 / 22 / 10 % of stall; base 13 % for 90° in 0.6 s | D6 TRQ, YAW |
+| B8 | Kinematic model: link lengths, frames, tool offset (Task 7) | **Met.** Links unchanged (49.5 mm); shoulder axis 46.6 mm above the table; TCP 39.3 mm out, offset `gap/2 − 6.75` mm sideways | drawing E, spanner §7 |
+| B9 | Gripper: evaluate the original, ≥ 2 concepts, justified selection (Task 10.3–10.4) | **Met.** Original evaluated; spanner concepts A/B/C + mini claw compared; selection justified and confirmed by simulation | spanner README §2–3, `full_designs` |
+| B10 | Dimensioned CAD; check clearances, gear/rack mesh, wall thickness, servo travel, symmetry, slicer warnings (Task 10.5) | **Met.** Key-dimension sheet; mechanism sim 12/12 (mesh, backlash 0.23 mm, contact ratio 1.74, stresses); 140° of the SG90's 180°; asymmetry is by design (datum jaw) with the offset documented; new STLs watertight (repair the 3 supplied ones) | `results/key_dimensions.png`, `../spanner_gripper/sim/` |
+| B11 | Two test objects of different width/shape within range (Task 10.1) | **Met.** 15 mm cube and 12 × 20 mm cylinder inside the 1.0–20.5 mm opening; larger objects via the tooth preset | spanner §6 |
+| GRIP-01 | Opening ≥ 18 mm | **Design: met.** 19.5 mm range (1.0–20.5) | spanner sim |
+| GRIP-02 | Jaw faces parallel within 0.5 mm | **Design: met.** Dovetail lift play 0.38 mm, side play 0.20 mm | spanner sim |
+| GRIP-03 | Backlash at the jaw ≤ 0.5 mm | **Design: met.** 0.23 mm | spanner sim |
+| GRIP-04/05 | 5/5 transfers per object; datum placement ±1 mm | **Build:** physical trials (`08_tests/gripper_trials.csv`) | – |
+| SAFE | Pinch points, servo stall | **Design: met.** Torque margin ≥ 2.5×; grip by commanded gap (object − 1 mm), not stall; floor rule for firmware | spanner §7, this README |
+
+**Decision:** D6 meets every design objective. The rest is build-stage evidence the brief asks for anyway: dry-fit, cable routing, calibration, and the repeated gripper and pick-and-place trials. **D6 is confirmed as the design the group builds.**
+
+### Confirmation checklist (fit, assembly, wiring)
 
 | Question | Answer | Evidence |
 | --- | --- | --- |
@@ -122,6 +153,10 @@ Cube: 60 / 80 / 100 mm −45° → +45°; 80 mm −90° → +90°; 60 mm 0° →
   The low shoulder and elbow limits depend on the other joints. **Firmware should check the tool height** (TCP z ≥ surface + clearance; surface = 1.6 mm inside r = 89 mm, 0 outside) rather than use a fixed shoulder minimum.
 - **Leaning back:** the margin stays positive all the way to the shoulder at 180° (+37 mm).
 
+## Key dimensions
+
+![Key dimensions](results/key_dimensions.png)
+
 ## Parts
 
 The BOM is in `../full_designs/assemblies/D6/D6_bom.csv`. The assembled model at HOME is `D6_assembly_home.3mf`.
@@ -159,6 +194,10 @@ python3 03_cad/spanner_build/simulate_build.py
 
 ```bash
 python3 03_cad/spanner_build/render_fit.py
+```
+
+```bash
+python3 03_cad/spanner_build/drawing.py
 ```
 
 `fit_check.py` takes a few seconds and `simulate_build.py` about a minute. The D6 renders, assembly and video come from `../full_designs/` (`simulate_designs.py --only D6`, `build_assemblies.py`, `animate.py --only D6`).

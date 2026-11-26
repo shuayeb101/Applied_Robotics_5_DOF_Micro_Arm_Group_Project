@@ -44,7 +44,8 @@ P = dict(
     tab_top=2.5,                               # servo tab top above plate front face
     boss_top=10.8,                             # SG90 boss (base of the spline) above plate front face
     boss_r=6.3,                                # boss radius 5.9 + clearance
-    cbore_d=4.8, cbore_floor=1.5,              # counterbore so the supplied short tab screws reach
+    cbore_d=4.4, cbore_floor=1.5,              # counterbore so the supplied short tab screws reach
+    case_l=22.8, case_w=12.4, case_clear=0.25, # SG90 case (datasheet max) for the plinth window
     # drive
     module=1.0, teeth=16, pressure=20.0, backlash=0.15,
     pinion_z0=2.8, pinion_b=5.5, spline_d=4.7, spline_depth=3.6,
@@ -284,7 +285,12 @@ def mount_v2(parts, p, d):
     out = {k: m.translate((0, 0, z)) for k, m in parts.items()}
     wx0, wy0, wx1, wy1 = p['window']
     plinth = box(p['x_left'], d['y_lo'], p['tab_top'], p['wall_out'], d['y_hi'], z + 0.01)
-    plinth -= box(wx0 - 0.25, wy0 - 0.25, -1, wx1 + 0.25, wy1 + 0.25, z + p['base_t'] + 0.7)
+    # plinth window hugs the real case (datasheet max + clearance), not the plate's
+    # larger window, so the floor under each screw head stays ~1 mm wide
+    cx, cy = (wx0 + wx1) / 2, p['axis_y']
+    hl, hw = p['case_l'] / 2 + p['case_clear'], p['case_w'] / 2 + p['case_clear']
+    plinth -= box(cx - hw, cy - hl, -1, cx + hw, cy + hl, z + 0.02)
+    out['head'] = out['head'] - box(wx0 - 0.25, wy0 - 0.25, z - 1, wx1 + 0.25, wy1 + 0.25, z + p['base_t'] + 0.7)
     plinth -= cyl(p['shaft_x'], p['shaft_y'], -1, z + 1, p['boss_r'], 64)
     # lightening pockets, open to the bed side, 2.4 mm walls; keep solid round the screws
     w = 2.4
@@ -332,6 +338,8 @@ def main():
         parts = mount_v2(parts, p, d)
         print(f"v2: lifted {zoff_v2(p):.1f} mm onto the real SG90 spline; head stands on the servo tabs")
     ver = 'v1' if a.v1 else 'v2'
+    if a.v1 and a.out.rstrip('/').endswith('stl'):
+        a.out = os.path.join(a.out, 'superseded')     # v1 does not fit: keep it out of the print folder
     tag = '_shaftlow' if a.shaft_low else ''
     names = {k: f'GripperSpanner{n}_{ver}' for k, n in
              dict(head='Head', slider='Slider', jaw='Jaw', pinion='Pinion').items()}
